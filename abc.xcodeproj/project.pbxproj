@@ -457,14 +457,14 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/Users/james/Desktop/OgreSDK/lib/macosx/Release\"",
+					/OgreSDK/lib/macosx/Release,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					/usr/local/lib,
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
 				);
-				OGRE_SDK_ROOT = /Users/james/Desktop/OgreSDK;
+				OGRE_SDK_ROOT = /OgreSDK;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lOIS",
@@ -485,14 +485,14 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"/Users/james/Desktop/OgreSDK/lib/macosx/Release\"",
+					/OgreSDK/lib/macosx/Release,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					/usr/local/lib,
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
 				);
-				OGRE_SDK_ROOT = /Users/james/Desktop/OgreSDK;
+				OGRE_SDK_ROOT = /OgreSDK;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lOIS",
