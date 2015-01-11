@@ -177,8 +177,8 @@ void DemoApp::setupDemoScene()
     kingEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("kingEntity", "king.mesh");
     kingNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("kingNode");
     kingNode->attachObject(kingEntity);
-    kingNode->scale(1,1,1);
-//    kingNode->translate(10,50,50);
+    kingNode->scale(4,4,4);
+    kingNode->translate(5,12,0);
 
     queenEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("queenEntity", "queen.mesh");
     queenNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("queenNode");
