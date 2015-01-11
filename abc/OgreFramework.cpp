@@ -10,7 +10,7 @@ namespace Ogre
 
 OgreFramework::OgreFramework()
 {
-	m_MoveSpeed			= 0.1f;
+	m_MoveSpeed			= 6.0f;
 	m_RotateSpeed       = 0.3f;
     
 	m_bShutDownOgre     = false;
