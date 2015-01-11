@@ -4,6 +4,7 @@
 
 #include <OgreLight.h>
 #include <OgreWindowEventUtilities.h>
+#include "OgreText.h"
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -246,8 +247,12 @@ bool DemoApp::keyPressed(const OIS::KeyEvent &keyEventRef)
 	
 	if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_F))
 	{
-        //do something
-	}
+        OgreText *textItem = new OgreText;
+        textItem->setText("Hello World!");    // Text to be displayed
+        // Now it is possible to use the Ogre::String as parameter too
+        textItem->setPos(0.1f,0.1f);        // Text position, using relative co-ordinates
+        textItem->setCol(1.0f,1.0f,1.0f,0.5f);    // Text colour (Red, Green, Blue, Alpha)
+    }
 #endif
 	return true;
 }

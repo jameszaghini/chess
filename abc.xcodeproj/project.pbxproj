@@ -79,6 +79,7 @@
 		1ACAA0171A628D6F00F09C73 /* pawn.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = pawn.mesh; sourceTree = "<group>"; };
 		1ACAA0181A628D6F00F09C73 /* queen.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = queen.mesh; sourceTree = "<group>"; };
 		1ACAA0191A628D6F00F09C73 /* rook.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = rook.mesh; sourceTree = "<group>"; };
+		2EB4FDB41A633C0200C9FC90 /* OgreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OgreText.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +156,7 @@
 				1A6B61291A5EBD0500F8D961 /* OgreDemoApp.h */,
 				1A6B612A1A5EBD0500F8D961 /* OgreFramework.cpp */,
 				1A6B612C1A5EBD0500F8D961 /* OgreFramework.h */,
+				2EB4FDB41A633C0200C9FC90 /* OgreText.h */,
 			);
 			name = "Basic Ogre Framework";
 			sourceTree = "<group>";
