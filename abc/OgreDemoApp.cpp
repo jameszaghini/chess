@@ -11,8 +11,12 @@ DemoApp::DemoApp()
 {
 	m_pOgreHeadNode			= 0;
 	m_pOgreHeadEntity		= 0;
+
     kingNode = 0;
     kingEntity = 0;
+    
+    queenNode = 0;
+    queenEntity = 0;
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
@@ -173,8 +177,13 @@ void DemoApp::setupDemoScene()
     kingEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("kingEntity", "king.mesh");
     kingNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("kingNode");
     kingNode->attachObject(kingEntity);
-    kingNode->scale(104,104,104);
+    kingNode->scale(1,1,1);
+//    kingNode->translate(10,50,50);
 
+    queenEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("queenEntity", "queen.mesh");
+    queenNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("queenNode");
+    queenNode->attachObject(queenEntity);
+    queenNode->scale(1,1,1);
 
 }
 

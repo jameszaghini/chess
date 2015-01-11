@@ -101,6 +101,9 @@ private:
     Ogre::SceneNode *kingNode;
     Ogre::Entity *kingEntity;
     
+    Ogre::SceneNode *queenNode;
+    Ogre::Entity *queenEntity;
+    
 	bool					m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
     Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.
