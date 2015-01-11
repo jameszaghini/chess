@@ -57,14 +57,16 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     pluginsPath = m_ResourcePath + "plugins.cfg";
 #endif
     
-    m_pRoot = new Ogre::    Root(pluginsPath, Ogre::macBundlePath() + "/ogre.cfg");
+    m_pRoot = new Ogre::Root(pluginsPath, Ogre::macBundlePath() + "/ogre.cfg");
     
 #ifdef OGRE_STATIC_LIB
     m_StaticPluginLoader.load();
 #endif
     
-	if(!m_pRoot->showConfigDialog())
-		return false;
+    RenderSystem *rs = m_pRoot->getRenderSystemByName("OpenGL Rendering Subsystem");
+    m_pRoot->setRenderSystem(rs);
+    rs->setConfigOption("Video Mode", "1024 x 480 @ 32-bit colour");
+
 	m_pRenderWnd = m_pRoot->initialise(true, wndTitle);
     
 	m_pSceneMgr = m_pRoot->createSceneManager(ST_GENERIC, "SceneManager");
