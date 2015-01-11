@@ -19,8 +19,24 @@
 		1A6B613F1A5EBD0600F8D961 /* ogre.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B613E1A5EBD0600F8D961 /* ogre.cfg */; };
 		1A6B61411A5EBD0600F8D961 /* plugins.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61401A5EBD0600F8D961 /* plugins.cfg */; };
 		1A6B61431A5EBD0600F8D961 /* resources.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61421A5EBD0600F8D961 /* resources.cfg */; };
-		1AD4191B1A5FC618002F6C70 /* Ogre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD4191A1A5FC618002F6C70 /* Ogre.framework */; };
-		1AD4191D1A5FC62E002F6C70 /* OgreOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD4191C1A5FC62E002F6C70 /* OgreOverlay.framework */; };
+		1ACA9FA81A61554400F09C73 /* board.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FA71A61554400F09C73 /* board.mesh */; };
+		1ACA9FAB1A6155A000F09C73 /* black.material in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FA91A6155A000F09C73 /* black.material */; };
+		1ACA9FAC1A6155A000F09C73 /* white.material in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FAA1A6155A000F09C73 /* white.material */; };
+		1ACA9FAE1A61576100F09C73 /* skybox.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FAD1A61576100F09C73 /* skybox.zip */; };
+		1ACA9FED1A61578E00F09C73 /* cubescene_bk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FBC1A61578E00F09C73 /* cubescene_bk.jpg */; };
+		1ACA9FEE1A61578E00F09C73 /* cubescene_dn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FBD1A61578E00F09C73 /* cubescene_dn.jpg */; };
+		1ACA9FEF1A61578E00F09C73 /* cubescene_fr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FBE1A61578E00F09C73 /* cubescene_fr.jpg */; };
+		1ACA9FF01A61578E00F09C73 /* cubescene_lf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FBF1A61578E00F09C73 /* cubescene_lf.jpg */; };
+		1ACA9FF11A61578E00F09C73 /* cubescene_rt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FC01A61578E00F09C73 /* cubescene_rt.jpg */; };
+		1ACA9FF21A61578E00F09C73 /* cubescene_up.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FC11A61578E00F09C73 /* cubescene_up.jpg */; };
+		1ACAA0051A61578E00F09C73 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FD41A61578E00F09C73 /* README */; };
+		1ACAA01A1A628D6F00F09C73 /* bishop.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0141A628D6F00F09C73 /* bishop.mesh */; };
+		1ACAA01B1A628D6F00F09C73 /* king.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0151A628D6F00F09C73 /* king.mesh */; };
+		1ACAA01C1A628D6F00F09C73 /* knight.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0161A628D6F00F09C73 /* knight.mesh */; };
+		1ACAA01D1A628D6F00F09C73 /* pawn.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0171A628D6F00F09C73 /* pawn.mesh */; };
+		1ACAA01E1A628D6F00F09C73 /* queen.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0181A628D6F00F09C73 /* queen.mesh */; };
+		1ACAA01F1A628D6F00F09C73 /* rook.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACAA0191A628D6F00F09C73 /* rook.mesh */; };
+		1ACEC33B1A5FF39A00BE8447 /* Barrel.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACEC33A1A5FF39A00BE8447 /* Barrel.mesh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,19 +57,32 @@
 		1A6B612C1A5EBD0500F8D961 /* OgreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreFramework.h; sourceTree = "<group>"; };
 		1A6B61311A5EBD0600F8D961 /* Examples.material */ = {isa = PBXFileReference; lastKnownFileType = text; path = Examples.material; sourceTree = "<group>"; };
 		1A6B61321A5EBD0600F8D961 /* Ogre.material */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ogre.material; sourceTree = "<group>"; };
-		1A6B61341A5EBD0600F8D961 /* GreenSkin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GreenSkin.jpg; sourceTree = "<group>"; };
-		1A6B61351A5EBD0600F8D961 /* spheremap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spheremap.png; sourceTree = "<group>"; };
 		1A6B61361A5EBD0600F8D961 /* tusk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tusk.jpg; sourceTree = "<group>"; };
 		1A6B61381A5EBD0600F8D961 /* ogrehead.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = ogrehead.mesh; sourceTree = "<group>"; };
 		1A6B613A1A5EBD0600F8D961 /* cubemap.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cubemap.zip; sourceTree = "<group>"; };
 		1A6B613B1A5EBD0600F8D961 /* cubemapsJS.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cubemapsJS.zip; sourceTree = "<group>"; };
 		1A6B613C1A5EBD0600F8D961 /* SdkTrays.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = SdkTrays.zip; sourceTree = "<group>"; };
-		1A6B613D1A5EBD0600F8D961 /* skybox.zip */ = {isa = PBXFileReference; lastKnownFileType = folder; name = skybox.zip; path = ..; sourceTree = "<group>"; };
 		1A6B613E1A5EBD0600F8D961 /* ogre.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ogre.cfg; sourceTree = "<group>"; };
 		1A6B61401A5EBD0600F8D961 /* plugins.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugins.cfg; sourceTree = "<group>"; };
 		1A6B61421A5EBD0600F8D961 /* resources.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = resources.cfg; sourceTree = "<group>"; };
-		1AD4191A1A5FC618002F6C70 /* Ogre.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogre.framework; path = ../Desktop/OgreSDK/lib/macosx/Release/Ogre.framework; sourceTree = "<group>"; };
-		1AD4191C1A5FC62E002F6C70 /* OgreOverlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OgreOverlay.framework; path = ../Desktop/OgreSDK/lib/macosx/Release/OgreOverlay.framework; sourceTree = "<group>"; };
+		1ACA9FA71A61554400F09C73 /* board.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = board.mesh; sourceTree = "<group>"; };
+		1ACA9FA91A6155A000F09C73 /* black.material */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = black.material; sourceTree = "<group>"; };
+		1ACA9FAA1A6155A000F09C73 /* white.material */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = white.material; sourceTree = "<group>"; };
+		1ACA9FAD1A61576100F09C73 /* skybox.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = skybox.zip; sourceTree = "<group>"; };
+		1ACA9FBC1A61578E00F09C73 /* cubescene_bk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_bk.jpg; sourceTree = "<group>"; };
+		1ACA9FBD1A61578E00F09C73 /* cubescene_dn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_dn.jpg; sourceTree = "<group>"; };
+		1ACA9FBE1A61578E00F09C73 /* cubescene_fr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_fr.jpg; sourceTree = "<group>"; };
+		1ACA9FBF1A61578E00F09C73 /* cubescene_lf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_lf.jpg; sourceTree = "<group>"; };
+		1ACA9FC01A61578E00F09C73 /* cubescene_rt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_rt.jpg; sourceTree = "<group>"; };
+		1ACA9FC11A61578E00F09C73 /* cubescene_up.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cubescene_up.jpg; sourceTree = "<group>"; };
+		1ACA9FD41A61578E00F09C73 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		1ACAA0141A628D6F00F09C73 /* bishop.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = bishop.mesh; sourceTree = "<group>"; };
+		1ACAA0151A628D6F00F09C73 /* king.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = king.mesh; sourceTree = "<group>"; };
+		1ACAA0161A628D6F00F09C73 /* knight.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = knight.mesh; sourceTree = "<group>"; };
+		1ACAA0171A628D6F00F09C73 /* pawn.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = pawn.mesh; sourceTree = "<group>"; };
+		1ACAA0181A628D6F00F09C73 /* queen.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = queen.mesh; sourceTree = "<group>"; };
+		1ACAA0191A628D6F00F09C73 /* rook.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = rook.mesh; sourceTree = "<group>"; };
+		1ACEC33A1A5FF39A00BE8447 /* Barrel.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = Barrel.mesh; path = ../../../../Desktop/OgreSDK/Media/models/Barrel.mesh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */,
-				1AD4191B1A5FC618002F6C70 /* Ogre.framework in Frameworks */,
-				1AD4191D1A5FC62E002F6C70 /* OgreOverlay.framework in Frameworks */,
 				1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */,
 				1A6B61191A5EBD0500F8D961 /* OpenGL.framework in Frameworks */,
 				1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */,
@@ -94,8 +121,6 @@
 		1A6B61111A5EBD0500F8D961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AD4191C1A5FC62E002F6C70 /* OgreOverlay.framework */,
-				1AD4191A1A5FC618002F6C70 /* Ogre.framework */,
 				1A6B61121A5EBD0500F8D961 /* Carbon.framework */,
 				1A6B61141A5EBD0500F8D961 /* Cocoa.framework */,
 				1A6B61161A5EBD0500F8D961 /* IOKit.framework */,
@@ -180,8 +205,9 @@
 		1A6B61331A5EBD0600F8D961 /* textures */ = {
 			isa = PBXGroup;
 			children = (
-				1A6B61341A5EBD0600F8D961 /* GreenSkin.jpg */,
-				1A6B61351A5EBD0600F8D961 /* spheremap.png */,
+				1ACA9FAF1A61578200F09C73 /* skybox */,
+				1ACA9FA91A6155A000F09C73 /* black.material */,
+				1ACA9FAA1A6155A000F09C73 /* white.material */,
 				1A6B61361A5EBD0600F8D961 /* tusk.jpg */,
 			);
 			path = textures;
@@ -190,7 +216,15 @@
 		1A6B61371A5EBD0600F8D961 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1ACEC33A1A5FF39A00BE8447 /* Barrel.mesh */,
+				1ACAA0141A628D6F00F09C73 /* bishop.mesh */,
+				1ACA9FA71A61554400F09C73 /* board.mesh */,
+				1ACAA0151A628D6F00F09C73 /* king.mesh */,
+				1ACAA0161A628D6F00F09C73 /* knight.mesh */,
 				1A6B61381A5EBD0600F8D961 /* ogrehead.mesh */,
+				1ACAA0171A628D6F00F09C73 /* pawn.mesh */,
+				1ACAA0181A628D6F00F09C73 /* queen.mesh */,
+				1ACAA0191A628D6F00F09C73 /* rook.mesh */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -198,12 +232,26 @@
 		1A6B61391A5EBD0600F8D961 /* packs */ = {
 			isa = PBXGroup;
 			children = (
+				1ACA9FAD1A61576100F09C73 /* skybox.zip */,
 				1A6B613A1A5EBD0600F8D961 /* cubemap.zip */,
 				1A6B613B1A5EBD0600F8D961 /* cubemapsJS.zip */,
 				1A6B613C1A5EBD0600F8D961 /* SdkTrays.zip */,
-				1A6B613D1A5EBD0600F8D961 /* skybox.zip */,
 			);
 			path = packs;
+			sourceTree = "<group>";
+		};
+		1ACA9FAF1A61578200F09C73 /* skybox */ = {
+			isa = PBXGroup;
+			children = (
+				1ACA9FBC1A61578E00F09C73 /* cubescene_bk.jpg */,
+				1ACA9FBD1A61578E00F09C73 /* cubescene_dn.jpg */,
+				1ACA9FBE1A61578E00F09C73 /* cubescene_fr.jpg */,
+				1ACA9FBF1A61578E00F09C73 /* cubescene_lf.jpg */,
+				1ACA9FC01A61578E00F09C73 /* cubescene_rt.jpg */,
+				1ACA9FC11A61578E00F09C73 /* cubescene_up.jpg */,
+				1ACA9FD41A61578E00F09C73 /* README */,
+			);
+			name = skybox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +310,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACA9FED1A61578E00F09C73 /* cubescene_bk.jpg in Resources */,
+				1ACA9FEE1A61578E00F09C73 /* cubescene_dn.jpg in Resources */,
+				1ACAA01E1A628D6F00F09C73 /* queen.mesh in Resources */,
 				1A6B61221A5EBD0500F8D961 /* InfoPlist.strings in Resources */,
+				1ACAA01F1A628D6F00F09C73 /* rook.mesh in Resources */,
+				1ACA9FF21A61578E00F09C73 /* cubescene_up.jpg in Resources */,
+				1ACAA01C1A628D6F00F09C73 /* knight.mesh in Resources */,
+				1ACA9FF01A61578E00F09C73 /* cubescene_lf.jpg in Resources */,
+				1ACA9FAE1A61576100F09C73 /* skybox.zip in Resources */,
+				1ACA9FAC1A6155A000F09C73 /* white.material in Resources */,
+				1ACAA01B1A628D6F00F09C73 /* king.mesh in Resources */,
+				1ACAA01D1A628D6F00F09C73 /* pawn.mesh in Resources */,
 				1A6B613F1A5EBD0600F8D961 /* ogre.cfg in Resources */,
+				1ACAA0051A61578E00F09C73 /* README in Resources */,
+				1ACA9FAB1A6155A000F09C73 /* black.material in Resources */,
+				1ACAA01A1A628D6F00F09C73 /* bishop.mesh in Resources */,
 				1A6B61431A5EBD0600F8D961 /* resources.cfg in Resources */,
+				1ACA9FF11A61578E00F09C73 /* cubescene_rt.jpg in Resources */,
+				1ACA9FA81A61554400F09C73 /* board.mesh in Resources */,
 				1A6B61411A5EBD0600F8D961 /* plugins.cfg in Resources */,
+				1ACEC33B1A5FF39A00BE8447 /* Barrel.mesh in Resources */,
+				1ACA9FEF1A61578E00F09C73 /* cubescene_fr.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

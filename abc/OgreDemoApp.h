@@ -97,6 +97,9 @@ private:
 
 	Ogre::SceneNode*			m_pOgreHeadNode;
 	Ogre::Entity*				m_pOgreHeadEntity;
+
+    Ogre::SceneNode *kingNode;
+    Ogre::Entity *kingEntity;
     
 	bool					m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM

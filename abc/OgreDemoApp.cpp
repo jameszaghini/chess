@@ -11,6 +11,8 @@ DemoApp::DemoApp()
 {
 	m_pOgreHeadNode			= 0;
 	m_pOgreHeadEntity		= 0;
+    kingNode = 0;
+    kingEntity = 0;
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
@@ -113,7 +115,7 @@ void DemoApp::destroyRTShaderSystem()
 void DemoApp::startDemo()
 {
 	new OgreFramework();
-	if(!OgreFramework::getSingletonPtr()->initOgre("DemoApp v1.0", this, 0))
+	if(!OgreFramework::getSingletonPtr()->initOgre("Chess", this, 0))
 		return;
     
 	m_bShutdown = false;
@@ -159,13 +161,21 @@ void DemoApp::startDemo()
 
 void DemoApp::setupDemoScene()
 {
-	OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SpaceSkyBox");
+	OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SceneCubeMap2");
 
 	OgreFramework::getSingletonPtr()->m_pSceneMgr->createLight("Light")->setPosition(75,75,75);
 
-	m_pOgreHeadEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("OgreHeadEntity", "ogrehead.mesh");
+	m_pOgreHeadEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("OgreHeadEntity", "board.mesh");
 	m_pOgreHeadNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("OgreHeadNode");
 	m_pOgreHeadNode->attachObject(m_pOgreHeadEntity);
+    m_pOgreHeadNode->scale(4,1,4);
+    
+    kingEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("kingEntity", "king.mesh");
+    kingNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("kingNode");
+    kingNode->attachObject(kingEntity);
+    kingNode->scale(104,104,104);
+
+
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
