@@ -14,7 +14,7 @@
 		1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */; };
 		1A6B61221A5EBD0500F8D961 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61201A5EBD0500F8D961 /* InfoPlist.strings */; };
 		1A6B61241A5EBD0500F8D961 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B61231A5EBD0500F8D961 /* main.mm */; };
-		1A6B61281A5EBD0500F8D961 /* OgreDemoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B61271A5EBD0500F8D961 /* OgreDemoApp.cpp */; };
+		1A6B61281A5EBD0500F8D961 /* OgreChess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B61271A5EBD0500F8D961 /* OgreChess.cpp */; };
 		1A6B612B1A5EBD0500F8D961 /* OgreFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A6B612A1A5EBD0500F8D961 /* OgreFramework.cpp */; };
 		1A6B613F1A5EBD0600F8D961 /* ogre.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B613E1A5EBD0600F8D961 /* ogre.cfg */; };
 		1A6B61411A5EBD0600F8D961 /* plugins.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61401A5EBD0600F8D961 /* plugins.cfg */; };
@@ -50,8 +50,8 @@
 		1A6B61211A5EBD0500F8D961 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A6B61231A5EBD0500F8D961 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		1A6B61261A5EBD0500F8D961 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1A6B61271A5EBD0500F8D961 /* OgreDemoApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OgreDemoApp.cpp; sourceTree = "<group>"; };
-		1A6B61291A5EBD0500F8D961 /* OgreDemoApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreDemoApp.h; sourceTree = "<group>"; };
+		1A6B61271A5EBD0500F8D961 /* OgreChess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OgreChess.cpp; sourceTree = "<group>"; };
+		1A6B61291A5EBD0500F8D961 /* OgreChess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreChess.h; sourceTree = "<group>"; };
 		1A6B612A1A5EBD0500F8D961 /* OgreFramework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OgreFramework.cpp; sourceTree = "<group>"; };
 		1A6B612C1A5EBD0500F8D961 /* OgreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OgreFramework.h; sourceTree = "<group>"; };
 		1A6B61311A5EBD0600F8D961 /* Examples.material */ = {isa = PBXFileReference; lastKnownFileType = text; path = Examples.material; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				1A6B61261A5EBD0500F8D961 /* AppDelegate.h */,
-				1A6B61271A5EBD0500F8D961 /* OgreDemoApp.cpp */,
-				1A6B61291A5EBD0500F8D961 /* OgreDemoApp.h */,
+				1A6B61271A5EBD0500F8D961 /* OgreChess.cpp */,
+				1A6B61291A5EBD0500F8D961 /* OgreChess.h */,
 				1A6B612A1A5EBD0500F8D961 /* OgreFramework.cpp */,
 				1A6B612C1A5EBD0500F8D961 /* OgreFramework.h */,
 				2EB4FDB41A633C0200C9FC90 /* OgreText.h */,
@@ -354,7 +354,7 @@
 			files = (
 				1A6B612B1A5EBD0500F8D961 /* OgreFramework.cpp in Sources */,
 				1A6B61241A5EBD0500F8D961 /* main.mm in Sources */,
-				1A6B61281A5EBD0500F8D961 /* OgreDemoApp.cpp in Sources */,
+				1A6B61281A5EBD0500F8D961 /* OgreChess.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

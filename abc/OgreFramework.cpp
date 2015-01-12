@@ -351,7 +351,7 @@ void OgreFramework::getInput()
     
     if(m_pKeyboard->isKeyDown(OIS::KC_HOME)) {
         m_pCamera->setPosition(-50, 27, -21);
-        m_pCamera->lookAt(50,-20,0);
+        m_pCamera->lookAt(50,-20,10);
     }
     
 #endif

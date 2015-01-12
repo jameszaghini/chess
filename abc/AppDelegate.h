@@ -28,7 +28,7 @@
 #endif
 {
     NSTimer *mTimer;
-    DemoApp demo;
+    Chess demo;
     
     NSDate *mDate;
     double mLastFrameTime;

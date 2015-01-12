@@ -78,11 +78,11 @@ protected:
 };
 #endif
 
-class DemoApp : public OIS::KeyListener
+class Chess : public OIS::KeyListener
 {
 public:
-	DemoApp();
-	~DemoApp();
+	Chess();
+	~Chess();
     
 	void startDemo();
 	

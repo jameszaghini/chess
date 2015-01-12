@@ -1,6 +1,6 @@
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-#include "OgreDemoApp.h"
+#include "OgreChess.h"
 #include "AppDelegate.h"
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
@@ -35,8 +35,8 @@ int main(int argc, char **argv)
     
 	try
     {
-		DemoApp demo;
-		demo.startDemo();
+		Chess chess;
+		chess.startDemo();
     }
 	catch(std::exception& e)
     {

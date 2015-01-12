@@ -1,6 +1,6 @@
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-#include "OgreDemoApp.h"
+#include "OgreChess.h"
 
 #include <OgreLight.h>
 #include <OgreWindowEventUtilities.h>
@@ -8,7 +8,7 @@
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-DemoApp::DemoApp()
+Chess::Chess()
 {
 	m_pOgreHeadNode			= 0;
 	m_pOgreHeadEntity		= 0;
@@ -22,7 +22,7 @@ DemoApp::DemoApp()
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-DemoApp::~DemoApp()
+Chess::~Chess()
 {
 #ifdef INCLUDE_RTSHADER_SYSTEM
     mShaderGenerator->removeSceneManager(OgreFramework::getSingletonPtr()->m_pSceneMgr);
@@ -40,7 +40,7 @@ DemoApp::~DemoApp()
 /*-----------------------------------------------------------------------------
  | Initialize the RT Shader system.	
  -----------------------------------------------------------------------------*/
-bool DemoApp::initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr)
+bool Chess::initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr)
 {			
     if (Ogre::RTShader::ShaderGenerator::initialize())
     {
@@ -95,7 +95,7 @@ bool DemoApp::initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr)
 /*-----------------------------------------------------------------------------
  | Destroy the RT Shader system.
  -----------------------------------------------------------------------------*/
-void DemoApp::destroyRTShaderSystem()
+void Chess::destroyRTShaderSystem()
 {
     // Restore default scheme.
     Ogre::MaterialManager::getSingleton().setActiveScheme(Ogre::MaterialManager::DEFAULT_SCHEME_NAME);
@@ -117,7 +117,7 @@ void DemoApp::destroyRTShaderSystem()
 }
 #endif // INCLUDE_RTSHADER_SYSTEM
 
-void DemoApp::startDemo()
+void Chess::startDemo()
 {
 	new OgreFramework();
 	if(!OgreFramework::getSingletonPtr()->initOgre("Chess", this, 0))
@@ -164,7 +164,7 @@ void DemoApp::startDemo()
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-void DemoApp::setupDemoScene()
+void Chess::setupDemoScene()
 {
 	OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SceneCubeMap2");
 
@@ -185,12 +185,12 @@ void DemoApp::setupDemoScene()
     queenNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("queenNode");
     queenNode->attachObject(queenEntity);
     queenNode->scale(1,1,1);
-
+    
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-void DemoApp::runDemo()
+void Chess::runDemo()
 {
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Start main loop...");
 	
@@ -240,7 +240,7 @@ void DemoApp::runDemo()
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-bool DemoApp::keyPressed(const OIS::KeyEvent &keyEventRef)
+bool Chess::keyPressed(const OIS::KeyEvent &keyEventRef)
 {
 #if !defined(OGRE_IS_IOS)
 	OgreFramework::getSingletonPtr()->keyPressed(keyEventRef);
@@ -259,7 +259,7 @@ bool DemoApp::keyPressed(const OIS::KeyEvent &keyEventRef)
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-bool DemoApp::keyReleased(const OIS::KeyEvent &keyEventRef)
+bool Chess::keyReleased(const OIS::KeyEvent &keyEventRef)
 {
 #if !defined(OGRE_IS_IOS)
 	OgreFramework::getSingletonPtr()->keyReleased(keyEventRef);
