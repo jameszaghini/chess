@@ -6,8 +6,6 @@
 #include <OgreWindowEventUtilities.h>
 #include "OgreText.h"
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 Chess::Chess()
 {
 	boardNode = 0;
@@ -26,8 +24,6 @@ Chess::Chess()
     whitePawnEntity2 = 0;
 }
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 Chess::~Chess()
 {
 #ifdef INCLUDE_RTSHADER_SYSTEM
@@ -38,8 +34,6 @@ Chess::~Chess()
     
     delete OgreFramework::getSingletonPtr();
 }
-
-//|||||||||||||||||||||||||||||||||||||||||||||||
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
 
@@ -168,8 +162,6 @@ void Chess::startDemo()
 #endif
 }
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 void Chess::setupChessScene()
 {
 	OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SceneCubeMap2");
@@ -234,8 +226,6 @@ void Chess::setupChessScene()
     whitePawnNode8->translate(13.2,0.5,.5);
 }
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 void Chess::runDemo()
 {
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Start main loop...");
@@ -284,8 +274,6 @@ void Chess::runDemo()
 #endif
 }
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 bool Chess::keyPressed(const OIS::KeyEvent &keyEventRef)
 {
 #if !defined(OGRE_IS_IOS)
@@ -303,8 +291,6 @@ bool Chess::keyPressed(const OIS::KeyEvent &keyEventRef)
 	return true;
 }
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
-
 bool Chess::keyReleased(const OIS::KeyEvent &keyEventRef)
 {
 #if !defined(OGRE_IS_IOS)
@@ -313,5 +299,3 @@ bool Chess::keyReleased(const OIS::KeyEvent &keyEventRef)
 
 	return true;
 }
-
-//|||||||||||||||||||||||||||||||||||||||||||||||
