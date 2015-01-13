@@ -196,13 +196,42 @@ void Chess::setupChessScene()
     whitePawnEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity", "PawnA01.mesh");
     whitePawnNode = boardNode->createChildSceneNode("whitePawnNode");
     whitePawnNode->attachObject(whitePawnEntity);
-    whitePawnNode->scale(1,1,1);
-    whitePawnNode->translate(-0.75,1,1);
+    whitePawnNode->translate(-0.8,0.5,.5);
     
     whitePawnEntity2 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity2", "PawnA01.mesh");
     whitePawnNode2 = boardNode->createChildSceneNode("whitePawnNode2");
     whitePawnNode2->attachObject(whitePawnEntity2);
-    whitePawnNode2->translate(1,1,1);
+    whitePawnNode2->translate(1.2,0.5,.5);
+    
+    whitePawnEntity3 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity3", "PawnA01.mesh");
+    whitePawnNode3 = boardNode->createChildSceneNode("whitePawnNode3");
+    whitePawnNode3->attachObject(whitePawnEntity3);
+    whitePawnNode3->translate(3.2,0.5,.5);
+    
+    whitePawnEntity4 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity4", "PawnA01.mesh");
+    whitePawnNode4 = boardNode->createChildSceneNode("whitePawnNode4");
+    whitePawnNode4->attachObject(whitePawnEntity4);
+    whitePawnNode4->translate(5.2,0.5,.5);
+    
+    whitePawnEntity5 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity5", "PawnA01.mesh");
+    whitePawnNode5 = boardNode->createChildSceneNode("whitePawnNode5");
+    whitePawnNode5->attachObject(whitePawnEntity5);
+    whitePawnNode5->translate(7.2,0.5,.5);
+    
+    whitePawnEntity6 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity6", "PawnA01.mesh");
+    whitePawnNode6 = boardNode->createChildSceneNode("whitePawnNode6");
+    whitePawnNode6->attachObject(whitePawnEntity6);
+    whitePawnNode6->translate(9.2,0.5,.5);
+    
+    whitePawnEntity7 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity7", "PawnA01.mesh");
+    whitePawnNode7 = boardNode->createChildSceneNode("whitePawnNode7");
+    whitePawnNode7->attachObject(whitePawnEntity7);
+    whitePawnNode7->translate(11.2,0.5,.5);
+    
+    whitePawnEntity8 = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("whitePawnEntity8", "PawnA01.mesh");
+    whitePawnNode8 = boardNode->createChildSceneNode("whitePawnNode8");
+    whitePawnNode8->attachObject(whitePawnEntity8);
+    whitePawnNode8->translate(13.2,0.5,.5);
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||

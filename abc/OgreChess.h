@@ -110,6 +110,24 @@ private:
     Ogre::SceneNode *whitePawnNode2;
     Ogre::Entity *whitePawnEntity2;
     
+    Ogre::SceneNode *whitePawnNode3;
+    Ogre::Entity *whitePawnEntity3;
+    
+    Ogre::SceneNode *whitePawnNode4;
+    Ogre::Entity *whitePawnEntity4;
+    
+    Ogre::SceneNode *whitePawnNode5;
+    Ogre::Entity *whitePawnEntity5;
+    
+    Ogre::SceneNode *whitePawnNode6;
+    Ogre::Entity *whitePawnEntity6;
+    
+    Ogre::SceneNode *whitePawnNode7;
+    Ogre::Entity *whitePawnEntity7;
+    
+    Ogre::SceneNode *whitePawnNode8;
+    Ogre::Entity *whitePawnEntity8;
+    
 	bool					m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
     Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.
