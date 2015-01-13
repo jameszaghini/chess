@@ -321,7 +321,12 @@ bool Chess::keyPressed(const OIS::KeyEvent &keyEventRef)
 	if(OgreFramework::getSingletonPtr()->m_pKeyboard->isKeyDown(OIS::KC_F))
 	{
         OgreText *textItem = new OgreText;
-        textItem->setText("Hello World!");    // Text to be displayed
+        
+        Ogre::Vector3 cameraPosition = OgreFramework::getSingletonPtr()->m_pCamera->getPosition();
+        
+        printf("Camera x: %f, y: %f, z: %f", cameraPosition.x, cameraPosition.y, cameraPosition.z);
+        
+        //textItem->setText("Camera x: %f, y: %f, z: %f", cameraPosition.x, cameraPosition.y, cameraPosition.z);    // Text to be displayed
         // Now it is possible to use the Ogre::String as parameter too
         textItem->setPos(0.1f,0.1f);        // Text position, using relative co-ordinates
         textItem->setCol(1.0f,1.0f,1.0f,0.5f);    // Text colour (Red, Green, Blue, Alpha)
