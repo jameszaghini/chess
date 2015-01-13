@@ -70,7 +70,7 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
 	m_pRenderWnd = m_pRoot->initialise(true, wndTitle);
     
 	m_pSceneMgr = m_pRoot->createSceneManager(ST_GENERIC, "SceneManager");
-	m_pSceneMgr->setAmbientLight(Ogre::ColourValue(0.7f, 0.7f, 0.7f));
+	m_pSceneMgr->setAmbientLight(Ogre::ColourValue(0.6f, 0.6f, 0.6f));
 
     m_pOverlaySystem = new Ogre::OverlaySystem();
     m_pSceneMgr->addRenderQueueListener(m_pOverlaySystem);
@@ -81,7 +81,7 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
 	m_pCamera->setNearClipDistance(1);
     
 	m_pViewport = m_pRenderWnd->addViewport(m_pCamera);
-	m_pViewport->setBackgroundColour(ColourValue(0.8f, 0.7f, 0.6f, 1.0f));
+	m_pViewport->setBackgroundColour(ColourValue(0.4f, 0.2f, 0.2f, 1.0f));
     
 	m_pCamera->setAspectRatio(Real(m_pViewport->getActualWidth()) / Real(m_pViewport->getActualHeight()));
 	
