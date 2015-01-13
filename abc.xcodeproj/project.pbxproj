@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A3010361A63E44B00B14087 /* BishopA01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A3010181A63E44B00B14087 /* BishopA01.mesh */; };
-		1A3010371A63E44B00B14087 /* BishopB02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A3010191A63E44B00B14087 /* BishopB02.mesh */; };
 		1A3010381A63E44B00B14087 /* HorseA01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A30101A1A63E44B00B14087 /* HorseA01.mesh */; };
 		1A3010391A63E44B00B14087 /* HorseA02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A30101B1A63E44B00B14087 /* HorseA02.mesh */; };
 		1A30103A1A63E44B00B14087 /* HorseB01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A30101C1A63E44B00B14087 /* HorseB01.mesh */; };
@@ -37,6 +35,7 @@
 		1A3010511A63E44B00B14087 /* TowerA02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A3010331A63E44B00B14087 /* TowerA02.mesh */; };
 		1A3010521A63E44B00B14087 /* TowerB01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A3010341A63E44B00B14087 /* TowerB01.mesh */; };
 		1A3010531A63E44B00B14087 /* TowerB02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A3010351A63E44B00B14087 /* TowerB02.mesh */; };
+		1A62D3AD1A64D4F5005A7293 /* Bishop.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A62D3AC1A64D4F5005A7293 /* Bishop.mesh */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
 		1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61141A5EBD0500F8D961 /* Cocoa.framework */; };
 		1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61161A5EBD0500F8D961 /* IOKit.framework */; };
@@ -63,8 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A3010181A63E44B00B14087 /* BishopA01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = BishopA01.mesh; sourceTree = "<group>"; };
-		1A3010191A63E44B00B14087 /* BishopB02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = BishopB02.mesh; sourceTree = "<group>"; };
 		1A30101A1A63E44B00B14087 /* HorseA01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = HorseA01.mesh; sourceTree = "<group>"; };
 		1A30101B1A63E44B00B14087 /* HorseA02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = HorseA02.mesh; sourceTree = "<group>"; };
 		1A30101C1A63E44B00B14087 /* HorseB01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = HorseB01.mesh; sourceTree = "<group>"; };
@@ -93,6 +90,7 @@
 		1A3010331A63E44B00B14087 /* TowerA02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = TowerA02.mesh; sourceTree = "<group>"; };
 		1A3010341A63E44B00B14087 /* TowerB01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = TowerB01.mesh; sourceTree = "<group>"; };
 		1A3010351A63E44B00B14087 /* TowerB02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = TowerB02.mesh; sourceTree = "<group>"; };
+		1A62D3AC1A64D4F5005A7293 /* Bishop.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bishop.mesh; sourceTree = "<group>"; };
 		1A6B610F1A5EBD0500F8D961 /* abc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B61121A5EBD0500F8D961 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		1A6B61141A5EBD0500F8D961 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -148,8 +146,7 @@
 		1A300FDB1A63E0A300B14087 /* new */ = {
 			isa = PBXGroup;
 			children = (
-				1A3010181A63E44B00B14087 /* BishopA01.mesh */,
-				1A3010191A63E44B00B14087 /* BishopB02.mesh */,
+				1A62D3AC1A64D4F5005A7293 /* Bishop.mesh */,
 				1A30101A1A63E44B00B14087 /* HorseA01.mesh */,
 				1A30101B1A63E44B00B14087 /* HorseA02.mesh */,
 				1A30101C1A63E44B00B14087 /* HorseB01.mesh */,
@@ -384,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3010521A63E44B00B14087 /* TowerB01.mesh in Resources */,
-				1A3010361A63E44B00B14087 /* BishopA01.mesh in Resources */,
 				1A3010441A63E44B00B14087 /* PawnA07.mesh in Resources */,
 				1A3010481A63E44B00B14087 /* PawnB03.mesh in Resources */,
 				1A3010401A63E44B00B14087 /* PawnA03.mesh in Resources */,
@@ -400,8 +396,8 @@
 				1A3010531A63E44B00B14087 /* TowerB02.mesh in Resources */,
 				1ACA9FF01A61578E00F09C73 /* cubescene_lf.jpg in Resources */,
 				1ACA9FAE1A61576100F09C73 /* skybox.zip in Resources */,
+				1A62D3AD1A64D4F5005A7293 /* Bishop.mesh in Resources */,
 				1ACA9FAC1A6155A000F09C73 /* white.material in Resources */,
-				1A3010371A63E44B00B14087 /* BishopB02.mesh in Resources */,
 				1A30103A1A63E44B00B14087 /* HorseB01.mesh in Resources */,
 				1A6B613F1A5EBD0600F8D961 /* ogre.cfg in Resources */,
 				1A30103F1A63E44B00B14087 /* PawnA02.mesh in Resources */,
