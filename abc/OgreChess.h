@@ -90,19 +90,25 @@ public:
 	bool keyReleased(const OIS::KeyEvent &keyEventRef);
     
 private:
-    void setupDemoScene();
+    void setupChessScene();
 	void runDemo();
     bool initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void destroyRTShaderSystem();
 
-	Ogre::SceneNode*			m_pOgreHeadNode;
-	Ogre::Entity*				m_pOgreHeadEntity;
+	Ogre::SceneNode *boardNode;
+	Ogre::Entity *boardEntity;
 
-    Ogre::SceneNode *kingNode;
-    Ogre::Entity *kingEntity;
+    Ogre::SceneNode *whiteQueenNode;
+    Ogre::Entity *whiteQueenEntity;
     
-    Ogre::SceneNode *queenNode;
-    Ogre::Entity *queenEntity;
+    Ogre::SceneNode *whiteKingNode;
+    Ogre::Entity *whiteKingEntity;
+    
+    Ogre::SceneNode *whitePawnNode;
+    Ogre::Entity *whitePawnEntity;
+    
+    Ogre::SceneNode *whitePawnNode2;
+    Ogre::Entity *whitePawnEntity2;
     
 	bool					m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM

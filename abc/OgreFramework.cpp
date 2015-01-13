@@ -65,7 +65,7 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     
     RenderSystem *rs = m_pRoot->getRenderSystemByName("OpenGL Rendering Subsystem");
     m_pRoot->setRenderSystem(rs);
-    rs->setConfigOption("Video Mode", "1024 x 480 @ 32-bit colour");
+    rs->setConfigOption("Video Mode", "1440 x 900 @ 32-bit colour");
 
 	m_pRenderWnd = m_pRoot->initialise(true, wndTitle);
     
@@ -76,7 +76,7 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     m_pSceneMgr->addRenderQueueListener(m_pOverlaySystem);
 
 	m_pCamera = m_pSceneMgr->createCamera("Camera");
-	m_pCamera->setPosition(Vector3(0, 60, 60));
+	m_pCamera->setPosition(Vector3(0, 20, 20));
 	m_pCamera->lookAt(Vector3(0, 0, 0));
 	m_pCamera->setNearClipDistance(1);
     
@@ -208,14 +208,10 @@ bool OgreFramework::keyPressed(const OIS::KeyEvent &keyEventRef)
     
 	if(m_pKeyboard->isKeyDown(OIS::KC_O))
 	{
-		if(m_pTrayMgr->isLogoVisible())
-        {
+		if(m_pTrayMgr->isLogoVisible()) {
             m_pTrayMgr->hideLogo();
             m_pTrayMgr->hideFrameStats();
-        }
-        else
-        {
-//            m_pTrayMgr->showLogo(OgreBites::TL_BOTTOMRIGHT);
+        } else {
             m_pTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
         }
 	}
