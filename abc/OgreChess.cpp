@@ -165,76 +165,104 @@ void Chess::startDemo()
 void Chess::setupChessScene()
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
-	sManager->setSkyBox(true, "Examples/SceneCubeMap2");
-
-//	sManager->createLight("Light")->setPosition(75,75,75);
+//	sManager->setSkyBox(true, "Examples/SceneCubeMap2");
 
     Ogre::Light* spotLight = sManager->createLight("spotLight");
     spotLight->setType(Ogre::Light::LT_SPOTLIGHT);
     spotLight->setDiffuseColour(0.8, 0.8, 0.8);
     spotLight->setSpecularColour(0.8, 0.8, 0.8);
-    
     spotLight->setDirection(-1, -1, 0);
     spotLight->setPosition(Ogre::Vector3(40, 40, 0));
-    
     spotLight->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(28));
     
 	boardEntity = sManager->createEntity("boardEntity", "board.mesh");
 	boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
 	boardNode->attachObject(boardEntity);
-    boardNode->setPosition(0,0,0);
+    boardNode->setPosition(0, 0, 0);
     
-    whiteQueenEntity = sManager->createEntity("whiteQueenEntity", "QueenB.mesh");
+    whiteQueenEntity = sManager->createEntity("whiteQueenEntity", "QueenA.mesh");
     whiteQueenNode = boardNode->createChildSceneNode("whiteQueenNode");
     whiteQueenNode->attachObject(whiteQueenEntity);
-    whiteQueenNode->scale(1,1,1);
-    whiteQueenNode->translate(0,1,0);    
+    whiteQueenNode->translate(7.1, 1.5, -1);
     
     whiteKingEntity = sManager->createEntity("whiteKingEntity", "KingA.mesh");
     whiteKingNode = boardNode->createChildSceneNode("whiteKingNode");
     whiteKingNode->attachObject(whiteKingEntity);
-    whiteKingNode->scale(1,1,1);
-    whiteKingNode->translate(0,2,0);
+    whiteKingNode->translate(9.1, 1.35, -1);
     
+    float pawnZ = -7.5f;
+    float pawnY = -.2f;
     whitePawnEntity = sManager->createEntity("whitePawnEntity", "PawnA01.mesh");
     whitePawnNode = boardNode->createChildSceneNode("whitePawnNode");
     whitePawnNode->attachObject(whitePawnEntity);
-    whitePawnNode->translate(-0.8,0.5,.5);
+    whitePawnNode->translate(7.3, pawnY, pawnZ);
     
     whitePawnEntity2 = sManager->createEntity("whitePawnEntity2", "PawnA01.mesh");
     whitePawnNode2 = boardNode->createChildSceneNode("whitePawnNode2");
     whitePawnNode2->attachObject(whitePawnEntity2);
-    whitePawnNode2->translate(1.2,0.5,.5);
+    whitePawnNode2->translate(9.3, pawnY, pawnZ);
     
     whitePawnEntity3 = sManager->createEntity("whitePawnEntity3", "PawnA01.mesh");
     whitePawnNode3 = boardNode->createChildSceneNode("whitePawnNode3");
     whitePawnNode3->attachObject(whitePawnEntity3);
-    whitePawnNode3->translate(3.2,0.5,.5);
+    whitePawnNode3->translate(11.3, pawnY, pawnZ);
     
     whitePawnEntity4 = sManager->createEntity("whitePawnEntity4", "PawnA01.mesh");
     whitePawnNode4 = boardNode->createChildSceneNode("whitePawnNode4");
     whitePawnNode4->attachObject(whitePawnEntity4);
-    whitePawnNode4->translate(5.2,0.5,.5);
+    whitePawnNode4->translate(13.3, pawnY, pawnZ);
     
     whitePawnEntity5 = sManager->createEntity("whitePawnEntity5", "PawnA01.mesh");
     whitePawnNode5 = boardNode->createChildSceneNode("whitePawnNode5");
     whitePawnNode5->attachObject(whitePawnEntity5);
-    whitePawnNode5->translate(7.2,0.5,.5);
+    whitePawnNode5->translate(15.3, pawnY, pawnZ);
     
     whitePawnEntity6 = sManager->createEntity("whitePawnEntity6", "PawnA01.mesh");
     whitePawnNode6 = boardNode->createChildSceneNode("whitePawnNode6");
     whitePawnNode6->attachObject(whitePawnEntity6);
-    whitePawnNode6->translate(9.2,0.5,.5);
+    whitePawnNode6->translate(17.3, pawnY, pawnZ);
     
     whitePawnEntity7 = sManager->createEntity("whitePawnEntity7", "PawnA01.mesh");
     whitePawnNode7 = boardNode->createChildSceneNode("whitePawnNode7");
     whitePawnNode7->attachObject(whitePawnEntity7);
-    whitePawnNode7->translate(11.2,0.5,.5);
+    whitePawnNode7->translate(19.3, pawnY, pawnZ);
     
     whitePawnEntity8 = sManager->createEntity("whitePawnEntity8", "PawnA01.mesh");
     whitePawnNode8 = boardNode->createChildSceneNode("whitePawnNode8");
     whitePawnNode8->attachObject(whitePawnEntity8);
-    whitePawnNode8->translate(13.2,0.5,.5);
+    whitePawnNode8->translate(21.3, pawnY, pawnZ);
+    
+    whiteRookEntity1 = sManager->createEntity("whiteRookEntity1", "TowerA01.mesh");
+    whiteRookNode1 = boardNode->createChildSceneNode("whiteRookNode1");
+    whiteRookNode1->attachObject(whiteRookEntity1);
+    whiteRookNode1->translate(1.1, 0.8, -1);
+    
+    whiteRookEntity2 = sManager->createEntity("whiteRookEntity2", "TowerA01.mesh");
+    whiteRookNode2 = boardNode->createChildSceneNode("whiteRookNode2");
+    whiteRookNode2->attachObject(whiteRookEntity2);
+    whiteRookNode2->translate(15.1, 0.8, -1);
+    
+    whiteKnightEntity1 = sManager->createEntity("whiteKnightEntity1", "HorseA01.mesh");
+    whiteKnightNode1 = boardNode->createChildSceneNode("whiteKnightNode1");
+    whiteKnightNode1->attachObject(whiteKnightEntity1);
+    whiteKnightNode1->translate(3.1, 0.7f, -1);
+    
+    whiteKnightEntity2 = sManager->createEntity("whiteKnightEntity2", "HorseA01.mesh");
+    whiteKnightNode2 = boardNode->createChildSceneNode("whiteKnightNode2");
+    whiteKnightNode2->attachObject(whiteKnightEntity2);
+    whiteKnightNode2->translate(13.1, 0.7, -1);
+    whiteKnightNode2->roll(Degree(-90));
+    
+    whiteBishopEntity1 = sManager->createEntity("whiteBishopEntity1", "Bishop.mesh");
+    whiteBishopNode1 = boardNode->createChildSceneNode("whiteBishopNode1");
+    whiteBishopNode1->attachObject(whiteBishopEntity1);
+    whiteBishopNode1->translate(5.1, 0.6, -1);
+    
+    whiteBishopEntity2 = sManager->createEntity("whiteBishopEntity2", "Bishop.mesh");
+    whiteBishopNode2 = boardNode->createChildSceneNode("whiteBishopNode2");
+    whiteBishopNode2->attachObject(whiteBishopEntity2);
+    whiteBishopNode2->translate(11.1, 0.6, -1);
+    whiteBishopNode2->yaw(Degree(90));
 }
 
 void Chess::runDemo()
