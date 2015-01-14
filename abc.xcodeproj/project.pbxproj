@@ -48,6 +48,7 @@
 		1A6B613F1A5EBD0600F8D961 /* ogre.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B613E1A5EBD0600F8D961 /* ogre.cfg */; };
 		1A6B61411A5EBD0600F8D961 /* plugins.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61401A5EBD0600F8D961 /* plugins.cfg */; };
 		1A6B61431A5EBD0600F8D961 /* resources.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 1A6B61421A5EBD0600F8D961 /* resources.cfg */; };
+		1A8F83C21A654376007FDBE0 /* SoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F83C01A654376007FDBE0 /* SoundManager.cpp */; };
 		1ACA9FA81A61554400F09C73 /* board.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FA71A61554400F09C73 /* board.mesh */; };
 		1ACA9FAB1A6155A000F09C73 /* black.material in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FA91A6155A000F09C73 /* black.material */; };
 		1ACA9FAC1A6155A000F09C73 /* white.material in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA9FAA1A6155A000F09C73 /* white.material */; };
@@ -113,6 +114,8 @@
 		1A6B613E1A5EBD0600F8D961 /* ogre.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ogre.cfg; sourceTree = "<group>"; };
 		1A6B61401A5EBD0600F8D961 /* plugins.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = plugins.cfg; sourceTree = "<group>"; };
 		1A6B61421A5EBD0600F8D961 /* resources.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = resources.cfg; sourceTree = "<group>"; };
+		1A8F83C01A654376007FDBE0 /* SoundManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundManager.cpp; sourceTree = "<group>"; };
+		1A8F83C11A654376007FDBE0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		1ACA9FA71A61554400F09C73 /* board.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; path = board.mesh; sourceTree = "<group>"; };
 		1ACA9FA91A6155A000F09C73 /* black.material */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = black.material; sourceTree = "<group>"; };
 		1ACA9FAA1A6155A000F09C73 /* white.material */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = white.material; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				1A6B612A1A5EBD0500F8D961 /* OgreFramework.cpp */,
 				1A6B612C1A5EBD0500F8D961 /* OgreFramework.h */,
 				2EB4FDB41A633C0200C9FC90 /* OgreText.h */,
+				1A8F83C01A654376007FDBE0 /* SoundManager.cpp */,
+				1A8F83C11A654376007FDBE0 /* SoundManager.h */,
 			);
 			name = "Basic Ogre Framework";
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6B612B1A5EBD0500F8D961 /* OgreFramework.cpp in Sources */,
+				1A8F83C21A654376007FDBE0 /* SoundManager.cpp in Sources */,
 				1A6B61241A5EBD0500F8D961 /* main.mm in Sources */,
 				1A6B61281A5EBD0500F8D961 /* OgreChess.cpp in Sources */,
 			);

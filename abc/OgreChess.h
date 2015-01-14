@@ -140,6 +140,9 @@ private:
     Ogre::SceneNode *whiteBishopNode2;
     Ogre::Entity *whiteBishopEntity2;
     
+    int            gunSoundIndex;
+    int            gunSoundChannel;
+    
 	bool					m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
     Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.

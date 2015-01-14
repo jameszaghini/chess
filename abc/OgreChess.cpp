@@ -6,6 +6,9 @@
 #include <OgreWindowEventUtilities.h>
 #include "OgreText.h"
 
+#include "SoundManager.h"
+
+
 Chess::Chess()
 {
 	boardNode = 0;
@@ -263,6 +266,9 @@ void Chess::setupChessScene()
     whiteBishopNode2->attachObject(whiteBishopEntity2);
     whiteBishopNode2->translate(11.1, 0.6, -1);
     whiteBishopNode2->yaw(Degree(90));
+    
+    
+    
 }
 
 void Chess::runDemo()
