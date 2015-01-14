@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
+		1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61141A5EBD0500F8D961 /* Cocoa.framework */; };
+		1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61161A5EBD0500F8D961 /* IOKit.framework */; };
+		1A6B61191A5EBD0500F8D961 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61181A5EBD0500F8D961 /* OpenGL.framework */; };
+		1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */; };
+		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
+		2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */; };
+		2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */; };
+		2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31C1A65E2B900A50D33 /* OgreFramework.cpp */; };
+		2ECDC3241A65E2D000A50D33 /* ogre.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3211A65E2D000A50D33 /* ogre.cfg */; };
+		2ECDC3251A65E2D000A50D33 /* plugins.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3221A65E2D000A50D33 /* plugins.cfg */; };
+		2ECDC3261A65E2D000A50D33 /* resources.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3231A65E2D000A50D33 /* resources.cfg */; };
+		2ECDC3451A66273600A50D33 /* Bishop.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3271A66273600A50D33 /* Bishop.mesh */; };
+		2ECDC3461A66273600A50D33 /* board.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3281A66273600A50D33 /* board.mesh */; };
+		2ECDC3471A66273600A50D33 /* HorseA01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3291A66273600A50D33 /* HorseA01.mesh */; };
+		2ECDC3481A66273600A50D33 /* HorseA02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32A1A66273600A50D33 /* HorseA02.mesh */; };
+		2ECDC3491A66273600A50D33 /* HorseB01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32B1A66273600A50D33 /* HorseB01.mesh */; };
+		2ECDC34A1A66273600A50D33 /* HorseB02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32C1A66273600A50D33 /* HorseB02.mesh */; };
+		2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32D1A66273600A50D33 /* KingA.mesh */; };
+		2ECDC34C1A66273600A50D33 /* KingB.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32E1A66273600A50D33 /* KingB.mesh */; };
+		2ECDC34D1A66273600A50D33 /* PawnA01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC32F1A66273600A50D33 /* PawnA01.mesh */; };
+		2ECDC34E1A66273600A50D33 /* PawnA02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3301A66273600A50D33 /* PawnA02.mesh */; };
+		2ECDC34F1A66273600A50D33 /* PawnA03.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3311A66273600A50D33 /* PawnA03.mesh */; };
+		2ECDC3501A66273600A50D33 /* PawnA04.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3321A66273600A50D33 /* PawnA04.mesh */; };
+		2ECDC3511A66273600A50D33 /* PawnA05.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3331A66273600A50D33 /* PawnA05.mesh */; };
+		2ECDC3521A66273600A50D33 /* PawnA06.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3341A66273600A50D33 /* PawnA06.mesh */; };
+		2ECDC3531A66273600A50D33 /* PawnA07.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3351A66273600A50D33 /* PawnA07.mesh */; };
+		2ECDC3541A66273600A50D33 /* PawnA08.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3361A66273600A50D33 /* PawnA08.mesh */; };
+		2ECDC3551A66273600A50D33 /* PawnB01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3371A66273600A50D33 /* PawnB01.mesh */; };
+		2ECDC3561A66273600A50D33 /* PawnB02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3381A66273600A50D33 /* PawnB02.mesh */; };
+		2ECDC3571A66273600A50D33 /* PawnB03.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3391A66273600A50D33 /* PawnB03.mesh */; };
+		2ECDC3581A66273600A50D33 /* PawnB04.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33A1A66273600A50D33 /* PawnB04.mesh */; };
+		2ECDC3591A66273600A50D33 /* PawnB05.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33B1A66273600A50D33 /* PawnB05.mesh */; };
+		2ECDC35A1A66273600A50D33 /* PawnB06.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33C1A66273600A50D33 /* PawnB06.mesh */; };
+		2ECDC35B1A66273600A50D33 /* PawnB07.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33D1A66273600A50D33 /* PawnB07.mesh */; };
+		2ECDC35C1A66273600A50D33 /* PawnB08.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33E1A66273600A50D33 /* PawnB08.mesh */; };
+		2ECDC35D1A66273600A50D33 /* QueenA.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC33F1A66273600A50D33 /* QueenA.mesh */; };
+		2ECDC35E1A66273600A50D33 /* QueenB.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3401A66273600A50D33 /* QueenB.mesh */; };
+		2ECDC35F1A66273600A50D33 /* TowerA01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3411A66273600A50D33 /* TowerA01.mesh */; };
+		2ECDC3601A66273600A50D33 /* TowerA02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3421A66273600A50D33 /* TowerA02.mesh */; };
+		2ECDC3611A66273600A50D33 /* TowerB01.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3431A66273600A50D33 /* TowerB01.mesh */; };
+		2ECDC3621A66273600A50D33 /* TowerB02.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3441A66273600A50D33 /* TowerB02.mesh */; };
+		2ECDC3641A66275600A50D33 /* Examples.material in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3631A66275600A50D33 /* Examples.material */; };
+		2ECDC3691A66277200A50D33 /* cubemap.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3651A66277200A50D33 /* cubemap.zip */; };
+		2ECDC36A1A66277200A50D33 /* cubemapsJS.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3661A66277200A50D33 /* cubemapsJS.zip */; };
+		2ECDC36B1A66277200A50D33 /* SdkTrays.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3671A66277200A50D33 /* SdkTrays.zip */; };
+		2ECDC36C1A66277200A50D33 /* skybox.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3681A66277200A50D33 /* skybox.zip */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A6B610F1A5EBD0500F8D961 /* abc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6B61121A5EBD0500F8D961 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		1A6B61141A5EBD0500F8D961 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1A6B61161A5EBD0500F8D961 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		1A6B61181A5EBD0500F8D961 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		2ECDC3131A65E27E00A50D33 /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chess-Info.plist"; path = "chess/chess-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2ECDC3141A65E29D00A50D33 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = chess/main.mm; sourceTree = SOURCE_ROOT; };
+		2ECDC3171A65E2A100A50D33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = chess/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		2ECDC3191A65E2B900A50D33 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = chess/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OgreChess.cpp; path = chess/OgreChess.cpp; sourceTree = SOURCE_ROOT; };
+		2ECDC31B1A65E2B900A50D33 /* OgreChess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OgreChess.h; path = chess/OgreChess.h; sourceTree = SOURCE_ROOT; };
+		2ECDC31C1A65E2B900A50D33 /* OgreFramework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OgreFramework.cpp; path = chess/OgreFramework.cpp; sourceTree = SOURCE_ROOT; };
+		2ECDC31D1A65E2B900A50D33 /* OgreFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OgreFramework.h; path = chess/OgreFramework.h; sourceTree = SOURCE_ROOT; };
+		2ECDC31E1A65E2B900A50D33 /* OgreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OgreText.h; path = chess/OgreText.h; sourceTree = SOURCE_ROOT; };
+		2ECDC3211A65E2D000A50D33 /* ogre.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ogre.cfg; path = chess/ogre.cfg; sourceTree = SOURCE_ROOT; };
+		2ECDC3221A65E2D000A50D33 /* plugins.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plugins.cfg; path = chess/plugins.cfg; sourceTree = SOURCE_ROOT; };
+		2ECDC3231A65E2D000A50D33 /* resources.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = resources.cfg; path = chess/resources.cfg; sourceTree = SOURCE_ROOT; };
+		2ECDC3271A66273600A50D33 /* Bishop.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bishop.mesh; path = chess/media/models/Bishop.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3281A66273600A50D33 /* board.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = board.mesh; path = chess/media/models/board.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3291A66273600A50D33 /* HorseA01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = HorseA01.mesh; path = chess/media/models/HorseA01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32A1A66273600A50D33 /* HorseA02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = HorseA02.mesh; path = chess/media/models/HorseA02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32B1A66273600A50D33 /* HorseB01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = HorseB01.mesh; path = chess/media/models/HorseB01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32C1A66273600A50D33 /* HorseB02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = HorseB02.mesh; path = chess/media/models/HorseB02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32D1A66273600A50D33 /* KingA.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = KingA.mesh; path = chess/media/models/KingA.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32E1A66273600A50D33 /* KingB.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = KingB.mesh; path = chess/media/models/KingB.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC32F1A66273600A50D33 /* PawnA01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA01.mesh; path = chess/media/models/PawnA01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3301A66273600A50D33 /* PawnA02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA02.mesh; path = chess/media/models/PawnA02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3311A66273600A50D33 /* PawnA03.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA03.mesh; path = chess/media/models/PawnA03.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3321A66273600A50D33 /* PawnA04.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA04.mesh; path = chess/media/models/PawnA04.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3331A66273600A50D33 /* PawnA05.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA05.mesh; path = chess/media/models/PawnA05.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3341A66273600A50D33 /* PawnA06.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA06.mesh; path = chess/media/models/PawnA06.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3351A66273600A50D33 /* PawnA07.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA07.mesh; path = chess/media/models/PawnA07.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3361A66273600A50D33 /* PawnA08.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA08.mesh; path = chess/media/models/PawnA08.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3371A66273600A50D33 /* PawnB01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB01.mesh; path = chess/media/models/PawnB01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3381A66273600A50D33 /* PawnB02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB02.mesh; path = chess/media/models/PawnB02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3391A66273600A50D33 /* PawnB03.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB03.mesh; path = chess/media/models/PawnB03.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33A1A66273600A50D33 /* PawnB04.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB04.mesh; path = chess/media/models/PawnB04.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33B1A66273600A50D33 /* PawnB05.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB05.mesh; path = chess/media/models/PawnB05.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33C1A66273600A50D33 /* PawnB06.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB06.mesh; path = chess/media/models/PawnB06.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33D1A66273600A50D33 /* PawnB07.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB07.mesh; path = chess/media/models/PawnB07.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33E1A66273600A50D33 /* PawnB08.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnB08.mesh; path = chess/media/models/PawnB08.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC33F1A66273600A50D33 /* QueenA.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = QueenA.mesh; path = chess/media/models/QueenA.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3401A66273600A50D33 /* QueenB.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = QueenB.mesh; path = chess/media/models/QueenB.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3411A66273600A50D33 /* TowerA01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = TowerA01.mesh; path = chess/media/models/TowerA01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3421A66273600A50D33 /* TowerA02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = TowerA02.mesh; path = chess/media/models/TowerA02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3431A66273600A50D33 /* TowerB01.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = TowerB01.mesh; path = chess/media/models/TowerB01.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3441A66273600A50D33 /* TowerB02.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = TowerB02.mesh; path = chess/media/models/TowerB02.mesh; sourceTree = SOURCE_ROOT; };
+		2ECDC3631A66275600A50D33 /* Examples.material */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Examples.material; path = chess/media/materials/scripts/Examples.material; sourceTree = SOURCE_ROOT; };
+		2ECDC3651A66277200A50D33 /* cubemap.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = cubemap.zip; path = chess/media/packs/cubemap.zip; sourceTree = SOURCE_ROOT; };
+		2ECDC3661A66277200A50D33 /* cubemapsJS.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = cubemapsJS.zip; path = chess/media/packs/cubemapsJS.zip; sourceTree = SOURCE_ROOT; };
+		2ECDC3671A66277200A50D33 /* SdkTrays.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = SdkTrays.zip; path = chess/media/packs/SdkTrays.zip; sourceTree = SOURCE_ROOT; };
+		2ECDC3681A66277200A50D33 /* skybox.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = skybox.zip; path = chess/media/packs/skybox.zip; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A6B610B1A5EBD0500F8D961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */,
+				1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */,
+				1A6B61191A5EBD0500F8D961 /* OpenGL.framework in Frameworks */,
+				1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */,
+				1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A6B61051A5EBD0500F8D961 = {
+			isa = PBXGroup;
+			children = (
+				1A6B611C1A5EBD0500F8D961 /* chess */,
+				1A6B61111A5EBD0500F8D961 /* Frameworks */,
+				1A6B61101A5EBD0500F8D961 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A6B61101A5EBD0500F8D961 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B610F1A5EBD0500F8D961 /* abc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A6B61111A5EBD0500F8D961 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B61121A5EBD0500F8D961 /* Carbon.framework */,
+				1A6B61141A5EBD0500F8D961 /* Cocoa.framework */,
+				1A6B61161A5EBD0500F8D961 /* IOKit.framework */,
+				1A6B61181A5EBD0500F8D961 /* OpenGL.framework */,
+				1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A6B611C1A5EBD0500F8D961 /* chess */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */,
+				2ECDC3141A65E29D00A50D33 /* main.mm */,
+				1A6B61251A5EBD0500F8D961 /* Basic Ogre Framework */,
+				1A6B612D1A5EBD0600F8D961 /* Resources */,
+				1A6B611D1A5EBD0500F8D961 /* Supporting Files */,
+			);
+			name = chess;
+			path = abc;
+			sourceTree = "<group>";
+		};
+		1A6B611D1A5EBD0500F8D961 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */,
+				2ECDC3131A65E27E00A50D33 /* chess-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A6B61251A5EBD0500F8D961 /* Basic Ogre Framework */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3191A65E2B900A50D33 /* AppDelegate.h */,
+				2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */,
+				2ECDC31B1A65E2B900A50D33 /* OgreChess.h */,
+				2ECDC31C1A65E2B900A50D33 /* OgreFramework.cpp */,
+				2ECDC31D1A65E2B900A50D33 /* OgreFramework.h */,
+				2ECDC31E1A65E2B900A50D33 /* OgreText.h */,
+			);
+			name = "Basic Ogre Framework";
+			sourceTree = "<group>";
+		};
+		1A6B612D1A5EBD0600F8D961 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3211A65E2D000A50D33 /* ogre.cfg */,
+				2ECDC3221A65E2D000A50D33 /* plugins.cfg */,
+				2ECDC3231A65E2D000A50D33 /* resources.cfg */,
+				1A6B612E1A5EBD0600F8D961 /* media */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1A6B612E1A5EBD0600F8D961 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B612F1A5EBD0600F8D961 /* materials */,
+				1A6B61371A5EBD0600F8D961 /* models */,
+				1A6B61391A5EBD0600F8D961 /* packs */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		1A6B612F1A5EBD0600F8D961 /* materials */ = {
+			isa = PBXGroup;
+			children = (
+				1A6B61301A5EBD0600F8D961 /* scripts */,
+				1A6B61331A5EBD0600F8D961 /* textures */,
+			);
+			path = materials;
+			sourceTree = "<group>";
+		};
+		1A6B61301A5EBD0600F8D961 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3631A66275600A50D33 /* Examples.material */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		1A6B61331A5EBD0600F8D961 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		1A6B61371A5EBD0600F8D961 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3271A66273600A50D33 /* Bishop.mesh */,
+				2ECDC3281A66273600A50D33 /* board.mesh */,
+				2ECDC3291A66273600A50D33 /* HorseA01.mesh */,
+				2ECDC32A1A66273600A50D33 /* HorseA02.mesh */,
+				2ECDC32B1A66273600A50D33 /* HorseB01.mesh */,
+				2ECDC32C1A66273600A50D33 /* HorseB02.mesh */,
+				2ECDC32D1A66273600A50D33 /* KingA.mesh */,
+				2ECDC32E1A66273600A50D33 /* KingB.mesh */,
+				2ECDC32F1A66273600A50D33 /* PawnA01.mesh */,
+				2ECDC3301A66273600A50D33 /* PawnA02.mesh */,
+				2ECDC3311A66273600A50D33 /* PawnA03.mesh */,
+				2ECDC3321A66273600A50D33 /* PawnA04.mesh */,
+				2ECDC3331A66273600A50D33 /* PawnA05.mesh */,
+				2ECDC3341A66273600A50D33 /* PawnA06.mesh */,
+				2ECDC3351A66273600A50D33 /* PawnA07.mesh */,
+				2ECDC3361A66273600A50D33 /* PawnA08.mesh */,
+				2ECDC3371A66273600A50D33 /* PawnB01.mesh */,
+				2ECDC3381A66273600A50D33 /* PawnB02.mesh */,
+				2ECDC3391A66273600A50D33 /* PawnB03.mesh */,
+				2ECDC33A1A66273600A50D33 /* PawnB04.mesh */,
+				2ECDC33B1A66273600A50D33 /* PawnB05.mesh */,
+				2ECDC33C1A66273600A50D33 /* PawnB06.mesh */,
+				2ECDC33D1A66273600A50D33 /* PawnB07.mesh */,
+				2ECDC33E1A66273600A50D33 /* PawnB08.mesh */,
+				2ECDC33F1A66273600A50D33 /* QueenA.mesh */,
+				2ECDC3401A66273600A50D33 /* QueenB.mesh */,
+				2ECDC3411A66273600A50D33 /* TowerA01.mesh */,
+				2ECDC3421A66273600A50D33 /* TowerA02.mesh */,
+				2ECDC3431A66273600A50D33 /* TowerB01.mesh */,
+				2ECDC3441A66273600A50D33 /* TowerB02.mesh */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		1A6B61391A5EBD0600F8D961 /* packs */ = {
+			isa = PBXGroup;
+			children = (
+				2ECDC3651A66277200A50D33 /* cubemap.zip */,
+				2ECDC3661A66277200A50D33 /* cubemapsJS.zip */,
+				2ECDC3671A66277200A50D33 /* SdkTrays.zip */,
+				2ECDC3681A66277200A50D33 /* skybox.zip */,
+			);
+			path = packs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A6B610E1A5EBD0500F8D961 /* abc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "abc" */;
+			buildPhases = (
+				1A6B610A1A5EBD0500F8D961 /* Sources */,
+				1A6B610B1A5EBD0500F8D961 /* Frameworks */,
+				1A6B610C1A5EBD0500F8D961 /* Resources */,
+				1A6B610D1A5EBD0500F8D961 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = abc;
+			productName = abc;
+			productReference = 1A6B610F1A5EBD0500F8D961 /* abc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A6B61061A5EBD0500F8D961 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					1A6B610E1A5EBD0500F8D961 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 1A6B61091A5EBD0500F8D961 /* Build configuration list for PBXProject "chess" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A6B61051A5EBD0500F8D961;
+			productRefGroup = 1A6B61101A5EBD0500F8D961 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A6B610E1A5EBD0500F8D961 /* abc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A6B610C1A5EBD0500F8D961 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ECDC35F1A66273600A50D33 /* TowerA01.mesh in Resources */,
+				2ECDC3691A66277200A50D33 /* cubemap.zip in Resources */,
+				2ECDC3261A65E2D000A50D33 /* resources.cfg in Resources */,
+				2ECDC35A1A66273600A50D33 /* PawnB06.mesh in Resources */,
+				2ECDC3561A66273600A50D33 /* PawnB02.mesh in Resources */,
+				2ECDC35D1A66273600A50D33 /* QueenA.mesh in Resources */,
+				2ECDC34A1A66273600A50D33 /* HorseB02.mesh in Resources */,
+				2ECDC35C1A66273600A50D33 /* PawnB08.mesh in Resources */,
+				2ECDC3521A66273600A50D33 /* PawnA06.mesh in Resources */,
+				2ECDC3501A66273600A50D33 /* PawnA04.mesh in Resources */,
+				2ECDC3641A66275600A50D33 /* Examples.material in Resources */,
+				2ECDC3591A66273600A50D33 /* PawnB05.mesh in Resources */,
+				2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */,
+				2ECDC3471A66273600A50D33 /* HorseA01.mesh in Resources */,
+				2ECDC3511A66273600A50D33 /* PawnA05.mesh in Resources */,
+				2ECDC3611A66273600A50D33 /* TowerB01.mesh in Resources */,
+				2ECDC3251A65E2D000A50D33 /* plugins.cfg in Resources */,
+				2ECDC36A1A66277200A50D33 /* cubemapsJS.zip in Resources */,
+				2ECDC3451A66273600A50D33 /* Bishop.mesh in Resources */,
+				2ECDC3481A66273600A50D33 /* HorseA02.mesh in Resources */,
+				2ECDC34D1A66273600A50D33 /* PawnA01.mesh in Resources */,
+				2ECDC35E1A66273600A50D33 /* QueenB.mesh in Resources */,
+				2ECDC3531A66273600A50D33 /* PawnA07.mesh in Resources */,
+				2ECDC3551A66273600A50D33 /* PawnB01.mesh in Resources */,
+				2ECDC3581A66273600A50D33 /* PawnB04.mesh in Resources */,
+				2ECDC3491A66273600A50D33 /* HorseB01.mesh in Resources */,
+				2ECDC3571A66273600A50D33 /* PawnB03.mesh in Resources */,
+				2ECDC34E1A66273600A50D33 /* PawnA02.mesh in Resources */,
+				2ECDC3601A66273600A50D33 /* TowerA02.mesh in Resources */,
+				2ECDC3541A66273600A50D33 /* PawnA08.mesh in Resources */,
+				2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */,
+				2ECDC3241A65E2D000A50D33 /* ogre.cfg in Resources */,
+				2ECDC35B1A66273600A50D33 /* PawnB07.mesh in Resources */,
+				2ECDC36B1A66277200A50D33 /* SdkTrays.zip in Resources */,
+				2ECDC36C1A66277200A50D33 /* skybox.zip in Resources */,
+				2ECDC3461A66273600A50D33 /* board.mesh in Resources */,
+				2ECDC34F1A66273600A50D33 /* PawnA03.mesh in Resources */,
+				2ECDC3621A66273600A50D33 /* TowerB02.mesh in Resources */,
+				2ECDC34C1A66273600A50D33 /* KingB.mesh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A6B610D1A5EBD0500F8D961 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Resources/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A6B610A1A5EBD0500F8D961 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */,
+				2ECDC3151A65E29D00A50D33 /* main.mm in Sources */,
+				2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ECDC3171A65E2A100A50D33 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A6B61441A5EBD0600F8D961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib/macosx/Release\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "chess/abc-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/include/OGRE\"",
+					"\"$(OGRE_SDK_ROOT)/include/OGRE/OSX\"",
+					"\"$(OGRE_SDK_ROOT)/include/OGRE/Overlay\"",
+					"\"$(OGRE_SDK_ROOT)/include/OIS\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
+					"\"$(OGRE_SDK_ROOT)/boost\"",
+				);
+				INFOPLIST_FILE = "chess/abc-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lOIS",
+					"-lboost_system-mt",
+					"-framework",
+					Ogre,
+					"-framework",
+					OgreOverlay,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A6B61451A5EBD0600F8D961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib/macosx/Release\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "chess/abc-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/include/OGRE\"",
+					"\"$(OGRE_SDK_ROOT)/include/OGRE/OSX\"",
+					"\"$(OGRE_SDK_ROOT)/include/OGRE/Overlay\"",
+					"\"$(OGRE_SDK_ROOT)/include/OIS\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
+					"\"$(OGRE_SDK_ROOT)/boost\"",
+				);
+				INFOPLIST_FILE = "chess/abc-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib\"",
+					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lOIS",
+					"-lboost_system-mt",
+					"-framework",
+					Ogre,
+					"-framework",
+					OgreOverlay,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1A6B61471A5EBD0600F8D961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/OgreSDK/lib/macosx/Release,
+				);
+				GCC_PREFIX_HEADER = "chess/chess-Prefix.pch";
+				INFOPLIST_FILE = "chess/chess-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib\"",
+					/usr/local/lib,
+					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
+				);
+				OGRE_SDK_ROOT = /OgreSDK;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lOIS",
+					"-lboost_system-mt",
+					"-framework",
+					Ogre,
+					"-framework",
+					OgreOverlay,
+				);
+			};
+			name = Debug;
+		};
+		1A6B61481A5EBD0600F8D961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/OgreSDK/lib/macosx/Release,
+				);
+				GCC_PREFIX_HEADER = "chess/chess-Prefix.pch";
+				INFOPLIST_FILE = "chess/chess-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(OGRE_SDK_ROOT)/lib\"",
+					/usr/local/lib,
+					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
+				);
+				OGRE_SDK_ROOT = /OgreSDK;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lOIS",
+					"-lboost_system-mt",
+					"-framework",
+					Ogre,
+					"-framework",
+					OgreOverlay,
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A6B61091A5EBD0500F8D961 /* Build configuration list for PBXProject "chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B61441A5EBD0600F8D961 /* Debug */,
+				1A6B61451A5EBD0600F8D961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "abc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A6B61471A5EBD0600F8D961 /* Debug */,
+				1A6B61481A5EBD0600F8D961 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A6B61061A5EBD0500F8D961 /* Project object */;
+}
