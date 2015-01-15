@@ -263,7 +263,7 @@ void Chess::setupChessScene()
     whiteBishopNode2->attachObject(whiteBishopEntity2);
     whiteBishopNode2->translate(11.1, 0.6, -1);
     whiteBishopNode2->yaw(Degree(90));
-       
+    
 //    blackQueenEntity = sManager->createEntity("blackQueenEntity", "QueenA.mesh");
 //    blackQueenNode = boardNode->createChildSceneNode("blackQueenNode");
 //    blackQueenNode->attachObject(blackQueenEntity);
@@ -288,70 +288,63 @@ void Chess::setupChessScene()
     blackPawnNode2->attachObject(blackPawnEntity2);
     blackPawnNode2->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity3 = sManager->createEntity("blackPawnEntity3", "PawnA01_black.mesh");
     blackPawnNode3 = boardNode->createChildSceneNode("blackPawnNode3");
     blackPawnNode3->attachObject(blackPawnEntity3);
     blackPawnNode3->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity4 = sManager->createEntity("blackPawnEntity4", "PawnA01_black.mesh");
     blackPawnNode4 = boardNode->createChildSceneNode("blackPawnNode4");
     blackPawnNode4->attachObject(blackPawnEntity4);
     blackPawnNode4->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity5 = sManager->createEntity("blackPawnEntity5", "PawnA01_black.mesh");
     blackPawnNode5 = boardNode->createChildSceneNode("blackPawnNode5");
     blackPawnNode5->attachObject(blackPawnEntity5);
     blackPawnNode5->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity6 = sManager->createEntity("blackPawnEntity6", "PawnA01_black.mesh");
     blackPawnNode6 = boardNode->createChildSceneNode("blackPawnNode6");
     blackPawnNode6->attachObject(blackPawnEntity6);
     blackPawnNode6->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity7 = sManager->createEntity("blackPawnEntity7", "PawnA01_black.mesh");
     blackPawnNode7 = boardNode->createChildSceneNode("blackPawnNode7");
     blackPawnNode7->attachObject(blackPawnEntity7);
     blackPawnNode7->translate(pawnX, pawnY, pawnZ);
     pawnX+=2;
-
     
     blackPawnEntity8 = sManager->createEntity("blackPawnEntity8", "PawnA01_black.mesh");
     blackPawnNode8 = boardNode->createChildSceneNode("blackPawnNode8");
     blackPawnNode8->attachObject(blackPawnEntity8);
     blackPawnNode8->translate(pawnX, pawnY, pawnZ);
-
     
-//    blackRookEntity1 = sManager->createEntity("blackRookEntity1", "TowerA01.mesh");
-//    blackRookNode1 = boardNode->createChildSceneNode("blackRookNode1");
-//    blackRookNode1->attachObject(blackRookEntity1);
-//    blackRookNode1->translate(1.1, 0.8, -1);
-//    
-//    blackRookEntity2 = sManager->createEntity("blackRookEntity2", "TowerA01.mesh");
-//    blackRookNode2 = boardNode->createChildSceneNode("blackRookNode2");
-//    blackRookNode2->attachObject(blackRookEntity2);
-//    blackRookNode2->translate(15.1, 0.8, -1);
-//    
-//    blackKnightEntity1 = sManager->createEntity("blackKnightEntity1", "HorseA01.mesh");
-//    blackKnightNode1 = boardNode->createChildSceneNode("blackKnightNode1");
-//    blackKnightNode1->attachObject(blackKnightEntity1);
-//    blackKnightNode1->translate(3.1, 0.7f, -1);
-//    
-//    blackKnightEntity2 = sManager->createEntity("blackKnightEntity2", "HorseA01.mesh");
-//    blackKnightNode2 = boardNode->createChildSceneNode("blackKnightNode2");
-//    blackKnightNode2->attachObject(blackKnightEntity2);
-//    blackKnightNode2->translate(13.1, 0.7, -1);
-//    blackKnightNode2->roll(Degree(-90));
-//    
+    blackRookEntity1 = sManager->createEntity("blackRookEntity1", "TowerA01_black.mesh");
+    blackRookNode1 = boardNode->createChildSceneNode("blackRookNode1");
+    blackRookNode1->attachObject(blackRookEntity1);
+    blackRookNode1->translate(1.1, 0.8, -15);
+    
+    blackRookEntity2 = sManager->createEntity("blackRookEntity2", "TowerA01_black.mesh");
+    blackRookNode2 = boardNode->createChildSceneNode("blackRookNode2");
+    blackRookNode2->attachObject(blackRookEntity2);
+    blackRookNode2->translate(15.1, 0.8, -15);
+
+    blackKnightEntity1 = sManager->createEntity("blackKnightEntity1", "HorseA01_black.mesh");
+    blackKnightNode1 = boardNode->createChildSceneNode("blackKnightNode1");
+    blackKnightNode1->attachObject(blackKnightEntity1);
+    blackKnightNode1->translate(3.1, 0.7f, -15);
+    
+    blackKnightEntity2 = sManager->createEntity("blackKnightEntity2", "HorseA01_black.mesh");
+    blackKnightNode2 = boardNode->createChildSceneNode("blackKnightNode2");
+    blackKnightNode2->attachObject(blackKnightEntity2);
+    blackKnightNode2->translate(13.1, 0.7, -15);
+    blackKnightNode2->roll(Degree(-90));
+//
 //    blackBishopEntity1 = sManager->createEntity("blackBishopEntity1", "Bishop.mesh");
 //    blackBishopNode1 = boardNode->createChildSceneNode("blackBishopNode1");
 //    blackBishopNode1->attachObject(blackBishopEntity1);
