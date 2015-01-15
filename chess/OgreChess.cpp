@@ -172,8 +172,16 @@ void Chess::setupChessScene()
     spotLight->setDiffuseColour(0.8, 0.8, 0.8);
     spotLight->setSpecularColour(0.8, 0.8, 0.8);
     spotLight->setDirection(-1, -1, 0);
-    spotLight->setPosition(Ogre::Vector3(40, 40, 0));
-    spotLight->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(38));
+    spotLight->setPosition(Ogre::Vector3(40, 40, -10));
+    spotLight->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(30));
+    
+    Ogre::Light* spotLight2 = sManager->createLight("spotLight2");
+    spotLight2->setType(Ogre::Light::LT_SPOTLIGHT);
+    spotLight2->setDiffuseColour(0.7, 0.2, 0.1);
+    spotLight2->setSpecularColour(0.8, 0.8, 0.8);
+    spotLight2->setDirection(-1, -1, 0);
+    spotLight2->setPosition(Ogre::Vector3(60, 40, -10));
+    spotLight2->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(30));
     
 	boardEntity = sManager->createEntity("boardEntity", "board.mesh");
 	boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
