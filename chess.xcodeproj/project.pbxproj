@@ -12,6 +12,7 @@
 		1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61161A5EBD0500F8D961 /* IOKit.framework */; };
 		1A6B61191A5EBD0500F8D961 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61181A5EBD0500F8D961 /* OpenGL.framework */; };
 		1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */; };
+		1A8F7B3A1A67DAEE0009DA31 /* PawnA01_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B391A67DAEE0009DA31 /* PawnA01_black.mesh */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
 		2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */; };
 		2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */; };
@@ -63,6 +64,7 @@
 		1A6B61161A5EBD0500F8D961 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		1A6B61181A5EBD0500F8D961 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1A6B611A1A5EBD0500F8D961 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1A8F7B391A67DAEE0009DA31 /* PawnA01_black.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = PawnA01_black.mesh; path = chess/media/models/PawnA01_black.mesh; sourceTree = SOURCE_ROOT; };
 		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2ECDC3131A65E27E00A50D33 /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chess-Info.plist"; path = "chess/chess-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2ECDC3141A65E29D00A50D33 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = chess/main.mm; sourceTree = SOURCE_ROOT; };
@@ -241,6 +243,7 @@
 		1A6B61371A5EBD0600F8D961 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1A8F7B391A67DAEE0009DA31 /* PawnA01_black.mesh */,
 				2ECDC3271A66273600A50D33 /* Bishop.mesh */,
 				2ECDC3281A66273600A50D33 /* board.mesh */,
 				2ECDC3291A66273600A50D33 /* HorseA01.mesh */,
@@ -375,6 +378,7 @@
 				2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */,
 				2ECDC3241A65E2D000A50D33 /* ogre.cfg in Resources */,
 				2ECDC35B1A66273600A50D33 /* PawnB07.mesh in Resources */,
+				1A8F7B3A1A67DAEE0009DA31 /* PawnA01_black.mesh in Resources */,
 				2ECDC36B1A66277200A50D33 /* SdkTrays.zip in Resources */,
 				2ECDC36C1A66277200A50D33 /* skybox.zip in Resources */,
 				2ECDC3461A66273600A50D33 /* board.mesh in Resources */,

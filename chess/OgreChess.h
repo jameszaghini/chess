@@ -140,6 +140,54 @@ private:
     Ogre::SceneNode *whiteBishopNode2;
     Ogre::Entity *whiteBishopEntity2;
     
+    Ogre::SceneNode *blackQueenNode;
+    Ogre::Entity *blackQueenEntity;
+    
+    Ogre::SceneNode *blackKingNode;
+    Ogre::Entity *blackKingEntity;
+    
+    Ogre::SceneNode *blackPawnNode;
+    Ogre::Entity *blackPawnEntity;
+    
+    Ogre::SceneNode *blackPawnNode2;
+    Ogre::Entity *blackPawnEntity2;
+    
+    Ogre::SceneNode *blackPawnNode3;
+    Ogre::Entity *blackPawnEntity3;
+    
+    Ogre::SceneNode *blackPawnNode4;
+    Ogre::Entity *blackPawnEntity4;
+    
+    Ogre::SceneNode *blackPawnNode5;
+    Ogre::Entity *blackPawnEntity5;
+    
+    Ogre::SceneNode *blackPawnNode6;
+    Ogre::Entity *blackPawnEntity6;
+    
+    Ogre::SceneNode *blackPawnNode7;
+    Ogre::Entity *blackPawnEntity7;
+    
+    Ogre::SceneNode *blackPawnNode8;
+    Ogre::Entity *blackPawnEntity8;
+    
+    Ogre::SceneNode *blackRookNode1;
+    Ogre::Entity *blackRookEntity1;
+    
+    Ogre::SceneNode *blackRookNode2;
+    Ogre::Entity *blackRookEntity2;
+    
+    Ogre::SceneNode *blackKnightNode1;
+    Ogre::Entity *blackKnightEntity1;
+    
+    Ogre::SceneNode *blackKnightNode2;
+    Ogre::Entity *blackKnightEntity2;
+    
+    Ogre::SceneNode *blackBishopNode1;
+    Ogre::Entity *blackBishopEntity1;
+    
+    Ogre::SceneNode *blackBishopNode2;
+    Ogre::Entity *blackBishopEntity2;
+    
     int            gunSoundIndex;
     int            gunSoundChannel;
     
