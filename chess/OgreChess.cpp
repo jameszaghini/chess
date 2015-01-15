@@ -6,9 +6,6 @@
 #include <OgreWindowEventUtilities.h>
 #include "OgreText.h"
 
-#include "SoundManager.h"
-
-
 Chess::Chess()
 {
 	boardNode = 0;
