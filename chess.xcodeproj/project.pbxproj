@@ -57,7 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A6B610F1A5EBD0500F8D961 /* abc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A6B610F1A5EBD0500F8D961 /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B61121A5EBD0500F8D961 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		1A6B61141A5EBD0500F8D961 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1A6B61161A5EBD0500F8D961 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -141,7 +141,7 @@
 		1A6B61101A5EBD0500F8D961 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A6B610F1A5EBD0500F8D961 /* abc.app */,
+				1A6B610F1A5EBD0500F8D961 /* chess.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,9 +289,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A6B610E1A5EBD0500F8D961 /* abc */ = {
+		1A6B610E1A5EBD0500F8D961 /* chess */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "abc" */;
+			buildConfigurationList = 1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "chess" */;
 			buildPhases = (
 				1A6B610A1A5EBD0500F8D961 /* Sources */,
 				1A6B610B1A5EBD0500F8D961 /* Frameworks */,
@@ -302,9 +302,9 @@
 			);
 			dependencies = (
 			);
-			name = abc;
+			name = chess;
 			productName = abc;
-			productReference = 1A6B610F1A5EBD0500F8D961 /* abc.app */;
+			productReference = 1A6B610F1A5EBD0500F8D961 /* chess.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A6B610E1A5EBD0500F8D961 /* abc */,
+				1A6B610E1A5EBD0500F8D961 /* chess */,
 			);
 		};
 /* End PBXProject section */
@@ -398,7 +398,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/abc.app/Contents/Resources/\"\n";
+			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -437,7 +437,7 @@
 					"\"$(OGRE_SDK_ROOT)/Dependencies\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "chess/abc-Prefix.pch";
+				GCC_PREFIX_HEADER = "chess/chess-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/include/OGRE\"",
 					"\"$(OGRE_SDK_ROOT)/include/OGRE/OSX\"",
@@ -446,7 +446,7 @@
 					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
 					"\"$(OGRE_SDK_ROOT)/boost\"",
 				);
-				INFOPLIST_FILE = "chess/abc-Info.plist";
+				INFOPLIST_FILE = "chess/chess-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
@@ -477,7 +477,7 @@
 					"\"$(OGRE_SDK_ROOT)/Dependencies\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "chess/abc-Prefix.pch";
+				GCC_PREFIX_HEADER = "chess/chess-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/include/OGRE\"",
 					"\"$(OGRE_SDK_ROOT)/include/OGRE/OSX\"",
@@ -486,7 +486,7 @@
 					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
 					"\"$(OGRE_SDK_ROOT)/boost\"",
 				);
-				INFOPLIST_FILE = "chess/abc-Info.plist";
+				INFOPLIST_FILE = "chess/chess-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "abc" */ = {
+		1A6B61461A5EBD0600F8D961 /* Build configuration list for PBXNativeTarget "chess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A6B61471A5EBD0600F8D961 /* Debug */,
