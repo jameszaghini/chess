@@ -164,8 +164,15 @@ void Chess::startDemo()
 
 void Chess::setupChessScene()
 {
-    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
 //	sManager->setSkyBox(true, "Examples/SceneCubeMap2");
+    setupLights();
+    setupWhitePieces();
+    setupBlackPieces();
+}
+
+void Chess::setupLights()
+{
+    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
 
     Ogre::Light* spotLight = sManager->createLight("spotLight");
     spotLight->setType(Ogre::Light::LT_SPOTLIGHT);
@@ -182,10 +189,15 @@ void Chess::setupChessScene()
     spotLight2->setDirection(-1, -1, 0);
     spotLight2->setPosition(Ogre::Vector3(60, 40, -10));
     spotLight2->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(30));
+}
+
+void Chess::setupWhitePieces()
+{
+    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     
-	boardEntity = sManager->createEntity("boardEntity", "board.mesh");
-	boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
-	boardNode->attachObject(boardEntity);
+    boardEntity = sManager->createEntity("boardEntity", "board.mesh");
+    boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
+    boardNode->attachObject(boardEntity);
     boardNode->setPosition(0, 0, 0);
     
     whiteQueenEntity = sManager->createEntity("whiteQueenEntity", "QueenA.mesh");
@@ -271,20 +283,15 @@ void Chess::setupChessScene()
     whiteBishopNode2->attachObject(whiteBishopEntity2);
     whiteBishopNode2->translate(11.1, 0.6, -1);
     whiteBishopNode2->yaw(Degree(90));
-    
-    blackQueenEntity = sManager->createEntity("blackQueenEntity", "QueenA_black.mesh");
-    blackQueenNode = boardNode->createChildSceneNode("blackQueenNode");
-    blackQueenNode->attachObject(blackQueenEntity);
-    blackQueenNode->translate(7.1, 1.5, -15);
+}
 
-    blackKingEntity = sManager->createEntity("blackKingEntity", "King_black.mesh");
-    blackKingNode = boardNode->createChildSceneNode("blackKingNode");
-    blackKingNode->attachObject(blackKingEntity);
-    blackKingNode->translate(9.1, .25, -15);
+void Chess::setupBlackPieces()
+{
+    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     
     float pawnX = 1.1;
-    pawnZ = -13.0f;
-    pawnY = 0.65;
+    float pawnZ = -13.0f;
+    float pawnY = 0.65;
     blackPawnEntity = sManager->createEntity("blackPawnEntity", "PawnA01_black.mesh");
     blackPawnNode = boardNode->createChildSceneNode("blackPawnNode");
     blackPawnNode->attachObject(blackPawnEntity);
@@ -341,7 +348,7 @@ void Chess::setupChessScene()
     blackRookNode2 = boardNode->createChildSceneNode("blackRookNode2");
     blackRookNode2->attachObject(blackRookEntity2);
     blackRookNode2->translate(15.1, 0.8, -15);
-
+    
     blackKnightEntity1 = sManager->createEntity("blackKnightEntity1", "HorseA01_black.mesh");
     blackKnightNode1 = boardNode->createChildSceneNode("blackKnightNode1");
     blackKnightNode1->attachObject(blackKnightEntity1);
@@ -352,7 +359,7 @@ void Chess::setupChessScene()
     blackKnightNode2->attachObject(blackKnightEntity2);
     blackKnightNode2->translate(13.1, 0.7, -15);
     blackKnightNode2->roll(Degree(-90));
-
+    
     blackBishopEntity1 = sManager->createEntity("blackBishopEntity1", "Bishop_black.mesh");
     blackBishopNode1 = boardNode->createChildSceneNode("blackBishopNode1");
     blackBishopNode1->attachObject(blackBishopEntity1);
@@ -363,6 +370,16 @@ void Chess::setupChessScene()
     blackBishopNode2->attachObject(blackBishopEntity2);
     blackBishopNode2->translate(11.1, 0.6, -15);
     blackBishopNode2->yaw(Degree(90));
+    
+    blackQueenEntity = sManager->createEntity("blackQueenEntity", "QueenA_black.mesh");
+    blackQueenNode = boardNode->createChildSceneNode("blackQueenNode");
+    blackQueenNode->attachObject(blackQueenEntity);
+    blackQueenNode->translate(7.1, 1.5, -15);
+    
+    blackKingEntity = sManager->createEntity("blackKingEntity", "King_black.mesh");
+    blackKingNode = boardNode->createChildSceneNode("blackKingNode");
+    blackKingNode->attachObject(blackKingEntity);
+    blackKingNode->translate(9.1, .25, -15);
 }
 
 void Chess::runDemo()

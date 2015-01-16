@@ -85,6 +85,9 @@ public:
     
 private:
     void setupChessScene();
+    void setupLights();
+    void setupWhitePieces();
+    void setupBlackPieces();
 	void runDemo();
     bool initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void destroyRTShaderSystem();
