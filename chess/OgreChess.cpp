@@ -272,15 +272,15 @@ void Chess::setupChessScene()
     whiteBishopNode2->translate(11.1, 0.6, -1);
     whiteBishopNode2->yaw(Degree(90));
     
-//    blackQueenEntity = sManager->createEntity("blackQueenEntity", "QueenA.mesh");
-//    blackQueenNode = boardNode->createChildSceneNode("blackQueenNode");
-//    blackQueenNode->attachObject(blackQueenEntity);
-//    blackQueenNode->translate(7.1, 1.5, -1);
-//    
-//    blackKingEntity = sManager->createEntity("blackKingEntity", "KingA.mesh");
-//    blackKingNode = boardNode->createChildSceneNode("blackKingNode");
-//    blackKingNode->attachObject(blackKingEntity);
-//    blackKingNode->translate(9.1, 1.35, -1);
+    blackQueenEntity = sManager->createEntity("blackQueenEntity", "QueenA_black.mesh");
+    blackQueenNode = boardNode->createChildSceneNode("blackQueenNode");
+    blackQueenNode->attachObject(blackQueenEntity);
+    blackQueenNode->translate(7.1, 1.5, -15);
+
+    blackKingEntity = sManager->createEntity("blackKingEntity", "King_black.mesh");
+    blackKingNode = boardNode->createChildSceneNode("blackKingNode");
+    blackKingNode->attachObject(blackKingEntity);
+    blackKingNode->translate(9.1, .25, -15);
     
     float pawnX = 1.1;
     pawnZ = -13.0f;
@@ -352,17 +352,17 @@ void Chess::setupChessScene()
     blackKnightNode2->attachObject(blackKnightEntity2);
     blackKnightNode2->translate(13.1, 0.7, -15);
     blackKnightNode2->roll(Degree(-90));
-//
-//    blackBishopEntity1 = sManager->createEntity("blackBishopEntity1", "Bishop.mesh");
-//    blackBishopNode1 = boardNode->createChildSceneNode("blackBishopNode1");
-//    blackBishopNode1->attachObject(blackBishopEntity1);
-//    blackBishopNode1->translate(5.1, 0.6, -1);
-//    
-//    blackBishopEntity2 = sManager->createEntity("blackBishopEntity2", "Bishop.mesh");
-//    blackBishopNode2 = boardNode->createChildSceneNode("blackBishopNode2");
-//    blackBishopNode2->attachObject(blackBishopEntity2);
-//    blackBishopNode2->translate(11.1, 0.6, -1);
-//    blackBishopNode2->yaw(Degree(90));
+
+    blackBishopEntity1 = sManager->createEntity("blackBishopEntity1", "Bishop_black.mesh");
+    blackBishopNode1 = boardNode->createChildSceneNode("blackBishopNode1");
+    blackBishopNode1->attachObject(blackBishopEntity1);
+    blackBishopNode1->translate(5.1, 0.6, -15);
+    
+    blackBishopEntity2 = sManager->createEntity("blackBishopEntity2", "Bishop_black.mesh");
+    blackBishopNode2 = boardNode->createChildSceneNode("blackBishopNode2");
+    blackBishopNode2->attachObject(blackBishopEntity2);
+    blackBishopNode2->translate(11.1, 0.6, -15);
+    blackBishopNode2->yaw(Degree(90));
 }
 
 void Chess::runDemo()

@@ -698,9 +698,19 @@
     </sharedgeometry>
     <submeshes>
         <submesh use32bitindexes="False" usesharedvertices="true" material="black" operationtype="triangle_list">
-            <faces count="50">
+            <faces count="116">
+                <face v1="0" v2="1" v3="2"/>
+                <face v1="0" v2="2" v3="3"/>
                 <face v1="4" v2="5" v3="6"/>
                 <face v1="4" v2="6" v3="7"/>
+                <face v1="8" v2="9" v3="10"/>
+                <face v1="8" v2="10" v3="11"/>
+                <face v1="12" v2="13" v3="14"/>
+                <face v1="12" v2="14" v3="15"/>
+                <face v1="16" v2="17" v3="18"/>
+                <face v1="16" v2="18" v3="19"/>
+                <face v1="20" v2="21" v3="22"/>
+                <face v1="20" v2="22" v3="23"/>
                 <face v1="5" v2="24" v3="25"/>
                 <face v1="5" v2="25" v3="26"/>
                 <face v1="27" v2="4" v3="28"/>
@@ -721,6 +731,10 @@
                 <face v1="6" v2="42" v3="40"/>
                 <face v1="38" v2="39" v3="43"/>
                 <face v1="38" v2="43" v3="42"/>
+                <face v1="44" v2="45" v3="46"/>
+                <face v1="35" v2="47" v3="48"/>
+                <face v1="49" v2="50" v3="35"/>
+                <face v1="49" v2="35" v3="48"/>
                 <face v1="6" v2="51" v3="32"/>
                 <face v1="38" v2="52" v3="53"/>
                 <face v1="38" v2="53" v3="51"/>
@@ -733,40 +747,6 @@
                 <face v1="39" v2="55" v3="63"/>
                 <face v1="64" v2="65" v3="66"/>
                 <face v1="67" v2="68" v3="69"/>
-                <face v1="82" v2="83" v3="84"/>
-                <face v1="82" v2="84" v3="85"/>
-                <face v1="86" v2="87" v3="88"/>
-                <face v1="86" v2="88" v3="89"/>
-                <face v1="87" v2="98" v3="99"/>
-                <face v1="87" v2="99" v3="88"/>
-                <face v1="98" v2="100" v3="101"/>
-                <face v1="98" v2="101" v3="99"/>
-                <face v1="100" v2="86" v3="89"/>
-                <face v1="100" v2="89" v3="101"/>
-                <face v1="83" v2="122" v3="123"/>
-                <face v1="83" v2="123" v3="84"/>
-                <face v1="122" v2="100" v3="124"/>
-                <face v1="122" v2="124" v3="123"/>
-                <face v1="100" v2="82" v3="85"/>
-                <face v1="100" v2="85" v3="124"/>
-            </faces>
-        </submesh>
-        <submesh use32bitindexes="False" usesharedvertices="true" material="white" operationtype="triangle_list">
-            <faces count="66">
-                <face v1="0" v2="1" v3="2"/>
-                <face v1="0" v2="2" v3="3"/>
-                <face v1="8" v2="9" v3="10"/>
-                <face v1="8" v2="10" v3="11"/>
-                <face v1="12" v2="13" v3="14"/>
-                <face v1="12" v2="14" v3="15"/>
-                <face v1="16" v2="17" v3="18"/>
-                <face v1="16" v2="18" v3="19"/>
-                <face v1="20" v2="21" v3="22"/>
-                <face v1="20" v2="22" v3="23"/>
-                <face v1="44" v2="45" v3="46"/>
-                <face v1="35" v2="47" v3="48"/>
-                <face v1="49" v2="50" v3="35"/>
-                <face v1="49" v2="35" v3="48"/>
                 <face v1="70" v2="71" v3="48"/>
                 <face v1="70" v2="48" v3="72"/>
                 <face v1="73" v2="74" v3="69"/>
@@ -779,12 +759,22 @@
                 <face v1="77" v2="79" v3="80"/>
                 <face v1="69" v2="74" v3="70"/>
                 <face v1="69" v2="70" v3="81"/>
+                <face v1="82" v2="83" v3="84"/>
+                <face v1="82" v2="84" v3="85"/>
+                <face v1="86" v2="87" v3="88"/>
+                <face v1="86" v2="88" v3="89"/>
                 <face v1="58" v2="57" v3="76"/>
                 <face v1="58" v2="76" v3="75"/>
                 <face v1="90" v2="91" v3="92"/>
                 <face v1="90" v2="92" v3="93"/>
                 <face v1="94" v2="95" v3="96"/>
                 <face v1="94" v2="96" v3="97"/>
+                <face v1="87" v2="98" v3="99"/>
+                <face v1="87" v2="99" v3="88"/>
+                <face v1="98" v2="100" v3="101"/>
+                <face v1="98" v2="101" v3="99"/>
+                <face v1="100" v2="86" v3="89"/>
+                <face v1="100" v2="89" v3="101"/>
                 <face v1="102" v2="103" v3="104"/>
                 <face v1="102" v2="104" v3="105"/>
                 <face v1="106" v2="107" v3="108"/>
@@ -795,6 +785,12 @@
                 <face v1="114" v2="116" v3="117"/>
                 <face v1="118" v2="119" v3="120"/>
                 <face v1="118" v2="120" v3="121"/>
+                <face v1="83" v2="122" v3="123"/>
+                <face v1="83" v2="123" v3="84"/>
+                <face v1="122" v2="100" v3="124"/>
+                <face v1="122" v2="124" v3="123"/>
+                <face v1="100" v2="82" v3="85"/>
+                <face v1="100" v2="85" v3="124"/>
                 <face v1="125" v2="126" v3="127"/>
                 <face v1="125" v2="127" v3="128"/>
                 <face v1="129" v2="130" v3="131"/>
@@ -824,8 +820,6 @@
     </submeshes>
     <submeshnames>
         <submesh index="0" name="black">
-        </submesh>
-        <submesh index="1" name="white">
         </submesh>
     </submeshnames>
 </mesh>
