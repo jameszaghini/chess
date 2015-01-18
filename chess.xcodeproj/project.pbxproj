@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A14B9651A6B6D4500013597 /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9641A6B6D4500013597 /* drumloop.wav */; };
+		1A14B96B1A6BD37C00013597 /* Gorilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B9691A6BD37C00013597 /* Gorilla.cpp */; };
+		1A14B97A1A6BD73700013597 /* common_platform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96E1A6BD73700013597 /* common_platform.mm */; };
+		1A14B97B1A6BD73700013597 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96F1A6BD73700013597 /* common.cpp */; };
+		1A14B97C1A6BD73700013597 /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9711A6BD73700013597 /* drumloop.wav */; };
+		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
+		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
 		1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61141A5EBD0500F8D961 /* Cocoa.framework */; };
 		1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61161A5EBD0500F8D961 /* IOKit.framework */; };
@@ -19,7 +24,6 @@
 		1A8F7B421A691EF20009DA31 /* QueenA_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */; };
 		1A8F7B441A6920A60009DA31 /* Bishop_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */; };
 		1A8F7B461A6922940009DA31 /* King_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B451A6922940009DA31 /* King_black.mesh */; };
-		1A8F7B481A6940540009DA31 /* CEGUI in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B471A6940530009DA31 /* CEGUI */; };
 		1A8F7B4A1A6942160009DA31 /* libCEGUIBase-0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B491A6942160009DA31 /* libCEGUIBase-0.dylib */; };
 		1A8F7B561A6944230009DA31 /* libexpat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4B1A6944230009DA31 /* libexpat.dylib */; };
 		1A8F7B571A6944230009DA31 /* libfreetype.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4C1A6944230009DA31 /* libfreetype.dylib */; };
@@ -32,8 +36,6 @@
 		1A8F7B5E1A6944230009DA31 /* libSILLY.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B531A6944230009DA31 /* libSILLY.dylib */; };
 		1A8F7B5F1A6944230009DA31 /* libtoluapp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B541A6944230009DA31 /* libtoluapp.dylib */; };
 		1A8F7B601A6944230009DA31 /* libzlib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B551A6944230009DA31 /* libzlib.dylib */; };
-		1A8F7B6C1A6B68C80009DA31 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F7B6A1A6B68C80009DA31 /* common.cpp */; };
-		1A8F7B6F1A6B68D80009DA31 /* common_platform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F7B6E1A6B68D80009DA31 /* common_platform.mm */; };
 		1A8F7B721A6B695C0009DA31 /* libfmod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B701A6B695C0009DA31 /* libfmod.dylib */; };
 		1A8F7B731A6B695C0009DA31 /* libfmodL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
@@ -81,7 +83,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A14B9641A6B6D4500013597 /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drumloop.wav; sourceTree = "<group>"; };
+		1A14B9691A6BD37C00013597 /* Gorilla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gorilla.cpp; path = chess/Gorilla.cpp; sourceTree = "<group>"; };
+		1A14B96A1A6BD37C00013597 /* Gorilla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gorilla.h; path = chess/Gorilla.h; sourceTree = "<group>"; };
+		1A14B96D1A6BD73700013597 /* common_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common_platform.h; path = chess/common_platform.h; sourceTree = "<group>"; };
+		1A14B96E1A6BD73700013597 /* common_platform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = common_platform.mm; path = chess/common_platform.mm; sourceTree = "<group>"; };
+		1A14B96F1A6BD73700013597 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = chess/common.cpp; sourceTree = "<group>"; };
+		1A14B9701A6BD73700013597 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = chess/common.h; sourceTree = "<group>"; };
+		1A14B9711A6BD73700013597 /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drumloop.wav; path = chess/drumloop.wav; sourceTree = "<group>"; };
+		1A14B9721A6BD73700013597 /* fmod_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_codec.h; path = chess/fmod_codec.h; sourceTree = "<group>"; };
+		1A14B9731A6BD73700013597 /* fmod_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_common.h; path = chess/fmod_common.h; sourceTree = "<group>"; };
+		1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp_effects.h; path = chess/fmod_dsp_effects.h; sourceTree = "<group>"; };
+		1A14B9751A6BD73700013597 /* fmod_dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp.h; path = chess/fmod_dsp.h; sourceTree = "<group>"; };
+		1A14B9761A6BD73700013597 /* fmod_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_errors.h; path = chess/fmod_errors.h; sourceTree = "<group>"; };
+		1A14B9771A6BD73700013597 /* fmod_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_output.h; path = chess/fmod_output.h; sourceTree = "<group>"; };
+		1A14B9781A6BD73700013597 /* fmod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod.h; path = chess/fmod.h; sourceTree = "<group>"; };
+		1A14B9791A6BD73700013597 /* fmod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fmod.hpp; path = chess/fmod.hpp; sourceTree = "<group>"; };
+		1A14B9831A6BDAFF00013597 /* dejavu.gorilla */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dejavu.gorilla; path = chess/media/models/dejavu.gorilla; sourceTree = SOURCE_ROOT; };
+		1A14B9851A6BDB3600013597 /* dejavu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dejavu.png; path = chess/media/models/dejavu.png; sourceTree = SOURCE_ROOT; };
 		1A6B610F1A5EBD0500F8D961 /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B61121A5EBD0500F8D961 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		1A6B61141A5EBD0500F8D961 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -94,7 +112,6 @@
 		1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = QueenA_black.mesh; path = chess/media/models/QueenA_black.mesh; sourceTree = SOURCE_ROOT; };
 		1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = Bishop_black.mesh; path = chess/media/models/Bishop_black.mesh; sourceTree = SOURCE_ROOT; };
 		1A8F7B451A6922940009DA31 /* King_black.mesh */ = {isa = PBXFileReference; lastKnownFileType = file; name = King_black.mesh; path = chess/media/models/King_black.mesh; sourceTree = SOURCE_ROOT; };
-		1A8F7B471A6940530009DA31 /* CEGUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CEGUI; sourceTree = "<group>"; };
 		1A8F7B491A6942160009DA31 /* libCEGUIBase-0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libCEGUIBase-0.dylib"; sourceTree = "<group>"; };
 		1A8F7B4B1A6944230009DA31 /* libexpat.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libexpat.dylib; sourceTree = "<group>"; };
 		1A8F7B4C1A6944230009DA31 /* libfreetype.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfreetype.dylib; sourceTree = "<group>"; };
@@ -107,18 +124,6 @@
 		1A8F7B531A6944230009DA31 /* libSILLY.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libSILLY.dylib; sourceTree = "<group>"; };
 		1A8F7B541A6944230009DA31 /* libtoluapp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtoluapp.dylib; sourceTree = "<group>"; };
 		1A8F7B551A6944230009DA31 /* libzlib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzlib.dylib; sourceTree = "<group>"; };
-		1A8F7B621A6B68A80009DA31 /* fmod_codec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_codec.h; sourceTree = "<group>"; };
-		1A8F7B631A6B68A80009DA31 /* fmod_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_common.h; sourceTree = "<group>"; };
-		1A8F7B641A6B68A80009DA31 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_dsp_effects.h; sourceTree = "<group>"; };
-		1A8F7B651A6B68A80009DA31 /* fmod_dsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_dsp.h; sourceTree = "<group>"; };
-		1A8F7B661A6B68A80009DA31 /* fmod_errors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_errors.h; sourceTree = "<group>"; };
-		1A8F7B671A6B68A80009DA31 /* fmod_output.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod_output.h; sourceTree = "<group>"; };
-		1A8F7B681A6B68A80009DA31 /* fmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmod.h; sourceTree = "<group>"; };
-		1A8F7B691A6B68A80009DA31 /* fmod.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fmod.hpp; sourceTree = "<group>"; };
-		1A8F7B6A1A6B68C80009DA31 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
-		1A8F7B6B1A6B68C80009DA31 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
-		1A8F7B6D1A6B68D80009DA31 /* common_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_platform.h; sourceTree = "<group>"; };
-		1A8F7B6E1A6B68D80009DA31 /* common_platform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = common_platform.mm; sourceTree = "<group>"; };
 		1A8F7B701A6B695C0009DA31 /* libfmod.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmod.dylib; sourceTree = "<group>"; };
 		1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmodL.dylib; sourceTree = "<group>"; };
 		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -201,11 +206,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A14B9681A6BD36400013597 /* gorilla */ = {
+			isa = PBXGroup;
+			children = (
+				1A14B9691A6BD37C00013597 /* Gorilla.cpp */,
+				1A14B96A1A6BD37C00013597 /* Gorilla.h */,
+			);
+			name = gorilla;
+			sourceTree = "<group>";
+		};
+		1A14B96C1A6BD71C00013597 /* fmod */ = {
+			isa = PBXGroup;
+			children = (
+				1A14B96D1A6BD73700013597 /* common_platform.h */,
+				1A14B96E1A6BD73700013597 /* common_platform.mm */,
+				1A14B96F1A6BD73700013597 /* common.cpp */,
+				1A14B9701A6BD73700013597 /* common.h */,
+				1A14B9711A6BD73700013597 /* drumloop.wav */,
+				1A14B9721A6BD73700013597 /* fmod_codec.h */,
+				1A14B9731A6BD73700013597 /* fmod_common.h */,
+				1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */,
+				1A14B9751A6BD73700013597 /* fmod_dsp.h */,
+				1A14B9761A6BD73700013597 /* fmod_errors.h */,
+				1A14B9771A6BD73700013597 /* fmod_output.h */,
+				1A14B9781A6BD73700013597 /* fmod.h */,
+				1A14B9791A6BD73700013597 /* fmod.hpp */,
+			);
+			name = fmod;
+			sourceTree = "<group>";
+		};
 		1A6B61051A5EBD0500F8D961 = {
 			isa = PBXGroup;
 			children = (
-				1A8F7B611A6B689E0009DA31 /* fmod */,
-				1A8F7B471A6940530009DA31 /* CEGUI */,
+				1A14B96C1A6BD71C00013597 /* fmod */,
+				1A14B9681A6BD36400013597 /* gorilla */,
 				1A6B611C1A5EBD0500F8D961 /* chess */,
 				1A6B61111A5EBD0500F8D961 /* Frameworks */,
 				1A6B61101A5EBD0500F8D961 /* Products */,
@@ -329,6 +363,8 @@
 		1A6B61371A5EBD0600F8D961 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1A14B9851A6BDB3600013597 /* dejavu.png */,
+				1A14B9831A6BDAFF00013597 /* dejavu.gorilla */,
 				1A8F7B451A6922940009DA31 /* King_black.mesh */,
 				1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */,
 				1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */,
@@ -378,26 +414,6 @@
 				2ECDC3681A66277200A50D33 /* skybox.zip */,
 			);
 			path = packs;
-			sourceTree = "<group>";
-		};
-		1A8F7B611A6B689E0009DA31 /* fmod */ = {
-			isa = PBXGroup;
-			children = (
-				1A14B9641A6B6D4500013597 /* drumloop.wav */,
-				1A8F7B6D1A6B68D80009DA31 /* common_platform.h */,
-				1A8F7B6E1A6B68D80009DA31 /* common_platform.mm */,
-				1A8F7B6A1A6B68C80009DA31 /* common.cpp */,
-				1A8F7B6B1A6B68C80009DA31 /* common.h */,
-				1A8F7B621A6B68A80009DA31 /* fmod_codec.h */,
-				1A8F7B631A6B68A80009DA31 /* fmod_common.h */,
-				1A8F7B641A6B68A80009DA31 /* fmod_dsp_effects.h */,
-				1A8F7B651A6B68A80009DA31 /* fmod_dsp.h */,
-				1A8F7B661A6B68A80009DA31 /* fmod_errors.h */,
-				1A8F7B671A6B68A80009DA31 /* fmod_output.h */,
-				1A8F7B681A6B68A80009DA31 /* fmod.h */,
-				1A8F7B691A6B68A80009DA31 /* fmod.hpp */,
-			);
-			name = fmod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +486,6 @@
 				2ECDC3641A66275600A50D33 /* Examples.material in Resources */,
 				2ECDC3591A66273600A50D33 /* PawnB05.mesh in Resources */,
 				2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */,
-				1A8F7B481A6940540009DA31 /* CEGUI in Resources */,
 				2ECDC3471A66273600A50D33 /* HorseA01.mesh in Resources */,
 				2ECDC3511A66273600A50D33 /* PawnA05.mesh in Resources */,
 				2ECDC3611A66273600A50D33 /* TowerB01.mesh in Resources */,
@@ -483,16 +498,18 @@
 				2ECDC34D1A66273600A50D33 /* PawnA01.mesh in Resources */,
 				2ECDC35E1A66273600A50D33 /* QueenB.mesh in Resources */,
 				2ECDC3531A66273600A50D33 /* PawnA07.mesh in Resources */,
+				1A14B9861A6BDB3600013597 /* dejavu.png in Resources */,
 				2ECDC3551A66273600A50D33 /* PawnB01.mesh in Resources */,
 				2ECDC3581A66273600A50D33 /* PawnB04.mesh in Resources */,
 				2ECDC3491A66273600A50D33 /* HorseB01.mesh in Resources */,
 				2ECDC3571A66273600A50D33 /* PawnB03.mesh in Resources */,
-				1A14B9651A6B6D4500013597 /* drumloop.wav in Resources */,
+				1A14B97C1A6BD73700013597 /* drumloop.wav in Resources */,
 				2ECDC34E1A66273600A50D33 /* PawnA02.mesh in Resources */,
 				2ECDC3601A66273600A50D33 /* TowerA02.mesh in Resources */,
 				2ECDC3541A66273600A50D33 /* PawnA08.mesh in Resources */,
 				2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */,
 				2ECDC3241A65E2D000A50D33 /* ogre.cfg in Resources */,
+				1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */,
 				1A8F7B3E1A67DFBC0009DA31 /* TowerA01_black.mesh in Resources */,
 				1A8F7B401A67E3AD0009DA31 /* HorseA01_black.mesh in Resources */,
 				2ECDC35B1A66273600A50D33 /* PawnB07.mesh in Resources */,
@@ -529,11 +546,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A8F7B6C1A6B68C80009DA31 /* common.cpp in Sources */,
 				2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */,
 				2ECDC3151A65E29D00A50D33 /* main.mm in Sources */,
+				1A14B96B1A6BD37C00013597 /* Gorilla.cpp in Sources */,
 				2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */,
-				1A8F7B6F1A6B68D80009DA31 /* common_platform.mm in Sources */,
+				1A14B97B1A6BD73700013597 /* common.cpp in Sources */,
+				1A14B97A1A6BD73700013597 /* common_platform.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,9 +665,8 @@
 					"\"$(OGRE_SDK_ROOT)/include/OGRE/Overlay\"",
 					"\"$(OGRE_SDK_ROOT)/include/OIS\"",
 					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
+					"\"/fmod/api/lowlevel\"/**",
 					"\"$(OGRE_SDK_ROOT)/boost\"",
-					"\"/cegui/cegui/include\"",
-					"\"/cegui/build/cegui/include/\"",
 				);
 				INFOPLIST_FILE = "chess/chess-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = /Users/james/chess;
@@ -690,9 +707,8 @@
 					"\"$(OGRE_SDK_ROOT)/include/OGRE/Overlay\"",
 					"\"$(OGRE_SDK_ROOT)/include/OIS\"",
 					"\"$(OGRE_SDK_ROOT)/Dependencies/include\"",
+					"\"/fmod/api/lowlevel\"/**",
 					"\"$(OGRE_SDK_ROOT)/boost\"",
-					"\"/cegui/cegui/include\"",
-					"\"/cegui/build/cegui/include/\"",
 				);
 				INFOPLIST_FILE = "chess/chess-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = /Users/james/chess;

@@ -8,6 +8,8 @@
 #include "fmod.hpp"
 #include "common.h"
 
+#include "Gorilla.h"
+
 #ifdef INCLUDE_RTSHADER_SYSTEM
 
 #include "OgreRTShaderSystem.h"
@@ -92,6 +94,7 @@ public:
     
 private:
     void setupChessScene();
+    void setupGorilla();
     void setupAudio();
     void setupLights();
     void setupWhitePieces();
@@ -199,15 +202,32 @@ private:
     Ogre::SceneNode *blackBishopNode2;
     Ogre::Entity *blackBishopEntity2;
     
-//    CEGUI::OgreCEGUIRenderer* mGUIRenderer;
-//    CEGUI::System* mGUISystem;
-    
     FMOD::System     *system;
     FMOD::Sound      *sound1;
     FMOD::Channel    *channel = 0;
     FMOD_RESULT       result;
     unsigned int      version;
     void             *extradriverdata = 0;
+    
+    Ogre::Real              mTimer, mTimer2;
+    Gorilla::Silverback*    mSilverback;
+    Gorilla::Screen*        mScreen;
+    Gorilla::Layer*         mLayer;
+    
+    Gorilla::Polygon* poly;
+    Gorilla::LineList*       list;
+    Gorilla::Caption*        caption;
+    Gorilla::Rectangle*      rect;
+    Gorilla::QuadList*       quads;
+    Gorilla::MarkupText*     markup;
+    
+    Gorilla::Layer* mMousePointerLayer;
+    Gorilla::Rectangle* mMousePointer;
+    Ogre::Vector2 mNormalizedMousePosition;
+    
+    // For the smooth movment when moving the mouse
+    Ogre::Vector3 cameraDirection;
+    
     
 	bool m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM

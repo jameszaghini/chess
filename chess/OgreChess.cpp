@@ -164,22 +164,32 @@ void Chess::startDemo()
 
 void Chess::setupChessScene()
 {
-//	sManager->setSkyBox(true, "Examples/SceneCubeMap2");
-    
-//    mGUIRenderer = new CEGUI::OgreCEGUIRenderer(mWindow, Ogre::RENDER_QUEUE_OVERLAY, false, 3000);
-//    mGUISystem = new CEGUI::System(mGUIRenderer);
-//    CEGUI::Logger::getSingleton().setLoggingLevel(CEGUI::Informative);
-//    
-//    // Load scheme and set up defaults
-//    CEGUI::SchemeManager::getSingleton().loadScheme( (CEGUI::utf8*)"TaharezLook.scheme");
-//    mGUISystem->setDefaultMouseCursor( (CEGUI::utf8*)"TaharezLook", (CEGUI::utf8*)"MouseArrow");
-//    CEGUI::MouseCursor::getSingleton().setImage(CEGUI::System::getSingleton().getDefaultMouseCursor());
-    Common_Init(&extradriverdata);
-    
+    setupGorilla();
     setupAudio();    
     setupLights();
     setupWhitePieces();
     setupBlackPieces();
+}
+
+void Chess::setupGorilla()
+{
+    // Create Silverback and load in dejavu
+    mSilverback = new Gorilla::Silverback();
+    mSilverback->loadAtlas("dejavu");
+    mScreen = mSilverback->createScreen(OgreFramework::getSingletonPtr()->m_pCamera->getViewport(), "dejavu");
+    mScreen->setOrientation(Ogre::OR_DEGREE_0);
+    Ogre::Real vpW = mScreen->getWidth(), vpH = mScreen->getHeight();
+    
+    // Create our drawing layer
+    mLayer = mScreen->createLayer(0);
+    rect = mLayer->createRectangle(20, 20, vpW / 4, vpH / 4);
+    rect->background_gradient(Gorilla::Gradient_Diagonal, Gorilla::rgb(100,149,237), Gorilla::rgb(65,105,225));
+    
+    markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n%@14%Ogre3D :: FMOD :: Gorilla%@9%\nAnnoying drum loop");
+    
+    mMousePointerLayer = mScreen->createLayer(15);
+    mMousePointer = mMousePointerLayer->createRectangle(0,0,10,18);
+    mMousePointer->background_image("mousepointer");
 }
 
 void Chess::setupAudio()
@@ -187,6 +197,8 @@ void Chess::setupAudio()
     /*
      Create a System object and initialize
      */
+    Common_Init(&extradriverdata);
+    
     result = FMOD::System_Create(&system);
     ERRCHECK(result);
     
@@ -202,8 +214,8 @@ void Chess::setupAudio()
     result = system->createSound(Common_MediaPath("drumloop.wav"), FMOD_DEFAULT, 0, &sound1);
     ERRCHECK(result);
     
-//    result = sound1->setMode(FMOD_LOOP_OFF);    /* drumloop.wav has embedded loop points which automatically makes looping turn on, */
-//    ERRCHECK(result);                           /* so turn it off here.  We could have also just put FMOD_LOOP_OFF in the above CreateSound call. */
+  //  result = sound1->setMode(FMOD_LOOP_OFF);    /* drumloop.wav has embedded loop points which automatically makes looping turn on, */
+  //  ERRCHECK(result);                           /* so turn it off here.  We could have also just put FMOD_LOOP_OFF in the above CreateSound call. */
     
     result = system->playSound(sound1, 0, false, &channel);
     ERRCHECK(result);
