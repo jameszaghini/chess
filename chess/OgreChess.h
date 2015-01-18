@@ -2,9 +2,16 @@
 #define OGRE_DEMO_H
 
 #include "OgreFramework.h"
+//#include "CEGUI/CEGUI.h"
+//#include <RendererModules/Ogre/CEGUIOgreRenderer.h>
+
+#include "fmod.hpp"
+#include "common.h"
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
+
 #include "OgreRTShaderSystem.h"
+
 
 /** This class demonstrates basic usage of the RTShader system.
  It sub class the material manager listener class and when a target scheme callback
@@ -85,6 +92,7 @@ public:
     
 private:
     void setupChessScene();
+    void setupAudio();
     void setupLights();
     void setupWhitePieces();
     void setupBlackPieces();
@@ -191,10 +199,17 @@ private:
     Ogre::SceneNode *blackBishopNode2;
     Ogre::Entity *blackBishopEntity2;
     
-    int            gunSoundIndex;
-    int            gunSoundChannel;
+//    CEGUI::OgreCEGUIRenderer* mGUIRenderer;
+//    CEGUI::System* mGUISystem;
     
-	bool					m_bShutdown;
+    FMOD::System     *system;
+    FMOD::Sound      *sound1;
+    FMOD::Channel    *channel = 0;
+    FMOD_RESULT       result;
+    unsigned int      version;
+    void             *extradriverdata = 0;
+    
+	bool m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
     Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.
     ShaderGeneratorTechniqueResolverListener*	mMaterialMgrListener;		// Shader generator material manager listener.	

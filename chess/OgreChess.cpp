@@ -165,9 +165,48 @@ void Chess::startDemo()
 void Chess::setupChessScene()
 {
 //	sManager->setSkyBox(true, "Examples/SceneCubeMap2");
+    
+//    mGUIRenderer = new CEGUI::OgreCEGUIRenderer(mWindow, Ogre::RENDER_QUEUE_OVERLAY, false, 3000);
+//    mGUISystem = new CEGUI::System(mGUIRenderer);
+//    CEGUI::Logger::getSingleton().setLoggingLevel(CEGUI::Informative);
+//    
+//    // Load scheme and set up defaults
+//    CEGUI::SchemeManager::getSingleton().loadScheme( (CEGUI::utf8*)"TaharezLook.scheme");
+//    mGUISystem->setDefaultMouseCursor( (CEGUI::utf8*)"TaharezLook", (CEGUI::utf8*)"MouseArrow");
+//    CEGUI::MouseCursor::getSingleton().setImage(CEGUI::System::getSingleton().getDefaultMouseCursor());
+    Common_Init(&extradriverdata);
+    
+    setupAudio();    
     setupLights();
     setupWhitePieces();
     setupBlackPieces();
+}
+
+void Chess::setupAudio()
+{
+    /*
+     Create a System object and initialize
+     */
+    result = FMOD::System_Create(&system);
+    ERRCHECK(result);
+    
+    result = system->getVersion(&version);
+    ERRCHECK(result);
+    if (version < FMOD_VERSION)
+    {
+        Common_Fatal("FMOD lib version %08x doesn't match header version %08x", version, FMOD_VERSION);
+    }
+    result = system->init(32, FMOD_INIT_NORMAL, extradriverdata);
+    ERRCHECK(result);
+    
+    result = system->createSound(Common_MediaPath("drumloop.wav"), FMOD_DEFAULT, 0, &sound1);
+    ERRCHECK(result);
+    
+//    result = sound1->setMode(FMOD_LOOP_OFF);    /* drumloop.wav has embedded loop points which automatically makes looping turn on, */
+//    ERRCHECK(result);                           /* so turn it off here.  We could have also just put FMOD_LOOP_OFF in the above CreateSound call. */
+    
+    result = system->playSound(sound1, 0, false, &channel);
+    ERRCHECK(result);
 }
 
 void Chess::setupLights()
@@ -385,11 +424,15 @@ void Chess::setupBlackPieces()
 void Chess::runDemo()
 {
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Start main loop...");
-	
+    
+
+    
 	double timeSinceLastFrame = 0;
 	double startTime = 0;
     
     OgreFramework::getSingletonPtr()->m_pRenderWnd->resetStatistics();
+    
+
     
 #if (!defined(OGRE_IS_IOS)) && !((OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__)
 	while(!m_bShutdown && !OgreFramework::getSingletonPtr()->isOgreToBeShutDown()) 
@@ -412,6 +455,20 @@ void Chess::runDemo()
 			OgreFramework::getSingletonPtr()->m_pRoot->renderOneFrame();
             
 			timeSinceLastFrame = OgreFramework::getSingletonPtr()->m_pTimer->getMillisecondsCPU() - startTime;
+            
+            using namespace CEGUI;
+            CEGUI::WindowManager& wmgr = CEGUI::WindowManager::getSingleton();
+            Window* myRoot = wmgr.createWindow( "DefaultWindow", "root" );
+            System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
+            FrameWindow* fWnd = static_cast<FrameWindow*>(wmgr.createWindow( "TaharezLook/FrameWindow", "testWindow" ));
+            myRoot->addChild( fWnd );
+            // position a quarter of the way in from the top-left of parent.
+            fWnd->setPosition( UVector2( UDim( 0.25f, 0.0f ), UDim( 0.25f, 0.0f ) ) );
+            // set size to be half the size of the parent
+            fWnd->setSize( USize( UDim( 0.5f, 0.0f ), UDim( 0.5f, 0.0f ) ) );
+            fWnd->setText( "Hello World!" );
+            
+            
 		}
 		else
 		{
