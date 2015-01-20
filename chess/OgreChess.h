@@ -206,6 +206,8 @@ private:
     Ogre::SceneNode *blackBishopNode2;
     Ogre::Entity *blackBishopEntity2;
     
+    Ogre::RaySceneQuery* mRayScnQuery;
+    
     FMOD::System *system;
     FMOD::Sound *sound1;
     FMOD::Channel *channel = 0;

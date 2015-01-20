@@ -159,6 +159,10 @@ void Chess::setupChessScene()
     setupLights();
     setupWhitePieces();
     setupBlackPieces();
+    
+    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
+
+    mRayScnQuery = sManager->createRayQuery(Ogre::Ray());
 }
 
 void Chess::setupGorilla()
@@ -501,6 +505,30 @@ bool Chess::mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
 
 bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
 {
+    Ogre::Vector2 mousePosition = mMousePointer->position();
+    
+    Real x = (mousePosition.x / OgreFramework::getSingletonPtr()->m_pRenderWnd->getWidth());
+    Real y = (mousePosition.y / OgreFramework::getSingletonPtr()->m_pRenderWnd->getHeight());
+    Ray mouseRay = OgreFramework::getSingletonPtr()->m_pCamera->getCameraToViewportRay(x, y);
+
+    mRayScnQuery->setRay(mouseRay);
+    
+    /*
+     This next chunk finds the results of the raycast
+     If the mouse is pointing at world geometry we spawn a robot at that position
+     */
+    Ogre::RaySceneQueryResult& result = mRayScnQuery->execute();
+    Ogre::RaySceneQueryResult::iterator iter = result.begin();
+    
+    for (iter = result.begin( ); iter != result.end(); iter++) {
+        Node *mynode = iter->movable->getParentNode();
+        
+        printf("%s", mynode->getName().c_str());
+        if(mynode->getName() != "boardNode") {
+            mynode->setScale(2,2,2);
+        }
+    }
+    
     return true;
 }
 
