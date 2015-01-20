@@ -2,12 +2,8 @@
 #define OGRE_DEMO_H
 
 #include "OgreFramework.h"
-//#include "CEGUI/CEGUI.h"
-//#include <RendererModules/Ogre/CEGUIOgreRenderer.h>
-
 #include "fmod.hpp"
 #include "common.h"
-
 #include "Gorilla.h"
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
@@ -77,20 +73,24 @@ public:
 	}
     
 protected:	
-	Ogre::RTShader::ShaderGenerator*	mShaderGenerator;			// The shader generator instance.		
+	Ogre::RTShader::ShaderGenerator *mShaderGenerator; // The shader generator instance.
 };
 #endif
 
-class Chess : public OIS::KeyListener
+class Chess : public OIS::KeyListener, public OIS::MouseListener
 {
 public:
 	Chess();
 	~Chess();
     
 	void startDemo();
-	
+
 	bool keyPressed(const OIS::KeyEvent &keyEventRef);
 	bool keyReleased(const OIS::KeyEvent &keyEventRef);
+
+    bool mouseMoved(const OIS::MouseEvent &e);
+    bool mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
+    bool mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id);
     
 private:
     void setupChessScene();
@@ -103,6 +103,10 @@ private:
     bool initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void destroyRTShaderSystem();
 
+    std::map<std::string, OIS::MouseListener*> mMouseListeners;
+    std::map<std::string, OIS::MouseListener*>::iterator itMouseListener;
+    std::map<std::string, OIS::MouseListener*>::iterator itMouseListenerEnd;
+    
 	Ogre::SceneNode *boardNode;
 	Ogre::Entity *boardEntity;
 
@@ -202,37 +206,36 @@ private:
     Ogre::SceneNode *blackBishopNode2;
     Ogre::Entity *blackBishopEntity2;
     
-    FMOD::System     *system;
-    FMOD::Sound      *sound1;
-    FMOD::Channel    *channel = 0;
-    FMOD_RESULT       result;
-    unsigned int      version;
-    void             *extradriverdata = 0;
+    FMOD::System *system;
+    FMOD::Sound *sound1;
+    FMOD::Channel *channel = 0;
+    FMOD_RESULT result;
+    unsigned int version;
+    void *extradriverdata = 0;
     
-    Ogre::Real              mTimer, mTimer2;
-    Gorilla::Silverback*    mSilverback;
-    Gorilla::Screen*        mScreen;
-    Gorilla::Layer*         mLayer;
+    Ogre::Real mTimer, mTimer2;
+    Gorilla::Silverback *mSilverback;
+    Gorilla::Screen *mScreen;
+    Gorilla::Layer *mLayer;
     
-    Gorilla::Polygon* poly;
-    Gorilla::LineList*       list;
-    Gorilla::Caption*        caption;
-    Gorilla::Rectangle*      rect;
-    Gorilla::QuadList*       quads;
-    Gorilla::MarkupText*     markup;
+    Gorilla::Polygon *poly;
+    Gorilla::LineList *list;
+    Gorilla::Caption *caption;
+    Gorilla::Rectangle *rect;
+    Gorilla::QuadList *quads;
+    Gorilla::MarkupText *markup;
     
     Gorilla::Layer* mMousePointerLayer;
-    Gorilla::Rectangle* mMousePointer;
+    Gorilla::Rectangle *mMousePointer;
     Ogre::Vector2 mNormalizedMousePosition;
     
     // For the smooth movment when moving the mouse
     Ogre::Vector3 cameraDirection;
     
-    
 	bool m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
-    Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.
-    ShaderGeneratorTechniqueResolverListener*	mMaterialMgrListener;		// Shader generator material manager listener.	
+    Ogre::RTShader::ShaderGenerator *mShaderGenerator;			// The Shader generator instance.
+    ShaderGeneratorTechniqueResolverListener *mMaterialMgrListener;		// Shader generator material manager listener.
 #endif // INCLUDE_RTSHADER_SYSTEM
 
 };

@@ -120,7 +120,7 @@ void Chess::destroyRTShaderSystem()
 void Chess::startDemo()
 {
 	new OgreFramework();
-	if(!OgreFramework::getSingletonPtr()->initOgre("Chess", this, 0))
+	if(!OgreFramework::getSingletonPtr()->initOgre("Chess", this, this))
 		return;
     
 	m_bShutdown = false;
@@ -131,32 +131,22 @@ void Chess::startDemo()
     initialiseRTShaderSystem(OgreFramework::getSingletonPtr()->m_pSceneMgr);
     Ogre::MaterialPtr baseWhite = Ogre::MaterialManager::getSingleton().getByName("BaseWhite", Ogre::ResourceGroupManager::INTERNAL_RESOURCE_GROUP_NAME);				
     baseWhite->setLightingEnabled(false);
-    mShaderGenerator->createShaderBasedTechnique(
-                                                 "BaseWhite", 
-                                                 Ogre::MaterialManager::DEFAULT_SCHEME_NAME, 
-                                                 Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);	
-    mShaderGenerator->validateMaterial(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME, 
-                                       "BaseWhite");
-    baseWhite->getTechnique(0)->getPass(0)->setVertexProgram(
-                                                             baseWhite->getTechnique(1)->getPass(0)->getVertexProgram()->getName());
-    baseWhite->getTechnique(0)->getPass(0)->setFragmentProgram(
-                                                               baseWhite->getTechnique(1)->getPass(0)->getFragmentProgram()->getName());
+    mShaderGenerator->createShaderBasedTechnique("BaseWhite", Ogre::MaterialManager::DEFAULT_SCHEME_NAME, Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
+    mShaderGenerator->validateMaterial(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME, "BaseWhite");
+    baseWhite->getTechnique(0)->getPass(0)->setVertexProgram(baseWhite->getTechnique(1)->getPass(0)->getVertexProgram()->getName());
+    baseWhite->getTechnique(0)->getPass(0)->setFragmentProgram(baseWhite->getTechnique(1)->getPass(0)->getFragmentProgram()->getName());
     
     // creates shaders for base material BaseWhiteNoLighting using the RTSS
-    mShaderGenerator->createShaderBasedTechnique(
-                                                 "BaseWhiteNoLighting", 
-                                                 Ogre::MaterialManager::DEFAULT_SCHEME_NAME, 
-                                                 Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);	
-    mShaderGenerator->validateMaterial(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME, 
-                                       "BaseWhiteNoLighting");
+    mShaderGenerator->createShaderBasedTechnique("BaseWhiteNoLighting", Ogre::MaterialManager::DEFAULT_SCHEME_NAME, Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME);
+    mShaderGenerator->validateMaterial(Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME, "BaseWhiteNoLighting");
     Ogre::MaterialPtr baseWhiteNoLighting = Ogre::MaterialManager::getSingleton().getByName("BaseWhiteNoLighting", Ogre::ResourceGroupManager::INTERNAL_RESOURCE_GROUP_NAME);
-    baseWhiteNoLighting->getTechnique(0)->getPass(0)->setVertexProgram(
-                                                                       baseWhiteNoLighting->getTechnique(1)->getPass(0)->getVertexProgram()->getName());
-    baseWhiteNoLighting->getTechnique(0)->getPass(0)->setFragmentProgram(
-                                                                         baseWhiteNoLighting->getTechnique(1)->getPass(0)->getFragmentProgram()->getName());
+    baseWhiteNoLighting->getTechnique(0)->getPass(0)->setVertexProgram(baseWhiteNoLighting->getTechnique(1)->getPass(0)->getVertexProgram()->getName());
+    baseWhiteNoLighting->getTechnique(0)->getPass(0)->setFragmentProgram(baseWhiteNoLighting->getTechnique(1)->getPass(0)->getFragmentProgram()->getName());
 #endif
     
 	setupChessScene();
+    
+    
 #if !((OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__)
 	runDemo();
 #endif
@@ -190,13 +180,12 @@ void Chess::setupGorilla()
     mMousePointerLayer = mScreen->createLayer(15);
     mMousePointer = mMousePointerLayer->createRectangle(0,0,10,18);
     mMousePointer->background_image("mousepointer");
+    mMousePointer->position(OgreFramework::getSingletonPtr()->m_pRenderWnd->getWidth() / 2, OgreFramework::getSingletonPtr()->m_pRenderWnd->getHeight() / 2);
 }
 
 void Chess::setupAudio()
 {
-    /*
-     Create a System object and initialize
-     */
+    /* Create a System object and initialize */
     Common_Init(&extradriverdata);
     
     result = FMOD::System_Create(&system);
@@ -437,14 +426,10 @@ void Chess::runDemo()
 {
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Start main loop...");
     
-
-    
 	double timeSinceLastFrame = 0;
 	double startTime = 0;
     
     OgreFramework::getSingletonPtr()->m_pRenderWnd->resetStatistics();
-    
-
     
 #if (!defined(OGRE_IS_IOS)) && !((OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__)
 	while(!m_bShutdown && !OgreFramework::getSingletonPtr()->isOgreToBeShutDown()) 
@@ -468,18 +453,10 @@ void Chess::runDemo()
             
 			timeSinceLastFrame = OgreFramework::getSingletonPtr()->m_pTimer->getMillisecondsCPU() - startTime;
             
-            using namespace CEGUI;
-            CEGUI::WindowManager& wmgr = CEGUI::WindowManager::getSingleton();
-            Window* myRoot = wmgr.createWindow( "DefaultWindow", "root" );
-            System::getSingleton().getDefaultGUIContext().setRootWindow( myRoot );
-            FrameWindow* fWnd = static_cast<FrameWindow*>(wmgr.createWindow( "TaharezLook/FrameWindow", "testWindow" ));
-            myRoot->addChild( fWnd );
-            // position a quarter of the way in from the top-left of parent.
-            fWnd->setPosition( UVector2( UDim( 0.25f, 0.0f ), UDim( 0.25f, 0.0f ) ) );
-            // set size to be half the size of the parent
-            fWnd->setSize( USize( UDim( 0.5f, 0.0f ), UDim( 0.5f, 0.0f ) ) );
-            fWnd->setText( "Hello World!" );
+            Axis x = OgreFramework::getSingletonPtr()->m_pMouse->getMouseState().X;
             
+            m_pMouse->getMouseState().height = m_pRenderWnd->getHeight();
+            m_pMouse->getMouseState().width	 = m_pRenderWnd->getWidth();
             
 		}
 		else
@@ -497,6 +474,34 @@ void Chess::runDemo()
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Main loop quit");
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Shutdown OGRE...");
 #endif
+}
+
+bool Chess::mouseMoved(const OIS::MouseEvent &e) {
+ 
+    OgreFramework::getSingletonPtr()->mouseMoved(e);
+
+    printf("x: %d, y: %d\n", e.state.X.abs, e.state.Y.abs);
+
+    mMousePointer->position(e.state.X.abs, e.state.Y.abs);
+    
+//    itMouseListener    = mMouseListeners.begin();
+//    itMouseListenerEnd = mMouseListeners.end();
+//    for(; itMouseListener != itMouseListenerEnd; ++itMouseListener ) {
+//        if(!itMouseListener->second->mouseMoved( e ))
+//            break;
+//    }
+    
+    return true;
+}
+
+bool Chess::mousePressed(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
+{
+    return true;
+}
+
+bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
+{
+    return true;
 }
 
 bool Chess::keyPressed(const OIS::KeyEvent &keyEventRef)
