@@ -24,18 +24,6 @@
 		1A8F7B421A691EF20009DA31 /* QueenA_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */; };
 		1A8F7B441A6920A60009DA31 /* Bishop_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */; };
 		1A8F7B461A6922940009DA31 /* King_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B451A6922940009DA31 /* King_black.mesh */; };
-		1A8F7B4A1A6942160009DA31 /* libCEGUIBase-0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B491A6942160009DA31 /* libCEGUIBase-0.dylib */; };
-		1A8F7B561A6944230009DA31 /* libexpat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4B1A6944230009DA31 /* libexpat.dylib */; };
-		1A8F7B571A6944230009DA31 /* libfreetype.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4C1A6944230009DA31 /* libfreetype.dylib */; };
-		1A8F7B581A6944230009DA31 /* libglew.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4D1A6944230009DA31 /* libglew.dylib */; };
-		1A8F7B591A6944230009DA31 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4E1A6944230009DA31 /* libglfw.dylib */; };
-		1A8F7B5A1A6944230009DA31 /* libjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B4F1A6944230009DA31 /* libjpeg.dylib */; };
-		1A8F7B5B1A6944230009DA31 /* liblibpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B501A6944230009DA31 /* liblibpng.dylib */; };
-		1A8F7B5C1A6944230009DA31 /* liblua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B511A6944230009DA31 /* liblua.dylib */; };
-		1A8F7B5D1A6944230009DA31 /* libpcre.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B521A6944230009DA31 /* libpcre.dylib */; };
-		1A8F7B5E1A6944230009DA31 /* libSILLY.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B531A6944230009DA31 /* libSILLY.dylib */; };
-		1A8F7B5F1A6944230009DA31 /* libtoluapp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B541A6944230009DA31 /* libtoluapp.dylib */; };
-		1A8F7B601A6944230009DA31 /* libzlib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B551A6944230009DA31 /* libzlib.dylib */; };
 		1A8F7B721A6B695C0009DA31 /* libfmod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B701A6B695C0009DA31 /* libfmod.dylib */; };
 		1A8F7B731A6B695C0009DA31 /* libfmodL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
@@ -182,24 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A8F7B721A6B695C0009DA31 /* libfmod.dylib in Frameworks */,
-				1A8F7B591A6944230009DA31 /* libglfw.dylib in Frameworks */,
-				1A8F7B561A6944230009DA31 /* libexpat.dylib in Frameworks */,
-				1A8F7B5E1A6944230009DA31 /* libSILLY.dylib in Frameworks */,
-				1A8F7B4A1A6942160009DA31 /* libCEGUIBase-0.dylib in Frameworks */,
 				1A6B611B1A5EBD0500F8D961 /* QuartzCore.framework in Frameworks */,
 				1A8F7B731A6B695C0009DA31 /* libfmodL.dylib in Frameworks */,
-				1A8F7B601A6944230009DA31 /* libzlib.dylib in Frameworks */,
-				1A8F7B5B1A6944230009DA31 /* liblibpng.dylib in Frameworks */,
-				1A8F7B581A6944230009DA31 /* libglew.dylib in Frameworks */,
 				1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */,
 				1A6B61191A5EBD0500F8D961 /* OpenGL.framework in Frameworks */,
-				1A8F7B5C1A6944230009DA31 /* liblua.dylib in Frameworks */,
 				1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */,
-				1A8F7B571A6944230009DA31 /* libfreetype.dylib in Frameworks */,
 				1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */,
-				1A8F7B5D1A6944230009DA31 /* libpcre.dylib in Frameworks */,
-				1A8F7B5F1A6944230009DA31 /* libtoluapp.dylib in Frameworks */,
-				1A8F7B5A1A6944230009DA31 /* libjpeg.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +513,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/libCEGUIBase-0.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libCEGUIBase-0.dylib\"\nditto \"$PROJECT_DIR/libSILLY.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libSILLY.dylib\"\nditto \"$PROJECT_DIR/libexpat.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libexpat.dylib\"\nditto \"$PROJECT_DIR/libfmod.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmod.dylib\"\nditto \"$PROJECT_DIR/libfmodL.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmodL.dylib\"\nditto \"$PROJECT_DIR/libfreetype.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfreetype.dylib\"\nditto \"$PROJECT_DIR/libglew.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libglew.dylib\"\nditto \"$PROJECT_DIR/libjpeg.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libjpeg.dylib\"\nditto \"$PROJECT_DIR/libjpeg.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libjpeg.dylib\"\nditto \"$PROJECT_DIR/liblibpng.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/liblibpng.dylib\"\nditto \"$PROJECT_DIR/liblua.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/liblua.dylib\"\nditto \"$PROJECT_DIR/libglfw.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libglfw.dylib\"\nditto \"$PROJECT_DIR/libpcre.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libpcre.dylib\"\nditto \"$PROJECT_DIR/libtoluapp.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libtoluapp.dylib\"\nditto \"$PROJECT_DIR/libzlib.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libzlib.dylib\"\n\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/\"\n";
+			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/libfmod.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmod.dylib\"\nditto \"$PROJECT_DIR/libfmodL.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmodL.dylib\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -669,12 +645,13 @@
 					"\"$(OGRE_SDK_ROOT)/boost\"",
 				);
 				INFOPLIST_FILE = "chess/chess-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = /Users/james/chess;
+				LD_RUNPATH_SEARCH_PATHS = "/Users/james/chess /fmod/api/lowlevel/lib";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					/usr/local/lib,
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
 					"\"$(SRCROOT)\"",
+					/fmod/api/lowlevel/lib,
 				);
 				OGRE_SDK_ROOT = /OgreSDK;
 				ONLY_ACTIVE_ARCH = YES;
@@ -685,7 +662,6 @@
 					Ogre,
 					"-framework",
 					OgreOverlay,
-					"-lCEGUIBase-0",
 				);
 			};
 			name = Debug;
@@ -711,12 +687,13 @@
 					"\"$(OGRE_SDK_ROOT)/boost\"",
 				);
 				INFOPLIST_FILE = "chess/chess-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = /Users/james/chess;
+				LD_RUNPATH_SEARCH_PATHS = "/Users/james/chess /fmod/api/lowlevel/lib";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib\"",
 					/usr/local/lib,
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
 					"\"$(SRCROOT)\"",
+					/fmod/api/lowlevel/lib,
 				);
 				OGRE_SDK_ROOT = /OgreSDK;
 				ONLY_ACTIVE_ARCH = YES;
@@ -727,7 +704,6 @@
 					Ogre,
 					"-framework",
 					OgreOverlay,
-					"-lCEGUIBase-0",
 				);
 			};
 			name = Release;
