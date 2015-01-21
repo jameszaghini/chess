@@ -512,6 +512,7 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
     Ray mouseRay = OgreFramework::getSingletonPtr()->m_pCamera->getCameraToViewportRay(x, y);
 
     mRayScnQuery->setRay(mouseRay);
+    mRayScnQuery->setSortByDistance(true);
     
     /*
      This next chunk finds the results of the raycast
