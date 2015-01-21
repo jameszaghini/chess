@@ -8,6 +8,8 @@
 
 Chess::Chess()
 {
+    selectedNode = 0;
+    
 	boardNode = 0;
 	boardEntity	= 0;
 
@@ -530,11 +532,18 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
     Ogre::RaySceneQueryResult::iterator iter = result.begin();
     
     for (iter = result.begin( ); iter != result.end(); iter++) {
-        Node *mynode = iter->movable->getParentNode();
+        Node *clickedNode = iter->movable->getParentNode();
         
-        if(mynode->getName() != "boardNode") {
-            printf("%s", mynode->getName().c_str());
-            mynode->setScale(1.2,1.2,1.2);
+        if(clickedNode->getName() != "boardNode") {
+            printf("%s", clickedNode->getName().c_str());
+            
+            if(selectedNode) {
+                selectedNode->setScale(1,1,1);
+            }
+            
+            clickedNode->setScale(1.2,1.2,1.2);
+            selectedNode = clickedNode;
+           
             break;
         }
     }

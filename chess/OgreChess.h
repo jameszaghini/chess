@@ -208,6 +208,8 @@ private:
     
     Ogre::RaySceneQuery* mRayScnQuery;
     
+    Ogre::Node *selectedNode;
+    
     FMOD::System *system;
     FMOD::Sound *sound1;
     FMOD::Channel *channel = 0;
