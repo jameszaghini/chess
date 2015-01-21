@@ -261,7 +261,7 @@
 			children = (
 				2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */,
 				2ECDC3141A65E29D00A50D33 /* main.mm */,
-				1A6B61251A5EBD0500F8D961 /* Basic Ogre Framework */,
+				1A6B61251A5EBD0500F8D961 /* code */,
 				1A6B612D1A5EBD0600F8D961 /* Resources */,
 				1A6B611D1A5EBD0500F8D961 /* Supporting Files */,
 			);
@@ -272,13 +272,13 @@
 		1A6B611D1A5EBD0500F8D961 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */,
 				2ECDC3131A65E27E00A50D33 /* chess-Info.plist */,
+				2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A6B61251A5EBD0500F8D961 /* Basic Ogre Framework */ = {
+		1A6B61251A5EBD0500F8D961 /* code */ = {
 			isa = PBXGroup;
 			children = (
 				2ECDC3191A65E2B900A50D33 /* AppDelegate.h */,
@@ -288,16 +288,16 @@
 				2ECDC31D1A65E2B900A50D33 /* OgreFramework.h */,
 				2ECDC31E1A65E2B900A50D33 /* OgreText.h */,
 			);
-			name = "Basic Ogre Framework";
+			name = code;
 			sourceTree = "<group>";
 		};
 		1A6B612D1A5EBD0600F8D961 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A6B612E1A5EBD0600F8D961 /* media */,
 				2ECDC3211A65E2D000A50D33 /* ogre.cfg */,
 				2ECDC3221A65E2D000A50D33 /* plugins.cfg */,
 				2ECDC3231A65E2D000A50D33 /* resources.cfg */,
-				1A6B612E1A5EBD0600F8D961 /* media */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -339,22 +339,20 @@
 		1A6B61371A5EBD0600F8D961 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				1A14B9851A6BDB3600013597 /* dejavu.png */,
-				1A14B9831A6BDAFF00013597 /* dejavu.gorilla */,
-				1A8F7B451A6922940009DA31 /* King_black.mesh */,
 				1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */,
-				1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */,
-				1A8F7B3F1A67E3AD0009DA31 /* HorseA01_black.mesh */,
-				1A8F7B3D1A67DFBC0009DA31 /* TowerA01_black.mesh */,
-				1A8F7B391A67DAEE0009DA31 /* PawnA01_black.mesh */,
 				2ECDC3271A66273600A50D33 /* Bishop.mesh */,
 				2ECDC3281A66273600A50D33 /* board.mesh */,
+				1A14B9831A6BDAFF00013597 /* dejavu.gorilla */,
+				1A14B9851A6BDB3600013597 /* dejavu.png */,
+				1A8F7B3F1A67E3AD0009DA31 /* HorseA01_black.mesh */,
 				2ECDC3291A66273600A50D33 /* HorseA01.mesh */,
 				2ECDC32A1A66273600A50D33 /* HorseA02.mesh */,
 				2ECDC32B1A66273600A50D33 /* HorseB01.mesh */,
 				2ECDC32C1A66273600A50D33 /* HorseB02.mesh */,
+				1A8F7B451A6922940009DA31 /* King_black.mesh */,
 				2ECDC32D1A66273600A50D33 /* KingA.mesh */,
 				2ECDC32E1A66273600A50D33 /* KingB.mesh */,
+				1A8F7B391A67DAEE0009DA31 /* PawnA01_black.mesh */,
 				2ECDC32F1A66273600A50D33 /* PawnA01.mesh */,
 				2ECDC3301A66273600A50D33 /* PawnA02.mesh */,
 				2ECDC3311A66273600A50D33 /* PawnA03.mesh */,
@@ -371,8 +369,10 @@
 				2ECDC33C1A66273600A50D33 /* PawnB06.mesh */,
 				2ECDC33D1A66273600A50D33 /* PawnB07.mesh */,
 				2ECDC33E1A66273600A50D33 /* PawnB08.mesh */,
+				1A8F7B411A691EF20009DA31 /* QueenA_black.mesh */,
 				2ECDC33F1A66273600A50D33 /* QueenA.mesh */,
 				2ECDC3401A66273600A50D33 /* QueenB.mesh */,
+				1A8F7B3D1A67DFBC0009DA31 /* TowerA01_black.mesh */,
 				2ECDC3411A66273600A50D33 /* TowerA01.mesh */,
 				2ECDC3421A66273600A50D33 /* TowerA02.mesh */,
 				2ECDC3431A66273600A50D33 /* TowerB01.mesh */,

@@ -254,47 +254,55 @@ void Chess::setupWhitePieces()
     whiteKingNode->attachObject(whiteKingEntity);
     whiteKingNode->translate(9.1, 1.35, -1);
     
-    float pawnZ = -7.5f;
-    float pawnY = -.2f;
+    float pawnX = 1.1;
+    float pawnZ = -3.f;
+    float pawnY = 0.25;
     whitePawnEntity = sManager->createEntity("whitePawnEntity", "PawnA01.mesh");
     whitePawnNode = boardNode->createChildSceneNode("whitePawnNode");
     whitePawnNode->attachObject(whitePawnEntity);
-    whitePawnNode->translate(7.3, pawnY, pawnZ);
+    whitePawnNode->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity2 = sManager->createEntity("whitePawnEntity2", "PawnA01.mesh");
     whitePawnNode2 = boardNode->createChildSceneNode("whitePawnNode2");
     whitePawnNode2->attachObject(whitePawnEntity2);
-    whitePawnNode2->translate(9.3, pawnY, pawnZ);
+    whitePawnNode2->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity3 = sManager->createEntity("whitePawnEntity3", "PawnA01.mesh");
     whitePawnNode3 = boardNode->createChildSceneNode("whitePawnNode3");
     whitePawnNode3->attachObject(whitePawnEntity3);
-    whitePawnNode3->translate(11.3, pawnY, pawnZ);
+    whitePawnNode3->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity4 = sManager->createEntity("whitePawnEntity4", "PawnA01.mesh");
     whitePawnNode4 = boardNode->createChildSceneNode("whitePawnNode4");
     whitePawnNode4->attachObject(whitePawnEntity4);
-    whitePawnNode4->translate(13.3, pawnY, pawnZ);
+    whitePawnNode4->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity5 = sManager->createEntity("whitePawnEntity5", "PawnA01.mesh");
     whitePawnNode5 = boardNode->createChildSceneNode("whitePawnNode5");
     whitePawnNode5->attachObject(whitePawnEntity5);
-    whitePawnNode5->translate(15.3, pawnY, pawnZ);
+    whitePawnNode5->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity6 = sManager->createEntity("whitePawnEntity6", "PawnA01.mesh");
     whitePawnNode6 = boardNode->createChildSceneNode("whitePawnNode6");
     whitePawnNode6->attachObject(whitePawnEntity6);
-    whitePawnNode6->translate(17.3, pawnY, pawnZ);
+    whitePawnNode6->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity7 = sManager->createEntity("whitePawnEntity7", "PawnA01.mesh");
     whitePawnNode7 = boardNode->createChildSceneNode("whitePawnNode7");
     whitePawnNode7->attachObject(whitePawnEntity7);
-    whitePawnNode7->translate(19.3, pawnY, pawnZ);
+    whitePawnNode7->translate(pawnX, pawnY, pawnZ);
+    pawnX+=2;
     
     whitePawnEntity8 = sManager->createEntity("whitePawnEntity8", "PawnA01.mesh");
     whitePawnNode8 = boardNode->createChildSceneNode("whitePawnNode8");
     whitePawnNode8->attachObject(whitePawnEntity8);
-    whitePawnNode8->translate(21.3, pawnY, pawnZ);
+    whitePawnNode8->translate(pawnX, pawnY, pawnZ);
     
     whiteRookEntity1 = sManager->createEntity("whiteRookEntity1", "TowerA01.mesh");
     whiteRookNode1 = boardNode->createChildSceneNode("whiteRookNode1");
