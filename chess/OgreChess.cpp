@@ -524,9 +524,10 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
     for (iter = result.begin( ); iter != result.end(); iter++) {
         Node *mynode = iter->movable->getParentNode();
         
-        printf("%s", mynode->getName().c_str());
         if(mynode->getName() != "boardNode") {
-            mynode->setScale(2,2,2);
+            printf("%s", mynode->getName().c_str());
+            mynode->setScale(1.2,1.2,1.2);
+            break;
         }
     }
     
