@@ -207,8 +207,9 @@ private:
     Ogre::SceneNode *blackBishopNode2;
     Ogre::Entity *blackBishopEntity2;
     
-    Ogre::RaySceneQuery* mRayScnQuery;
+    Ogre::RaySceneQuery *mRayScnQuery;
     
+    std::vector<Ogre::Node*> deselectedNodes;
     Ogre::Node *selectedNode;
     
     FMOD::System *system;

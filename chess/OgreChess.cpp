@@ -156,14 +156,28 @@ void Chess::startDemo()
 
 void Chess::update(double timeSinceLastFrame)
 {
+    if(deselectedNodes.size()) {      
+        int j = 0;
+        for ( auto &i : deselectedNodes ) {
+            Ogre::Node *node = (Ogre::Node*)i;
+            Vector3 position = node->getPosition();
+            node->setPosition(position.x, position.y-0.1, position.z);
+            if(position.y < 1) {
+                deselectedNodes.erase(deselectedNodes.begin() + j);
+            }
+            j++;
+        }
+    }
+    
     if(selectedNode) {
         Vector3 position = selectedNode->getPosition();
         float newY = position.y + 0.1;
-        if(newY > 1) {
+        if(newY > 3) {
             return;
         }
         selectedNode->setPosition(position.x, newY, position.z);
     }
+
 }
 
 void Chess::setupChessScene()
@@ -190,10 +204,12 @@ void Chess::setupGorilla()
     
     // Create our drawing layer
     mLayer = mScreen->createLayer(0);
-    rect = mLayer->createRectangle(20, 20, vpW / 4, vpH / 4);
+    rect = mLayer->createRectangle(20, 20, vpW / 6, vpH / 6);
     rect->background_gradient(Gorilla::Gradient_Diagonal, Gorilla::rgb(100,149,237), Gorilla::rgb(65,105,225));
     
-    markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n%@14%Ogre3D :: FMOD :: Gorilla%@9%\nAnnoying drum loop");
+//    markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n%@14%Ogre3D :: FMOD :: Gorilla%@9%\nAnnoying drum loop");
+    markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n");
+
     
     mMousePointerLayer = mScreen->createLayer(15);
     mMousePointer = mMousePointerLayer->createRectangle(0,0,10,18);
@@ -550,10 +566,9 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             printf("%s", clickedNode->getName().c_str());
             
             if(selectedNode) {
-//                selectedNode->setScale(1,1,1);
+                deselectedNodes.push_back(selectedNode);
             }
-            
-//            clickedNode->setScale(1.2,1.2,1.2);
+
             selectedNode = clickedNode;
            
             break;
