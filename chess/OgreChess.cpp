@@ -154,6 +154,18 @@ void Chess::startDemo()
 #endif
 }
 
+void Chess::update(double timeSinceLastFrame)
+{
+    if(selectedNode) {
+        Vector3 position = selectedNode->getPosition();
+        float newY = position.y + 0.1;
+        if(newY > 1) {
+            return;
+        }
+        selectedNode->setPosition(position.x, newY, position.z);
+    }
+}
+
 void Chess::setupChessScene()
 {
     setupGorilla();
@@ -538,10 +550,10 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             printf("%s", clickedNode->getName().c_str());
             
             if(selectedNode) {
-                selectedNode->setScale(1,1,1);
+//                selectedNode->setScale(1,1,1);
             }
             
-            clickedNode->setScale(1.2,1.2,1.2);
+//            clickedNode->setScale(1.2,1.2,1.2);
             selectedNode = clickedNode;
            
             break;

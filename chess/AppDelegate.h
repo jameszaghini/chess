@@ -28,7 +28,7 @@
 #endif
 {
     NSTimer *mTimer;
-    Chess demo;
+    Chess game;
     
     NSDate *mDate;
     double mLastFrameTime;
@@ -81,7 +81,7 @@ static id mAppDelegate;
     mTimer = nil;
     
     try {
-        demo.startDemo();
+        game.startDemo();
         
         Ogre::Root::getSingleton().getRenderSystem()->_initRenderTargets();
         
@@ -121,6 +121,7 @@ static id mAppDelegate;
 			OgreFramework::getSingletonPtr()->m_pMouse->capture();
             
 			OgreFramework::getSingletonPtr()->updateOgre(mLastFrameTime);
+            game.update(mLastFrameTime);
 			OgreFramework::getSingletonPtr()->m_pRoot->renderOneFrame();
             
 			mLastFrameTime = OgreFramework::getSingletonPtr()->m_pTimer->getMillisecondsCPU() - mStartTime;

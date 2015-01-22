@@ -84,7 +84,8 @@ public:
 	~Chess();
     
 	void startDemo();
-
+    void update(double timeSinceLastFrame);
+    
 	bool keyPressed(const OIS::KeyEvent &keyEventRef);
 	bool keyReleased(const OIS::KeyEvent &keyEventRef);
 
