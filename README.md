@@ -4,3 +4,6 @@
 * Ogre3D
 * FMOD
 * Gorilla
+
+![screen shot](https://raw.githubusercontent.com/jameszaghini/chess/master/chess/screen-shot.png)
+
