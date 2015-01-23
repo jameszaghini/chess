@@ -27,6 +27,8 @@
 		1A8F7B731A6B695C0009DA31 /* libfmodL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */; };
 		1A9C32931A72679D005367D4 /* thud1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32911A72679D005367D4 /* thud1.wav */; };
 		1A9C32941A72679D005367D4 /* thud6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32921A72679D005367D4 /* thud6.wav */; };
+		1A9C32971A72689A005367D4 /* thud10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32951A72689A005367D4 /* thud10.wav */; };
+		1A9C32981A72689A005367D4 /* thud11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32961A72689A005367D4 /* thud11.wav */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
 		2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */; };
 		2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */; };
@@ -116,6 +118,8 @@
 		1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmodL.dylib; sourceTree = "<group>"; };
 		1A9C32911A72679D005367D4 /* thud1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud1.wav; path = chess/media/thud1.wav; sourceTree = SOURCE_ROOT; };
 		1A9C32921A72679D005367D4 /* thud6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud6.wav; path = chess/media/thud6.wav; sourceTree = SOURCE_ROOT; };
+		1A9C32951A72689A005367D4 /* thud10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud10.wav; path = chess/media/thud10.wav; sourceTree = SOURCE_ROOT; };
+		1A9C32961A72689A005367D4 /* thud11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud11.wav; path = chess/media/thud11.wav; sourceTree = SOURCE_ROOT; };
 		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2ECDC3131A65E27E00A50D33 /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chess-Info.plist"; path = "chess/chess-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2ECDC3141A65E29D00A50D33 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = chess/main.mm; sourceTree = SOURCE_ROOT; };
@@ -306,6 +310,8 @@
 		1A6B612E1A5EBD0600F8D961 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				1A9C32951A72689A005367D4 /* thud10.wav */,
+				1A9C32961A72689A005367D4 /* thud11.wav */,
 				1A9C32911A72679D005367D4 /* thud1.wav */,
 				1A9C32921A72679D005367D4 /* thud6.wav */,
 				1A6B612F1A5EBD0600F8D961 /* materials */,
@@ -471,6 +477,7 @@
 				1A8F7B421A691EF20009DA31 /* QueenA_black.mesh in Resources */,
 				2ECDC3251A65E2D000A50D33 /* plugins.cfg in Resources */,
 				2ECDC36A1A66277200A50D33 /* cubemapsJS.zip in Resources */,
+				1A9C32981A72689A005367D4 /* thud11.wav in Resources */,
 				1A8F7B461A6922940009DA31 /* King_black.mesh in Resources */,
 				2ECDC3451A66273600A50D33 /* Bishop.mesh in Resources */,
 				2ECDC3481A66273600A50D33 /* HorseA02.mesh in Resources */,
@@ -485,6 +492,7 @@
 				2ECDC3571A66273600A50D33 /* PawnB03.mesh in Resources */,
 				2ECDC34E1A66273600A50D33 /* PawnA02.mesh in Resources */,
 				2ECDC3601A66273600A50D33 /* TowerA02.mesh in Resources */,
+				1A9C32971A72689A005367D4 /* thud10.wav in Resources */,
 				1A9C32941A72679D005367D4 /* thud6.wav in Resources */,
 				2ECDC3541A66273600A50D33 /* PawnA08.mesh in Resources */,
 				2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */,

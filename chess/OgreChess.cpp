@@ -162,7 +162,7 @@ void Chess::update(double timeSinceLastFrame)
         for ( auto &i : deselectedNodes ) {
             Ogre::Node *node = (Ogre::Node*)i;
             Vector3 position = node->getPosition();
-            node->setPosition(position.x, position.y-0.1, position.z);
+            node->setPosition(position.x, position.y -0.1, position.z);
             if(position.y < 1) {
                 toRemove = j;
 
@@ -233,14 +233,13 @@ void Chess::setupAudio()
     
     result = system->getVersion(&version);
     ERRCHECK(result);
-    if (version < FMOD_VERSION)
-    {
+    if (version < FMOD_VERSION) {
         Common_Fatal("FMOD lib version %08x doesn't match header version %08x", version, FMOD_VERSION);
     }
     result = system->init(32, FMOD_INIT_NORMAL, extradriverdata);
     ERRCHECK(result);
     
-    result = system->createSound(Common_MediaPath("thud6.wav"), FMOD_DEFAULT, 0, &pieceSound1);
+    result = system->createSound(Common_MediaPath("thud10.wav"), FMOD_DEFAULT, 0, &pieceSound1);
     ERRCHECK(result);
 
     result = system->createSound(Common_MediaPath("thud1.wav"), FMOD_DEFAULT, 0, &pieceSound2);
