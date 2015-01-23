@@ -10,7 +10,6 @@
 		1A14B96B1A6BD37C00013597 /* Gorilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B9691A6BD37C00013597 /* Gorilla.cpp */; };
 		1A14B97A1A6BD73700013597 /* common_platform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96E1A6BD73700013597 /* common_platform.mm */; };
 		1A14B97B1A6BD73700013597 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96F1A6BD73700013597 /* common.cpp */; };
-		1A14B97C1A6BD73700013597 /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9711A6BD73700013597 /* drumloop.wav */; };
 		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
 		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
@@ -26,6 +25,8 @@
 		1A8F7B461A6922940009DA31 /* King_black.mesh in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F7B451A6922940009DA31 /* King_black.mesh */; };
 		1A8F7B721A6B695C0009DA31 /* libfmod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B701A6B695C0009DA31 /* libfmod.dylib */; };
 		1A8F7B731A6B695C0009DA31 /* libfmodL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */; };
+		1A9C32931A72679D005367D4 /* thud1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32911A72679D005367D4 /* thud1.wav */; };
+		1A9C32941A72679D005367D4 /* thud6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32921A72679D005367D4 /* thud6.wav */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
 		2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */; };
 		2ECDC31F1A65E2B900A50D33 /* OgreChess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31A1A65E2B900A50D33 /* OgreChess.cpp */; };
@@ -77,7 +78,6 @@
 		1A14B96E1A6BD73700013597 /* common_platform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = common_platform.mm; path = chess/common_platform.mm; sourceTree = "<group>"; };
 		1A14B96F1A6BD73700013597 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = chess/common.cpp; sourceTree = "<group>"; };
 		1A14B9701A6BD73700013597 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = chess/common.h; sourceTree = "<group>"; };
-		1A14B9711A6BD73700013597 /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drumloop.wav; path = chess/drumloop.wav; sourceTree = "<group>"; };
 		1A14B9721A6BD73700013597 /* fmod_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_codec.h; path = chess/fmod_codec.h; sourceTree = "<group>"; };
 		1A14B9731A6BD73700013597 /* fmod_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_common.h; path = chess/fmod_common.h; sourceTree = "<group>"; };
 		1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp_effects.h; path = chess/fmod_dsp_effects.h; sourceTree = "<group>"; };
@@ -114,6 +114,8 @@
 		1A8F7B551A6944230009DA31 /* libzlib.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzlib.dylib; sourceTree = "<group>"; };
 		1A8F7B701A6B695C0009DA31 /* libfmod.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmod.dylib; sourceTree = "<group>"; };
 		1A8F7B711A6B695C0009DA31 /* libfmodL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfmodL.dylib; sourceTree = "<group>"; };
+		1A9C32911A72679D005367D4 /* thud1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud1.wav; path = chess/media/thud1.wav; sourceTree = SOURCE_ROOT; };
+		1A9C32921A72679D005367D4 /* thud6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud6.wav; path = chess/media/thud6.wav; sourceTree = SOURCE_ROOT; };
 		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2ECDC3131A65E27E00A50D33 /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chess-Info.plist"; path = "chess/chess-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2ECDC3141A65E29D00A50D33 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = chess/main.mm; sourceTree = SOURCE_ROOT; };
@@ -198,7 +200,6 @@
 				1A14B96E1A6BD73700013597 /* common_platform.mm */,
 				1A14B96F1A6BD73700013597 /* common.cpp */,
 				1A14B9701A6BD73700013597 /* common.h */,
-				1A14B9711A6BD73700013597 /* drumloop.wav */,
 				1A14B9721A6BD73700013597 /* fmod_codec.h */,
 				1A14B9731A6BD73700013597 /* fmod_common.h */,
 				1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */,
@@ -305,6 +306,8 @@
 		1A6B612E1A5EBD0600F8D961 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				1A9C32911A72679D005367D4 /* thud1.wav */,
+				1A9C32921A72679D005367D4 /* thud6.wav */,
 				1A6B612F1A5EBD0600F8D961 /* materials */,
 				1A6B61371A5EBD0600F8D961 /* models */,
 				1A6B61391A5EBD0600F8D961 /* packs */,
@@ -478,10 +481,11 @@
 				2ECDC3551A66273600A50D33 /* PawnB01.mesh in Resources */,
 				2ECDC3581A66273600A50D33 /* PawnB04.mesh in Resources */,
 				2ECDC3491A66273600A50D33 /* HorseB01.mesh in Resources */,
+				1A9C32931A72679D005367D4 /* thud1.wav in Resources */,
 				2ECDC3571A66273600A50D33 /* PawnB03.mesh in Resources */,
-				1A14B97C1A6BD73700013597 /* drumloop.wav in Resources */,
 				2ECDC34E1A66273600A50D33 /* PawnA02.mesh in Resources */,
 				2ECDC3601A66273600A50D33 /* TowerA02.mesh in Resources */,
+				1A9C32941A72679D005367D4 /* thud6.wav in Resources */,
 				2ECDC3541A66273600A50D33 /* PawnA08.mesh in Resources */,
 				2ECDC34B1A66273600A50D33 /* KingA.mesh in Resources */,
 				2ECDC3241A65E2D000A50D33 /* ogre.cfg in Resources */,
@@ -513,7 +517,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/libfmod.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmod.dylib\"\nditto \"$PROJECT_DIR/libfmodL.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmodL.dylib\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/\"\n";
+			shellScript = "# This shell script simply copies resources into their respective locations\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Plugins\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/Ogre.framework\" \"$BUILT_PRODUCTS_DIR/chess.app.app/Contents/Frameworks/Ogre.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/OgreOverlay.framework\" \"$BUILT_PRODUCTS_DIR/Test.app/Contents/Frameworks/OgreOverlay.framework\"\nditto \"$OGRE_SDK_ROOT/lib/macosx/Release/RenderSystem_GL.framework\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/RenderSystem_GL.framework\"\nditto \"$PROJECT_DIR/libfmod.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmod.dylib\"\nditto \"$PROJECT_DIR/libfmodL.dylib\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Frameworks/libfmodL.dylib\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/\"\nditto \"$PROJECT_DIR/$PROJECT_NAME/media/sounds\" \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/media/sounds\"\nditto $PROJECT_DIR/$PROJECT_NAME/*.cfg \"$BUILT_PRODUCTS_DIR/chess.app/Contents/Resources/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

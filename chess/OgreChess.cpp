@@ -170,6 +170,7 @@ void Chess::update(double timeSinceLastFrame)
             j++;
         }
         if(toRemove >= 0) {
+            system->playSound(pieceSound1, 0, false, &channel);
             deselectedNodes.erase(deselectedNodes.begin() + toRemove);
         }
     }
@@ -239,13 +240,10 @@ void Chess::setupAudio()
     result = system->init(32, FMOD_INIT_NORMAL, extradriverdata);
     ERRCHECK(result);
     
-    result = system->createSound(Common_MediaPath("drumloop.wav"), FMOD_DEFAULT, 0, &sound1);
+    result = system->createSound(Common_MediaPath("thud6.wav"), FMOD_DEFAULT, 0, &pieceSound1);
     ERRCHECK(result);
-    
-  //  result = sound1->setMode(FMOD_LOOP_OFF);    /* drumloop.wav has embedded loop points which automatically makes looping turn on, */
-  //  ERRCHECK(result);                           /* so turn it off here.  We could have also just put FMOD_LOOP_OFF in the above CreateSound call. */
-    
-    result = system->playSound(sound1, 0, false, &channel);
+
+    result = system->createSound(Common_MediaPath("thud1.wav"), FMOD_DEFAULT, 0, &pieceSound2);
     ERRCHECK(result);
 }
 
@@ -556,15 +554,12 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
 
     mRayScnQuery->setRay(mouseRay);
     mRayScnQuery->setSortByDistance(true);
-    
-    /*
-     This next chunk finds the results of the raycast
-     If the mouse is pointing at world geometry we spawn a robot at that position
-     */
+
     Ogre::RaySceneQueryResult& result = mRayScnQuery->execute();
     Ogre::RaySceneQueryResult::iterator iter = result.begin();
     
     for (iter = result.begin( ); iter != result.end(); iter++) {
+        
         Node *clickedNode = iter->movable->getParentNode();
         
         if(clickedNode->getName() != "boardNode") {
@@ -575,6 +570,8 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             }
 
             selectedNode = clickedNode;
+            
+            system->playSound(pieceSound2, 0, false, &channel);
            
             break;
         }

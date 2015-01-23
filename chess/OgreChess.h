@@ -214,6 +214,8 @@ private:
     
     FMOD::System *system;
     FMOD::Sound *sound1;
+    FMOD::Sound *pieceSound1;
+    FMOD::Sound *pieceSound2;
     FMOD::Channel *channel = 0;
     FMOD_RESULT result;
     unsigned int version;
