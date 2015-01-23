@@ -151,7 +151,7 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     inputContext.mMouse = m_pMouse;
     inputContext.mKeyboard = m_pKeyboard;
     m_pTrayMgr = new OgreBites::SdkTrayManager("TrayMgr", m_pRenderWnd, inputContext, this);
-    m_pTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
+//    m_pTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
     m_pTrayMgr->hideCursor();
     
 	m_pRenderWnd->setActive(true);
