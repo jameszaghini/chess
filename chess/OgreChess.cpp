@@ -156,16 +156,21 @@ void Chess::startDemo()
 
 void Chess::update(double timeSinceLastFrame)
 {
-    if(deselectedNodes.size()) {      
+    if(deselectedNodes.size()) {
         int j = 0;
+        int toRemove = -1;
         for ( auto &i : deselectedNodes ) {
             Ogre::Node *node = (Ogre::Node*)i;
             Vector3 position = node->getPosition();
             node->setPosition(position.x, position.y-0.1, position.z);
             if(position.y < 1) {
-                deselectedNodes.erase(deselectedNodes.begin() + j);
+                toRemove = j;
+
             }
             j++;
+        }
+        if(toRemove >= 0) {
+            deselectedNodes.erase(deselectedNodes.begin() + toRemove);
         }
     }
     
