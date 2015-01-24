@@ -17,13 +17,13 @@ class Piece
 {
     
 public:
-    Piece();
     Piece(std::string name, std::string meshName, float x, float y, float z, Ogre::SceneNode *parent);
     ~Piece();
-    
-private:
     Ogre::SceneNode *node;
     Ogre::Entity *entity;
+    
+private:
+
     float x;
     float y;
     float z;

@@ -322,10 +322,10 @@ void Chess::setupWhitePieces()
     whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 15.1, 0.8, -1, boardNode);
     whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 3.1, 0.7f, -1, boardNode);
     whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 13.1, 0.7, -1, boardNode);
-//    whiteKnight2->node->roll(Degree(-90));
+    whiteKnight2->node->roll(Degree(-90));
     whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", 5.1, 0.6, -1, boardNode);
     whiteBishop2 = new Piece("whiteBishop2", "Bishop.mesh", 11.1, 0.6, -1, boardNode);
-//    whiteBishop2->node->yaw(Degree(90));
+    whiteBishop2->node->yaw(Degree(90));
     whiteQueen = new Piece("whiteQueen", "QueenA.mesh", 7.1, 1.5, -1, boardNode);
     whiteKing = new Piece("whiteKing", "KingA.mesh", 9.1, 1.35, -1, boardNode);
 }
@@ -350,10 +350,10 @@ void Chess::setupBlackPieces()
     blackRook2 = new Piece("blackRook2", "TowerA01_black.mesh", 15.1, 0.8, -15, boardNode);
     blackKnight1 = new Piece("blackKnight1", "HorseA01_black.mesh", 3.1, 0.7f, -15, boardNode);
     blackKnight2 = new Piece("blackKnight2", "HorseA01_black.mesh", 13.1, 0.7, -15, boardNode);
-    //    blackKnight2->node->roll(Degree(-90));
+    blackKnight2->node->roll(Degree(-90));
     blackBishop1 = new Piece("blackBishop1", "Bishop_black.mesh", 5.1, 0.6, -15, boardNode);
     blackBishop2 = new Piece("blackBishop2", "Bishop_black.mesh", 11.1, 0.6, -15, boardNode);
-    //    blackBishop2->node->yaw(Degree(90));
+    blackBishop2->node->yaw(Degree(90));
     blackQueen = new Piece("blackQueen", "QueenA_black.mesh", 7.1, 1.5, -15, boardNode);
     blackKing = new Piece("blackKing", "King_black.mesh", 9.1, .25, -15, boardNode);
 }

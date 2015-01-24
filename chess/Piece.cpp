@@ -8,11 +8,6 @@
 
 #include "Piece.h"
 
-Piece::Piece()
-{
-    
-}
-
 Piece::Piece(std::string name, std::string meshName, float x, float y, float z, Ogre::SceneNode *parent)
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
