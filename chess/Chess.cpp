@@ -461,9 +461,15 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             }
             
             for(Piece *piece : pieces) {
+                
+                std::string pieceName = piece->node->getName();
+                if(selectedNode && pieceName.compare(selectedNode->getName()) == 0) {
+                    piece->deselect();
+                    continue;
+                }
+                
                 if(piece->node->getName().compare(clickedNode->getName()) == 0) {
-                    printf("%s", piece->node->getName().c_str());
-                    piece->entity->setMaterialName("red");
+                    piece->select();
                 }
 
             }
