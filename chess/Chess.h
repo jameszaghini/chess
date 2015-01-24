@@ -147,6 +147,8 @@ private:
     Piece *blackQueen;
     Piece *blackKing;
     
+    std::vector<Piece*> pieces;
+    
     Ogre::RaySceneQuery *mRayScnQuery;
     
     std::vector<Ogre::Node*> deselectedNodes;

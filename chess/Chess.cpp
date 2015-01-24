@@ -45,7 +45,7 @@ Chess::Chess()
     blackBishop1 = 0;
     blackBishop2 = 0;
     blackQueen = 0;
-    blackKing = 0;
+    blackKing = 0;   
 }
 
 Chess::~Chess()
@@ -310,24 +310,24 @@ void Chess::setupWhitePieces()
     float pawnZ = -3.f;
     float pawnY = 0.25;
     
-    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", pawnX, pawnY, pawnZ, boardNode);
-    whitePawn2 = new Piece("whitePawn2", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn3 = new Piece("whitePawn3", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn4 = new Piece("whitePawn4", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn5 = new Piece("whitePawn5", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn6 = new Piece("whitePawn6", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn7 = new Piece("whitePawn7", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whitePawn8 = new Piece("whitePawn8", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 1.1, 0.8, -1, boardNode);
-    whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 15.1, 0.8, -1, boardNode);
-    whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 3.1, 0.7f, -1, boardNode);
-    whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 13.1, 0.7, -1, boardNode);
+    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", pawnX, pawnY, pawnZ, boardNode, pieces);
+    whitePawn2 = new Piece("whitePawn2", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn3 = new Piece("whitePawn3", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn4 = new Piece("whitePawn4", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn5 = new Piece("whitePawn5", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn6 = new Piece("whitePawn6", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn7 = new Piece("whitePawn7", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whitePawn8 = new Piece("whitePawn8", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 1.1, 0.8, -1, boardNode, pieces);
+    whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 15.1, 0.8, -1, boardNode, pieces);
+    whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 3.1, 0.7f, -1, boardNode, pieces);
+    whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 13.1, 0.7, -1, boardNode, pieces);
     whiteKnight2->node->roll(Degree(-90));
-    whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", 5.1, 0.6, -1, boardNode);
-    whiteBishop2 = new Piece("whiteBishop2", "Bishop.mesh", 11.1, 0.6, -1, boardNode);
+    whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", 5.1, 0.6, -1, boardNode, pieces);
+    whiteBishop2 = new Piece("whiteBishop2", "Bishop.mesh", 11.1, 0.6, -1, boardNode, pieces);
     whiteBishop2->node->yaw(Degree(90));
-    whiteQueen = new Piece("whiteQueen", "QueenA.mesh", 7.1, 1.5, -1, boardNode);
-    whiteKing = new Piece("whiteKing", "KingA.mesh", 9.1, 1.35, -1, boardNode);
+    whiteQueen = new Piece("whiteQueen", "QueenA.mesh", 7.1, 1.5, -1, boardNode, pieces);
+    whiteKing = new Piece("whiteKing", "KingA.mesh", 9.1, 1.35, -1, boardNode, pieces);
 }
 
 void Chess::setupBlackPieces()
@@ -338,24 +338,24 @@ void Chess::setupBlackPieces()
     float pawnZ = -13.0f;
     float pawnY = 0.65;
     
-    blackPawn1 = new Piece("blackPawn1", "PawnA01_black.mesh", pawnX, pawnY, pawnZ, boardNode);
-    blackPawn2 = new Piece("blackPawn2", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn3 = new Piece("blackPawn3", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn4 = new Piece("blackPawn4", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn5 = new Piece("blackPawn5", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn6 = new Piece("blackPawn6", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn7 = new Piece("blackPawn7", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackPawn8 = new Piece("blackPawn8", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode);
-    blackRook1 = new Piece("blackRook1", "TowerA01_black.mesh", 1.1, 0.8, -15, boardNode);
-    blackRook2 = new Piece("blackRook2", "TowerA01_black.mesh", 15.1, 0.8, -15, boardNode);
-    blackKnight1 = new Piece("blackKnight1", "HorseA01_black.mesh", 3.1, 0.7f, -15, boardNode);
-    blackKnight2 = new Piece("blackKnight2", "HorseA01_black.mesh", 13.1, 0.7, -15, boardNode);
+    blackPawn1 = new Piece("blackPawn1", "PawnA01_black.mesh", pawnX, pawnY, pawnZ, boardNode, pieces);
+    blackPawn2 = new Piece("blackPawn2", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn3 = new Piece("blackPawn3", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn4 = new Piece("blackPawn4", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn5 = new Piece("blackPawn5", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn6 = new Piece("blackPawn6", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn7 = new Piece("blackPawn7", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackPawn8 = new Piece("blackPawn8", "PawnA01_black.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
+    blackRook1 = new Piece("blackRook1", "TowerA01_black.mesh", 1.1, 0.8, -15, boardNode, pieces);
+    blackRook2 = new Piece("blackRook2", "TowerA01_black.mesh", 15.1, 0.8, -15, boardNode, pieces);
+    blackKnight1 = new Piece("blackKnight1", "HorseA01_black.mesh", 3.1, 0.7f, -15, boardNode, pieces);
+    blackKnight2 = new Piece("blackKnight2", "HorseA01_black.mesh", 13.1, 0.7, -15, boardNode, pieces);
     blackKnight2->node->roll(Degree(-90));
-    blackBishop1 = new Piece("blackBishop1", "Bishop_black.mesh", 5.1, 0.6, -15, boardNode);
-    blackBishop2 = new Piece("blackBishop2", "Bishop_black.mesh", 11.1, 0.6, -15, boardNode);
+    blackBishop1 = new Piece("blackBishop1", "Bishop_black.mesh", 5.1, 0.6, -15, boardNode, pieces);
+    blackBishop2 = new Piece("blackBishop2", "Bishop_black.mesh", 11.1, 0.6, -15, boardNode, pieces);
     blackBishop2->node->yaw(Degree(90));
-    blackQueen = new Piece("blackQueen", "QueenA_black.mesh", 7.1, 1.5, -15, boardNode);
-    blackKing = new Piece("blackKing", "King_black.mesh", 9.1, .25, -15, boardNode);
+    blackQueen = new Piece("blackQueen", "QueenA_black.mesh", 7.1, 1.5, -15, boardNode, pieces);
+    blackKing = new Piece("blackKing", "King_black.mesh", 9.1, .25, -15, boardNode, pieces);
 }
 
 void Chess::runDemo()
@@ -459,12 +459,17 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             if(selectedNode) {
                 deselectedNodes.push_back(selectedNode);
             }
+            
+            for(Piece *piece : pieces) {
+                if(piece->node->getName().compare(clickedNode->getName()) == 0) {
+                    printf("%s", piece->node->getName().c_str());
+                    piece->entity->setMaterialName("red");
+                }
 
+            }
+            
             selectedNode = clickedNode;
-            
-//            Entity *entity = selectedNode->
-//            entity->setMaterialName("red");
-            
+
             system->playSound(pieceSound2, 0, false, &channel);
            
             break;
