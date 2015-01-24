@@ -463,7 +463,7 @@ bool Chess::mouseMoved(const OIS::MouseEvent &e) {
  
     OgreFramework::getSingletonPtr()->mouseMoved(e);
 
-    printf("x: %d, y: %d\n", e.state.X.abs, e.state.Y.abs);
+//    printf("x: %d, y: %d\n", e.state.X.abs, e.state.Y.abs);
 
     mMousePointer->position(e.state.X.abs, e.state.Y.abs);
     
