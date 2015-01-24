@@ -196,11 +196,11 @@ void Chess::setupChessScene()
     setupGorilla();
     setupAudio();    
     setupLights();
+    setupBoard();
     setupWhitePieces();
     setupBlackPieces();
     
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
-
     mRayScnQuery = sManager->createRayQuery(Ogre::Ray());
 }
 
@@ -220,7 +220,6 @@ void Chess::setupGorilla()
     
 //    markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n%@14%Ogre3D :: FMOD :: Gorilla%@9%\nAnnoying drum loop");
     markup = mLayer->createMarkupText(9,25,25, "%@24%Chess\n");
-
     
     mMousePointerLayer = mScreen->createLayer(15);
     mMousePointer = mMousePointerLayer->createRectangle(0,0,10,18);
@@ -275,7 +274,7 @@ void Chess::setupLights()
 
 }
 
-void Chess::setupWhitePieces()
+void Chess::setupBoard()
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     

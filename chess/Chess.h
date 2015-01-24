@@ -99,6 +99,7 @@ private:
     void setupGorilla();
     void setupAudio();
     void setupLights();
+    void setupBoard();
     void setupWhitePieces();
     void setupBlackPieces();
 	void runDemo();
