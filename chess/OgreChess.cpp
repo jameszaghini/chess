@@ -270,6 +270,9 @@ void Chess::setupLights()
     spotLight2->setDirection(-1, -1, 0);
     spotLight2->setPosition(Ogre::Vector3(60, 40, -10));
     spotLight2->setSpotlightRange(Ogre::Degree(10), Ogre::Degree(30));
+    
+    sManager->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_ADDITIVE);
+
 }
 
 void Chess::setupWhitePieces()
