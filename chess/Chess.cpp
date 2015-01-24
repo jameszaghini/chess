@@ -1,6 +1,6 @@
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-#include "OgreChess.h"
+#include "Chess.h"
 
 #include <OgreLight.h>
 #include <OgreWindowEventUtilities.h>
@@ -508,6 +508,9 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             }
 
             selectedNode = clickedNode;
+            
+//            Entity *entity = selectedNode->
+//            entity->setMaterialName("red");
             
             system->playSound(pieceSound2, 0, false, &channel);
            
