@@ -5,6 +5,7 @@
 #include "fmod.hpp"
 #include "common.h"
 #include "Gorilla.h"
+#include "Piece.h"
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
 
@@ -117,29 +118,22 @@ private:
     Ogre::SceneNode *whiteKingNode;
     Ogre::Entity *whiteKingEntity;
     
-    Ogre::SceneNode *whitePawnNode;
-    Ogre::Entity *whitePawnEntity;
-    
-    Ogre::SceneNode *whitePawnNode2;
-    Ogre::Entity *whitePawnEntity2;
-    
-    Ogre::SceneNode *whitePawnNode3;
-    Ogre::Entity *whitePawnEntity3;
-    
-    Ogre::SceneNode *whitePawnNode4;
-    Ogre::Entity *whitePawnEntity4;
-    
-    Ogre::SceneNode *whitePawnNode5;
-    Ogre::Entity *whitePawnEntity5;
-    
-    Ogre::SceneNode *whitePawnNode6;
-    Ogre::Entity *whitePawnEntity6;
-    
-    Ogre::SceneNode *whitePawnNode7;
-    Ogre::Entity *whitePawnEntity7;
-    
-    Ogre::SceneNode *whitePawnNode8;
-    Ogre::Entity *whitePawnEntity8;
+    Piece *whitePawn1;
+    Piece *whitePawn2;
+    Piece *whitePawn3;
+    Piece *whitePawn4;
+    Piece *whitePawn5;
+    Piece *whitePawn6;
+    Piece *whitePawn7;
+    Piece *whitePawn8;
+    Piece *whiteRook1;
+    Piece *whiteRook2;
+    Piece *whiteKnight1;
+    Piece *whiteKnight2;
+    Piece *whiteBishop1;
+    Piece *whiteBishop2;
+    Piece *whiteQueen;
+    Piece *whiteKing;
     
     Ogre::SceneNode *whiteRookNode1;
     Ogre::Entity *whiteRookEntity1;
