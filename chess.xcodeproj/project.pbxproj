@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A14B96B1A6BD37C00013597 /* Gorilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B9691A6BD37C00013597 /* Gorilla.cpp */; };
-		1A14B97A1A6BD73700013597 /* common_platform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96E1A6BD73700013597 /* common_platform.mm */; };
-		1A14B97B1A6BD73700013597 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A14B96F1A6BD73700013597 /* common.cpp */; };
 		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
 		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
@@ -30,6 +28,8 @@
 		1A9C32941A72679D005367D4 /* thud6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32921A72679D005367D4 /* thud6.wav */; };
 		1A9C32971A72689A005367D4 /* thud10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32951A72689A005367D4 /* thud10.wav */; };
 		1A9C32981A72689A005367D4 /* thud11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A9C32961A72689A005367D4 /* thud11.wav */; };
+		1ACC79AD1A750AE0009BA997 /* common_platform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC79AA1A750AE0009BA997 /* common_platform.mm */; };
+		1ACC79AE1A750AE0009BA997 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC79AB1A750AE0009BA997 /* common.cpp */; };
 		2ECDC3151A65E29D00A50D33 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC3141A65E29D00A50D33 /* main.mm */; };
 		2ECDC3181A65E2A100A50D33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2ECDC3161A65E2A100A50D33 /* InfoPlist.strings */; };
 		2ECDC31F1A65E2B900A50D33 /* Chess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECDC31A1A65E2B900A50D33 /* Chess.cpp */; };
@@ -77,18 +77,6 @@
 /* Begin PBXFileReference section */
 		1A14B9691A6BD37C00013597 /* Gorilla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Gorilla.cpp; path = chess/Gorilla.cpp; sourceTree = "<group>"; };
 		1A14B96A1A6BD37C00013597 /* Gorilla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gorilla.h; path = chess/Gorilla.h; sourceTree = "<group>"; };
-		1A14B96D1A6BD73700013597 /* common_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common_platform.h; path = chess/common_platform.h; sourceTree = "<group>"; };
-		1A14B96E1A6BD73700013597 /* common_platform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = common_platform.mm; path = chess/common_platform.mm; sourceTree = "<group>"; };
-		1A14B96F1A6BD73700013597 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = chess/common.cpp; sourceTree = "<group>"; };
-		1A14B9701A6BD73700013597 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = chess/common.h; sourceTree = "<group>"; };
-		1A14B9721A6BD73700013597 /* fmod_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_codec.h; path = chess/fmod_codec.h; sourceTree = "<group>"; };
-		1A14B9731A6BD73700013597 /* fmod_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_common.h; path = chess/fmod_common.h; sourceTree = "<group>"; };
-		1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp_effects.h; path = chess/fmod_dsp_effects.h; sourceTree = "<group>"; };
-		1A14B9751A6BD73700013597 /* fmod_dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_dsp.h; path = chess/fmod_dsp.h; sourceTree = "<group>"; };
-		1A14B9761A6BD73700013597 /* fmod_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_errors.h; path = chess/fmod_errors.h; sourceTree = "<group>"; };
-		1A14B9771A6BD73700013597 /* fmod_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod_output.h; path = chess/fmod_output.h; sourceTree = "<group>"; };
-		1A14B9781A6BD73700013597 /* fmod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod.h; path = chess/fmod.h; sourceTree = "<group>"; };
-		1A14B9791A6BD73700013597 /* fmod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fmod.hpp; path = chess/fmod.hpp; sourceTree = "<group>"; };
 		1A14B9831A6BDAFF00013597 /* dejavu.gorilla */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dejavu.gorilla; path = chess/media/models/dejavu.gorilla; sourceTree = SOURCE_ROOT; };
 		1A14B9851A6BDB3600013597 /* dejavu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dejavu.png; path = chess/media/models/dejavu.png; sourceTree = SOURCE_ROOT; };
 		1A6B610F1A5EBD0500F8D961 /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +111,10 @@
 		1A9C32921A72679D005367D4 /* thud6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud6.wav; path = chess/media/thud6.wav; sourceTree = SOURCE_ROOT; };
 		1A9C32951A72689A005367D4 /* thud10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud10.wav; path = chess/media/thud10.wav; sourceTree = SOURCE_ROOT; };
 		1A9C32961A72689A005367D4 /* thud11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = thud11.wav; path = chess/media/thud11.wav; sourceTree = SOURCE_ROOT; };
+		1ACC79A91A750AE0009BA997 /* common_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common_platform.h; path = chess/fmod/common_platform.h; sourceTree = "<group>"; };
+		1ACC79AA1A750AE0009BA997 /* common_platform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = common_platform.mm; path = chess/fmod/common_platform.mm; sourceTree = "<group>"; };
+		1ACC79AB1A750AE0009BA997 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = chess/fmod/common.cpp; sourceTree = "<group>"; };
+		1ACC79AC1A750AE0009BA997 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = chess/fmod/common.h; sourceTree = "<group>"; };
 		2ECDC3121A65E27E00A50D33 /* chess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "chess-Prefix.pch"; path = "chess/chess-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2ECDC3131A65E27E00A50D33 /* chess-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chess-Info.plist"; path = "chess/chess-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2ECDC3141A65E29D00A50D33 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = chess/main.mm; sourceTree = SOURCE_ROOT; };
@@ -203,18 +195,10 @@
 		1A14B96C1A6BD71C00013597 /* fmod */ = {
 			isa = PBXGroup;
 			children = (
-				1A14B96D1A6BD73700013597 /* common_platform.h */,
-				1A14B96E1A6BD73700013597 /* common_platform.mm */,
-				1A14B96F1A6BD73700013597 /* common.cpp */,
-				1A14B9701A6BD73700013597 /* common.h */,
-				1A14B9721A6BD73700013597 /* fmod_codec.h */,
-				1A14B9731A6BD73700013597 /* fmod_common.h */,
-				1A14B9741A6BD73700013597 /* fmod_dsp_effects.h */,
-				1A14B9751A6BD73700013597 /* fmod_dsp.h */,
-				1A14B9761A6BD73700013597 /* fmod_errors.h */,
-				1A14B9771A6BD73700013597 /* fmod_output.h */,
-				1A14B9781A6BD73700013597 /* fmod.h */,
-				1A14B9791A6BD73700013597 /* fmod.hpp */,
+				1ACC79A91A750AE0009BA997 /* common_platform.h */,
+				1ACC79AA1A750AE0009BA997 /* common_platform.mm */,
+				1ACC79AB1A750AE0009BA997 /* common.cpp */,
+				1ACC79AC1A750AE0009BA997 /* common.h */,
 			);
 			name = fmod;
 			sourceTree = "<group>";
@@ -540,12 +524,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */,
+				1ACC79AE1A750AE0009BA997 /* common.cpp in Sources */,
+				1ACC79AD1A750AE0009BA997 /* common_platform.mm in Sources */,
 				2ECDC3151A65E29D00A50D33 /* main.mm in Sources */,
 				1A9915261A7393B300C15939 /* Piece.cpp in Sources */,
 				1A14B96B1A6BD37C00013597 /* Gorilla.cpp in Sources */,
 				2ECDC31F1A65E2B900A50D33 /* Chess.cpp in Sources */,
-				1A14B97B1A6BD73700013597 /* common.cpp in Sources */,
-				1A14B97A1A6BD73700013597 /* common_platform.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
