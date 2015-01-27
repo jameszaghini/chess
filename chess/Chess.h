@@ -105,7 +105,7 @@ private:
 	void runDemo();
     bool initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void destroyRTShaderSystem();
-
+    
     std::map<std::string, OIS::MouseListener*> mMouseListeners;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListener;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListenerEnd;

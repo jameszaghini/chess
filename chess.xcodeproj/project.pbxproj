@@ -337,6 +337,7 @@
 		1A6B61371A5EBD0600F8D961 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9DE511A779EDC00CBFFFF /* newBoard */,
 				1A8F7B431A6920A60009DA31 /* Bishop_black.mesh */,
 				2ECDC3271A66273600A50D33 /* Bishop.mesh */,
 				2ECDC3281A66273600A50D33 /* board.mesh */,
@@ -388,6 +389,13 @@
 				2ECDC3681A66277200A50D33 /* skybox.zip */,
 			);
 			path = packs;
+			sourceTree = "<group>";
+		};
+		1AD9DE511A779EDC00CBFFFF /* newBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = newBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

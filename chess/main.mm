@@ -33,13 +33,10 @@ int main(int argc, char **argv)
 	return retVal;
 #else
     
-	try
-    {
+	try {
 		Chess chess;
 		chess.startDemo();
-    }
-	catch(std::exception& e)
-    {
+    } catch(std::exception& e) {
 #if OGRE_PLATFORM == PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WIN32
         MessageBoxA(NULL, e.what(), "An exception has occurred!", MB_OK | MB_ICONERROR | MB_TASKMODAL);
 #else

@@ -76,8 +76,8 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     m_pSceneMgr->addRenderQueueListener(m_pOverlaySystem);
 
 	m_pCamera = m_pSceneMgr->createCamera("Camera");
-	m_pCamera->setPosition(Vector3(8, 10, 10));
-	m_pCamera->lookAt(Vector3(8, 9, 8));
+	m_pCamera->setPosition(Vector3(9, 7, -14));
+	m_pCamera->lookAt(Vector3(8, 0, 8));
 	m_pCamera->setNearClipDistance(1);
     
 	m_pViewport = m_pRenderWnd->addViewport(m_pCamera);
