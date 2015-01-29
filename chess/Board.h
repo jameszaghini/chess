@@ -10,6 +10,7 @@
 #define __chess__Board__
 
 #include <stdio.h>
+#include "Square.h"
 
 class Board
 {
