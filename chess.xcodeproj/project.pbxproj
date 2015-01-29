@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
 		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
+		1A38BE751A7A5D8F0016BD25 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A38BE731A7A5D8F0016BD25 /* Board.cpp */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
 		1A6B61151A5EBD0500F8D961 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61141A5EBD0500F8D961 /* Cocoa.framework */; };
 		1A6B61171A5EBD0500F8D961 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61161A5EBD0500F8D961 /* IOKit.framework */; };
@@ -77,6 +78,8 @@
 /* Begin PBXFileReference section */
 		1A14B9831A6BDAFF00013597 /* dejavu.gorilla */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dejavu.gorilla; path = chess/media/models/dejavu.gorilla; sourceTree = SOURCE_ROOT; };
 		1A14B9851A6BDB3600013597 /* dejavu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dejavu.png; path = chess/media/models/dejavu.png; sourceTree = SOURCE_ROOT; };
+		1A38BE731A7A5D8F0016BD25 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Board.cpp; path = chess/Board.cpp; sourceTree = SOURCE_ROOT; };
+		1A38BE741A7A5D8F0016BD25 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = chess/Board.h; sourceTree = SOURCE_ROOT; };
 		1A6B610F1A5EBD0500F8D961 /* chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6B61121A5EBD0500F8D961 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		1A6B61141A5EBD0500F8D961 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -274,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				2ECDC3191A65E2B900A50D33 /* AppDelegate.h */,
+				1A38BE731A7A5D8F0016BD25 /* Board.cpp */,
+				1A38BE741A7A5D8F0016BD25 /* Board.h */,
 				2ECDC31A1A65E2B900A50D33 /* Chess.cpp */,
 				2ECDC31B1A65E2B900A50D33 /* Chess.h */,
 				2ECDC31C1A65E2B900A50D33 /* OgreFramework.cpp */,
@@ -533,6 +538,7 @@
 			files = (
 				2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */,
 				1ACC79AE1A750AE0009BA997 /* common.cpp in Sources */,
+				1A38BE751A7A5D8F0016BD25 /* Board.cpp in Sources */,
 				1ACC79AD1A750AE0009BA997 /* common_platform.mm in Sources */,
 				2ECDC3151A65E29D00A50D33 /* main.mm in Sources */,
 				1A9915261A7393B300C15939 /* Piece.cpp in Sources */,

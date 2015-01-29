@@ -6,6 +6,7 @@
 #include "common.h"
 #include "Gorilla.h"
 #include "Piece.h"
+#include "Board.h"
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
 
@@ -146,6 +147,8 @@ private:
     Piece *blackBishop2;
     Piece *blackQueen;
     Piece *blackKing;
+    
+    Board *board;
     
     std::vector<Piece*> pieces;
     

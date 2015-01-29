@@ -13,6 +13,8 @@ Chess::Chess()
 	boardNode = 0;
 	boardEntity	= 0;
 
+    board = 0;
+    
     whitePawn1 = 0;
     whitePawn2 = 0;
     whitePawn3 = 0;
@@ -295,19 +297,9 @@ void Chess::setupBoard()
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     
-    for(int i = 1; i < 9; i++) {
-        for(int j = 0; j < 7; j++) {
-            char letter = "ABCDEFG"[j];
-            std::string s = letter + std::to_string(i);
-            
-            Ogre::Entity *e = sManager->createEntity(s, s + ".mesh");
-            Ogre::SceneNode *n = sManager->getRootSceneNode()->createChildSceneNode(s);
-            n->attachObject(e);
-            n->setPosition(i*2,0,j*2);
-            
-        }
-    }
+    board = new Board();
     
+    // this needs to be here until I work out a way to get the pieces on the new board
     boardEntity = sManager->createEntity("boardEntity", "board.mesh");
     boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
     boardNode->attachObject(boardEntity);
