@@ -16,6 +16,8 @@ Square::Square(std::string name, float x, float y, float z)
     node = sManager->getRootSceneNode()->createChildSceneNode(name);
     node->attachObject(entity);
     node->setPosition(x, y, z);
+    
+    this->name = name;
 }
 
 Square::~Square()

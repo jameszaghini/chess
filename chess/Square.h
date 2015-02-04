@@ -17,9 +17,11 @@ class Square
 public:
     Square(std::string name, float x, float y, float z);
     ~Square();
-private:
+    std::string name;
     Ogre::SceneNode *node;
     Ogre::Entity *entity;
+private:
+
 };
 
 #endif /* defined(__chess__Square__) */

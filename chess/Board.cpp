@@ -11,11 +11,16 @@
 
 Board::Board()
 {
-    for(int i = 1; i < 9; i++) {
-        for(int j = 0; j < 7; j++) {
-            char letter = "ABCDEFG"[j];
-            std::string name = letter + std::to_string(i);
-            new Square(name, i*2,0,j*2);
+    using namespace std;
+    for(int i = 0; i < 7; i++) {
+        for(int j = 1; j < 9; j++) {
+            char letter = "ABCDEFG"[i];
+            string name = letter + to_string(j);
+            float x = i * -2;
+            float z = j * 2;
+            cout << "placing square " << name << " at x: " << x << " at z: " << z;
+            
+            squares.push_back(new Square(name, x, 0, z));
         }
     }
 }
@@ -24,4 +29,14 @@ Board::~Board()
 {
     
 }
+
+Square * Board::getSquareWithCoordinates(std::string letter, std::string number)
+{
+    for(Square *square : squares) {
+        if(square->name.compare(letter + number) == 0) {
+            return square;
+        }
+    }
+}
+
 

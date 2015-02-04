@@ -18,6 +18,10 @@ class Board
 public:
     Board();
     ~Board();
+    
+    Square * getSquareWithCoordinates(std::string letter, std::string number);
+    
+    std::vector<Square*> squares;
 };
 
 #endif /* defined(__chess__Board__) */

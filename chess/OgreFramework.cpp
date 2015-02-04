@@ -76,8 +76,8 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     m_pSceneMgr->addRenderQueueListener(m_pOverlaySystem);
 
 	m_pCamera = m_pSceneMgr->createCamera("Camera");
-	m_pCamera->setPosition(Vector3(9, 7, -14));
-	m_pCamera->lookAt(Vector3(8, 0, 8));
+	m_pCamera->setPosition(Vector3(-6, 7, -14));
+	m_pCamera->lookAt(Vector3(-6, 0, 8));
 	m_pCamera->setNearClipDistance(1);
     
 	m_pViewport = m_pRenderWnd->addViewport(m_pCamera);
@@ -346,7 +346,7 @@ void OgreFramework::getInput()
 		m_TranslateVector.z = m_MoveScale;
     
     if(m_pKeyboard->isKeyDown(OIS::KC_HOME)) {
-        m_pCamera->setPosition(-10.861927, 6.726564, -7.668012);
+        m_pCamera->setPosition(130, 6.726564, -20.0);
         m_pCamera->lookAt(0,4,-8);
     }
     

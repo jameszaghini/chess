@@ -308,14 +308,19 @@ void Chess::setupBoard()
 
 void Chess::setupWhitePieces()
 {
-
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
 
     float pawnX = 1.1;
     float pawnZ = -3.f;
     float pawnY = 0.25;
     
-    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", pawnX, pawnY, pawnZ, boardNode, pieces);
+    Square square = *board->getSquareWithCoordinates("A", "1");
+    Vector3 pos = square.node->getPosition();
+    
+    using namespace std;
+    cout << pos.x << ":" << pos.y << ":" << pos.z;
+    
+    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", pos.x, pos.y + 5, pos.z, square.node, pieces);
     whitePawn2 = new Piece("whitePawn2", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
     whitePawn3 = new Piece("whitePawn3", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
     whitePawn4 = new Piece("whitePawn4", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
@@ -323,7 +328,9 @@ void Chess::setupWhitePieces()
     whitePawn6 = new Piece("whitePawn6", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
     whitePawn7 = new Piece("whitePawn7", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
     whitePawn8 = new Piece("whitePawn8", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 1.1, 0.8, -1, boardNode, pieces);
+    square = *board->getSquareWithCoordinates("A", "2");
+ pos = square.node->getPosition();
+    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 0, pos.y +.75, pos.z, square.node, pieces);
     whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 15.1, 0.8, -1, boardNode, pieces);
     whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 3.1, 0.7f, -1, boardNode, pieces);
     whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 13.1, 0.7, -1, boardNode, pieces);
