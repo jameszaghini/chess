@@ -8,9 +8,8 @@
 
 #include "Piece.h"
 
-Piece::Piece(std::string name, std::string meshName, float x, float y, float z, Ogre::SceneNode *parent, std::vector<Piece*>& pieces)
+Piece::Piece(std::string name, std::string meshName, float y, float z, Ogre::SceneNode *parent, std::vector<Piece*>& pieces)
 {
-    originalX = x;
     originalY = y;
     originalZ = z;
     
@@ -18,7 +17,7 @@ Piece::Piece(std::string name, std::string meshName, float x, float y, float z, 
     entity = sManager->createEntity(name, meshName);
     node = parent->createChildSceneNode(name);
     node->attachObject(entity);
-    node->translate(x, y, z);
+    node->translate(0, y, z);
     pieces.push_back(this);
 }
 
