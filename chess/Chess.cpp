@@ -310,36 +310,27 @@ void Chess::setupWhitePieces()
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
 
-    float pawnX = 1.1;
-    float pawnZ = -3.f;
     float pawnY = 0.25;
+    float pawnZ = 0.f;
     
-    Square square = *board->getSquareWithCoordinates("A", "1");
-    Vector3 pos = square.node->getPosition();
-    
-    using namespace std;
-    cout << pos.x << ":" << pos.y << ":" << pos.z;
-    
-    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", pos.x, pos.y + 5, pos.z, square.node, pieces);
-    whitePawn2 = new Piece("whitePawn2", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn3 = new Piece("whitePawn3", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn4 = new Piece("whitePawn4", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn5 = new Piece("whitePawn5", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn6 = new Piece("whitePawn6", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn7 = new Piece("whitePawn7", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    whitePawn8 = new Piece("whitePawn8", "PawnA01.mesh", pawnX+=2, pawnY, pawnZ, boardNode, pieces);
-    square = *board->getSquareWithCoordinates("A", "2");
- pos = square.node->getPosition();
-    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 0, pos.y +.75, pos.z, square.node, pieces);
-    whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 15.1, 0.8, -1, boardNode, pieces);
-    whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 3.1, 0.7f, -1, boardNode, pieces);
-    whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 13.1, 0.7, -1, boardNode, pieces);
+    whitePawn1 = new Piece("whitePawn1", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("A", "2")).node, pieces);
+    whitePawn2 = new Piece("whitePawn2", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("B", "2")).node, pieces);
+    whitePawn3 = new Piece("whitePawn3", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("C", "2")).node, pieces);
+    whitePawn4 = new Piece("whitePawn4", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("D", "2")).node, pieces);
+    whitePawn5 = new Piece("whitePawn5", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("E", "2")).node, pieces);
+    whitePawn6 = new Piece("whitePawn6", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("F", "2")).node, pieces);
+    whitePawn7 = new Piece("whitePawn7", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("G", "2")).node, pieces);
+    whitePawn8 = new Piece("whitePawn8", "PawnA01.mesh", 0, pawnY, pawnZ, (*board->getSquareWithCoordinates("H", "2")).node, pieces);
+    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", 0, 0.5, 0, (*board->getSquareWithCoordinates("A", "1")).node, pieces);
+    whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", 0, 0.5, 0, (*board->getSquareWithCoordinates("H", "1")).node, pieces);
+    whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", 0, 0.5, 0, (*board->getSquareWithCoordinates("B", "1")).node, pieces);
+    whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", 0, 0.5, 0, (*board->getSquareWithCoordinates("G", "1")).node, pieces);
     whiteKnight2->node->roll(Degree(-90));
-    whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", 5.1, 0.6, -1, boardNode, pieces);
-    whiteBishop2 = new Piece("whiteBishop2", "Bishop.mesh", 11.1, 0.6, -1, boardNode, pieces);
+    whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", 0, 0.5, 0, (*board->getSquareWithCoordinates("C", "1")).node, pieces);
+    whiteBishop2 = new Piece("whiteBishop2", "Bishop.mesh", 0, 0.6, 0, (*board->getSquareWithCoordinates("F", "1")).node, pieces);
     whiteBishop2->node->yaw(Degree(90));
-    whiteQueen = new Piece("whiteQueen", "QueenA.mesh", 7.1, 1.5, -1, boardNode, pieces);
-    whiteKing = new Piece("whiteKing", "KingA.mesh", 9.1, 1.35, -1, boardNode, pieces);
+    whiteQueen = new Piece("whiteQueen", "QueenA.mesh", 0, 1.5, 0, (*board->getSquareWithCoordinates("D", "1")).node, pieces);
+    whiteKing = new Piece("whiteKing", "KingA.mesh", 0, 1.35, 0, (*board->getSquareWithCoordinates("E", "1")).node, pieces);
 }
 
 void Chess::setupBlackPieces()
