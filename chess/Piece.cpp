@@ -7,17 +7,15 @@
 //
 
 #include "Piece.h"
+#include "Square.h"
 
-Piece::Piece(std::string name, std::string meshName, float y, float z, Ogre::SceneNode *parent, std::vector<Piece*>& pieces)
+Piece::Piece(std::string name, std::string meshName, Ogre::SceneNode *parent, std::vector<Piece*>& pieces)
 {
-    originalY = y;
-    originalZ = z;
-    
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     entity = sManager->createEntity(name, meshName);
     node = parent->createChildSceneNode(name);
     node->attachObject(entity);
-    node->translate(0, y, z);
+    node->translate(0, .25, 0);
     pieces.push_back(this);
 }
 

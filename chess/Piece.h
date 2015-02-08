@@ -17,7 +17,7 @@ class Piece
 {
     
 public:
-    Piece(std::string name, std::string meshName, float y, float z, Ogre::SceneNode *parent, std::vector<Piece*>& pieces);
+    Piece(std::string name, std::string meshName, Ogre::SceneNode *parent, std::vector<Piece*>& pieces);
     ~Piece();
     
     void select();
