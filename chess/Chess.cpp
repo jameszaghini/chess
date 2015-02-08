@@ -187,7 +187,7 @@ void Chess::update(double timeSinceLastFrame)
             Ogre::Node *node = (Ogre::Node*)i;
             Vector3 position = node->getPosition();
             node->setPosition(position.x, position.y -0.1, position.z);
-            if(position.y < 1) {
+            if(position.y < 0.26) {
                 toRemove = j;
 
             }
@@ -202,7 +202,7 @@ void Chess::update(double timeSinceLastFrame)
     if(selectedNode) {
         Vector3 position = selectedNode->getPosition();
         float newY = position.y + 0.1;
-        if(newY > 3) {
+        if(newY > 1) {
             return;
         }
         selectedNode->setPosition(position.x, newY, position.z);
