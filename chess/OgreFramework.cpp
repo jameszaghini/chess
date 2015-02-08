@@ -346,8 +346,8 @@ void OgreFramework::getInput()
 		m_TranslateVector.z = m_MoveScale;
     
     if(m_pKeyboard->isKeyDown(OIS::KC_HOME)) {
-        m_pCamera->setPosition(10, 6.726564, -20.0);
-        m_pCamera->lookAt(0,4,-8);
+        m_pCamera->setPosition(10, 6.0, -10.0);
+        m_pCamera->lookAt(0,4,8);
     }
     
 #endif
