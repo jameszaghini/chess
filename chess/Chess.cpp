@@ -449,7 +449,25 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
         Node *clickedNode = iter->movable->getParentNode();
         
         if(clickedNode->getName() != "boardNode") {
+            
             printf("%s", clickedNode->getName().c_str());
+            
+            if(clickedNode->getName().length() == 2) {
+                if(selectedPieceNode) {
+                    selectedSquareNode = clickedNode;
+                    Vector3 pos1 = selectedPieceNode->getPosition();
+                    using namespace std;
+                    cout << endl;
+                    cout << pos1 << endl;
+                    Vector3 pos2 = selectedSquareNode->getPosition();
+                    cout << pos2 << endl;
+                    selectedPieceNode->setPosition(pos1.x - pos2.x, pos1.x, pos1.z - pos2.z);
+                    selectedPieceNode = nullptr;
+                }
+            } else {
+                selectedPieceNode = clickedNode;
+            }
+
             
             if(selectedNode) {
                 deselectedNodes.push_back(selectedNode);
@@ -470,6 +488,9 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             }
             
             selectedNode = clickedNode;
+            
+
+            
 
             system->playSound(pieceSound2, 0, false, &channel);
            

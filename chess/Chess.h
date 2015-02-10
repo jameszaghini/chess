@@ -157,6 +157,9 @@ private:
     std::vector<Ogre::Node*> deselectedNodes;
     Ogre::Node *selectedNode;
     
+    Ogre::Node *selectedPieceNode;
+    Ogre::Node *selectedSquareNode;
+    
     FMOD::System *system;
     FMOD::Sound *sound1;
     FMOD::Sound *pieceSound1;

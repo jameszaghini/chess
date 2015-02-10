@@ -35,3 +35,8 @@ void Piece::deselect()
     std::string color = (pieceName.find("white") != std::string::npos ? "white" : "black");
     entity->setMaterialName(color);
 }
+
+void moveToSquare(std::string coordinate)
+{
+    
+}

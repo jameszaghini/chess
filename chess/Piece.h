@@ -22,6 +22,7 @@ public:
     
     void select();
     void deselect();
+    void moveToSquare(std::string coordinate);
     
     Ogre::SceneNode *node;
     Ogre::Entity *entity;
