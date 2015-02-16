@@ -10,6 +10,7 @@
 #define __chess__Piece__
 
 #include "OgreFramework.h"
+#include "Square.h"
 
 #include <stdio.h>
 
@@ -17,20 +18,24 @@ class Piece
 {
     
 public:
-    Piece(std::string name, std::string meshName, Ogre::SceneNode *parent, std::vector<Piece*>& pieces);
+    Piece(std::string name, std::string meshName, Square *square, std::vector<Piece*>& pieces);
     ~Piece();
     
     void select();
     void deselect();
-    void moveToSquare(std::string coordinate);
+    void moveToSquare(Square *destinationSquare);
+    Piece * pieceByName(std::string *name);
     
     Ogre::SceneNode *node;
     Ogre::Entity *entity;
     
+    Square *square;
+
+    
 private:
 
     float y;
-    float z;
+    float z;    
     
     float originalY;
     float originalZ;

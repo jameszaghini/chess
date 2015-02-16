@@ -20,7 +20,8 @@ public:
     ~Board();
     
     Square * getSquareWithCoordinates(std::string letter, std::string number);
-    
+    Square * getSquarebyName(std::string name);
+
     std::vector<Square*> squares;
 };
 

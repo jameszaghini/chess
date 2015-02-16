@@ -7,13 +7,13 @@
 //
 
 #include "Piece.h"
-#include "Square.h"
 
-Piece::Piece(std::string name, std::string meshName, Ogre::SceneNode *parent, std::vector<Piece*>& pieces)
+Piece::Piece(std::string name, std::string meshName, Square *square, std::vector<Piece*>& pieces)
 {
     Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
     entity = sManager->createEntity(name, meshName);
-    node = parent->createChildSceneNode(name);
+    node = square->node->createChildSceneNode(name);
+    this->square = square;
     node->attachObject(entity);
     node->translate(0, .25, 0);
     pieces.push_back(this);
@@ -36,7 +36,10 @@ void Piece::deselect()
     entity->setMaterialName(color);
 }
 
-void moveToSquare(std::string coordinate)
+void Piece::moveToSquare(Square *destinationSquare)
 {
+    Ogre::Vector3 pos1 = square->node->getPosition();
+    Ogre::Vector3 pos2 = destinationSquare->node->getPosition();
     
+    this->node->setPosition(pos2.x - pos1.x, .25, pos2.z - pos1.z);
 }

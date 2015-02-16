@@ -40,3 +40,12 @@ Square * Board::getSquareWithCoordinates(std::string letter, std::string number)
 }
 
 
+Square * Board::getSquarebyName(std::string name)
+{
+    for(Square *square : squares) {
+        if(square->name.compare(name) == 0) {
+            return square;
+        }
+    }
+}
+

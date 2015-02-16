@@ -160,6 +160,9 @@ private:
     Ogre::Node *selectedPieceNode;
     Ogre::Node *selectedSquareNode;
     
+    Piece *selectedPiece;
+    Square *selectedSquare;
+    
     FMOD::System *system;
     FMOD::Sound *sound1;
     FMOD::Sound *pieceSound1;
