@@ -444,45 +444,39 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
     Ogre::RaySceneQueryResult& result = mRayScnQuery->execute();
     Ogre::RaySceneQueryResult::iterator iter = result.begin();
     
+    using namespace std;
     for (iter = result.begin( ); iter != result.end(); iter++) {
         
         Node *clickedNode = iter->movable->getParentNode();
         
         if(clickedNode->getName() != "boardNode") {
             
-            printf("%s", clickedNode->getName().c_str());
+            string clickedNodeName = clickedNode->getName();
+            cout << clickedNodeName << endl;
+
+            int squareNameLength = 2;
             
-            if(clickedNode->getName().length() == 2) {
+            if(clickedNodeName.length() == squareNameLength) {
                 if(selectedPiece) {
-                    
-                    selectedSquare = board->getSquarebyName(clickedNode->getName());
-
+                    selectedSquare = board->getSquarebyName(clickedNodeName);
                     selectedPiece->moveToSquare(selectedSquare);
-                    
-                    selectedPieceNode = nullptr;
+                    selectedPiece->deselect();
+                    selectedPiece = nullptr;
                 }
-            } else {
-                selectedPieceNode = clickedNode;
-            }
-
-            
-            if(selectedNode) {
-                deselectedNodes.push_back(selectedNode);
             }
             
             for(Piece *piece : pieces) {
                 
-                std::string pieceName = piece->node->getName();
-                if(selectedNode && pieceName.compare(selectedNode->getName()) == 0) {
+                string pieceName = piece->node->getName();
+                if(selectedPiece && pieceName.compare(selectedPiece->name) == 0) {
                     piece->deselect();
                     continue;
                 }
                 
-                if(piece->node->getName().compare(clickedNode->getName()) == 0) {
+                if(pieceName.compare(clickedNodeName) == 0) {
                     selectedPiece = piece;
                     piece->select();
                 }
-
             }
 
             system->playSound(pieceSound2, 0, false, &channel);

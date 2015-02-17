@@ -157,7 +157,6 @@ private:
     std::vector<Ogre::Node*> deselectedNodes;
     Ogre::Node *selectedNode;
     
-    Ogre::Node *selectedPieceNode;
     Ogre::Node *selectedSquareNode;
     
     Piece *selectedPiece;

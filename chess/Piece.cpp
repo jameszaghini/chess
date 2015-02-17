@@ -14,6 +14,7 @@ Piece::Piece(std::string name, std::string meshName, Square *square, std::vector
     entity = sManager->createEntity(name, meshName);
     node = square->node->createChildSceneNode(name);
     this->square = square;
+    this->name = name;
     node->attachObject(entity);
     node->translate(0, .25, 0);
     pieces.push_back(this);

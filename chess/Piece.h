@@ -31,6 +31,8 @@ public:
     
     Square *square;
 
+    std::string name;
+    
     
 private:
 
