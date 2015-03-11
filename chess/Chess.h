@@ -110,10 +110,7 @@ private:
     std::map<std::string, OIS::MouseListener*> mMouseListeners;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListener;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListenerEnd;
-    
-	Ogre::SceneNode *boardNode;
-	Ogre::Entity *boardEntity;
-    
+     
     Piece *whitePawn1;
     Piece *whitePawn2;
     Piece *whitePawn3;

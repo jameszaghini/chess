@@ -9,9 +9,6 @@
 Chess::Chess()
 {
     selectedNode = 0;
-    
-	boardNode = 0;
-	boardEntity	= 0;
 
     board = 0;
     
@@ -295,15 +292,7 @@ void Chess::setupLights()
 
 void Chess::setupBoard()
 {
-    Ogre::SceneManager *sManager = OgreFramework::getSingletonPtr()->m_pSceneMgr;
-    
     board = new Board();
-    
-    // this needs to be here until I work out a way to get the pieces on the new board
-    boardEntity = sManager->createEntity("boardEntity", "board.mesh");
-    boardNode = sManager->getRootSceneNode()->createChildSceneNode("boardNode");
-    boardNode->attachObject(boardEntity);
-    boardNode->setPosition(11110, 11110, 1110);
 }
 
 void Chess::setupWhitePieces()
