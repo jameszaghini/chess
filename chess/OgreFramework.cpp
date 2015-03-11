@@ -287,7 +287,7 @@ bool OgreFramework::mouseMoved(const OIS::MouseEvent &evt)
 {
 //	m_pCamera->yaw(Degree(evt.state.X.rel * -0.1f));
 //	m_pCamera->pitch(Degree(evt.state.Y.rel * -0.1f));
-//	
+	
 	return true;
 }
 
@@ -346,7 +346,7 @@ void OgreFramework::getInput()
 		m_TranslateVector.z = m_MoveScale;
     
     if(m_pKeyboard->isKeyDown(OIS::KC_HOME)) {
-        m_pCamera->setPosition(10, 6.0, -10.0);
+        m_pCamera->setPosition(13, 14.5, 8.0);
         m_pCamera->lookAt(0,4,8);
     }
     
