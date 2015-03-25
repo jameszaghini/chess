@@ -55,7 +55,8 @@ void setupPipes()
     } else {
         char buffer[4096];
         int count;
-        
+        std::string toWrite;
+
         /* close fds not required by parent */
         close(CHILD_READ_FD);
         close(CHILD_WRITE_FD);
@@ -69,7 +70,8 @@ void setupPipes()
         }
         
         // Write to child’s stdin
-        write(PARENT_WRITE_FD, "uci\n", 4);
+        toWrite = "isready\n";
+        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
 
         // Read from child’s stdout
         count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
@@ -80,17 +82,13 @@ void setupPipes()
             printf("IO Error\n");
         }
        
-        write(PARENT_WRITE_FD, "go depth 1\n", 11);
-        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-        if (count >= 0) {
-            buffer[count] = 0;
-            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
-        } else {
-            printf("IO Error\n");
-        }
-       
-        write(PARENT_WRITE_FD, "go depth 1\n", 11);
-        close(PARENT_WRITE_FD);
+        toWrite = "ucinewgame\n";
+        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
+        toWrite = "position startpos moves e2e4\n";
+        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
+        toWrite = "go depth 1\n";
+        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
+        
         count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
         if (count >= 0) {
             buffer[count] = 0;
