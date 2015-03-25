@@ -39,7 +39,7 @@ void setupPipes()
     pipe(pipes[PARENT_WRITE_PIPE]);
     
     if(!fork()) {
-        char *argv[]={ "/Users/james/Downloads/stockfish-6-mac/Mac/stockfish-6-64", "uci", 0};
+        char *argv[]={ "/Users/james/Downloads/stockfish-6-mac/Mac/stockfish-6-64", 0};
         
         dup2(CHILD_READ_FD, STDIN_FILENO);
         dup2(CHILD_WRITE_FD, STDOUT_FILENO);
@@ -60,9 +60,17 @@ void setupPipes()
         close(CHILD_READ_FD);
         close(CHILD_WRITE_FD);
         
-        // Write to child’s stdin
-        write(PARENT_WRITE_FD, "uci", 3);
+        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
+        if (count >= 0) {
+            buffer[count] = 0;
+            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
+        } else {
+            printf("IO Error\n");
+        }
         
+        // Write to child’s stdin
+        write(PARENT_WRITE_FD, "uci\n", 4);
+
         // Read from child’s stdout
         count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
         if (count >= 0) {
@@ -71,47 +79,25 @@ void setupPipes()
         } else {
             printf("IO Error\n");
         }
-        
-        // Write to child’s stdin
-        write(PARENT_WRITE_FD, "uci", 3);
-        
+       
+        write(PARENT_WRITE_FD, "go depth 1\n", 11);
         count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
         if (count >= 0) {
             buffer[count] = 0;
-            printf("---%s---", buffer);
+            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
         } else {
             printf("IO Error\n");
         }
-        
-        // Write to child’s stdin
-        write(PARENT_WRITE_FD, "ucinewgame", 10);
-        read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-
-        
-        write(PARENT_WRITE_FD, "position fen rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", 69);
-        read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-        
-        write(PARENT_WRITE_FD, "go depth 1", 10);
+       
+        write(PARENT_WRITE_FD, "go depth 1\n", 11);
+        close(PARENT_WRITE_FD);
         count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
         if (count >= 0) {
             buffer[count] = 0;
-            printf("---|%s|---", buffer);
+            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
         } else {
             printf("IO Error\n");
         }
-        
-//        // Write to child’s stdin
-//        write(PARENT_WRITE_FD, "go infinite", 10);
-//        wait((int*)getpid());
-//
-//        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-//        if (count >= 0) {
-//            buffer[count] = 0;
-//            printf("---%s---", buffer);
-//        } else {
-//            printf("IO Error\n");
-//        }
-        
     }
 }
 
