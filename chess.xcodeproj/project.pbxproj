@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A07B46B1AC48FB5007207F9 /* Stockfish.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A07B4691AC48FB5007207F9 /* Stockfish.cpp */; };
 		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
 		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
 		1A38BE751A7A5D8F0016BD25 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A38BE731A7A5D8F0016BD25 /* Board.cpp */; };
@@ -77,6 +78,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A07B4691AC48FB5007207F9 /* Stockfish.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stockfish.cpp; path = chess/Stockfish.cpp; sourceTree = SOURCE_ROOT; };
+		1A07B46A1AC48FB5007207F9 /* Stockfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stockfish.h; path = chess/Stockfish.h; sourceTree = SOURCE_ROOT; };
 		1A14B9831A6BDAFF00013597 /* dejavu.gorilla */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dejavu.gorilla; path = chess/media/models/dejavu.gorilla; sourceTree = SOURCE_ROOT; };
 		1A14B9851A6BDB3600013597 /* dejavu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dejavu.png; path = chess/media/models/dejavu.png; sourceTree = SOURCE_ROOT; };
 		1A38BE731A7A5D8F0016BD25 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Board.cpp; path = chess/Board.cpp; sourceTree = SOURCE_ROOT; };
@@ -291,6 +294,8 @@
 				1A9915251A7393B300C15939 /* Piece.h */,
 				1A38BE761A7A61950016BD25 /* Square.cpp */,
 				1A38BE771A7A61950016BD25 /* Square.h */,
+				1A07B4691AC48FB5007207F9 /* Stockfish.cpp */,
+				1A07B46A1AC48FB5007207F9 /* Stockfish.h */,
 			);
 			name = code;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				1A38BE781A7A61950016BD25 /* Square.cpp in Sources */,
 				1ACC79AE1A750AE0009BA997 /* common.cpp in Sources */,
 				1A38BE751A7A5D8F0016BD25 /* Board.cpp in Sources */,
+				1A07B46B1AC48FB5007207F9 /* Stockfish.cpp in Sources */,
 				1ACC79AD1A750AE0009BA997 /* common_platform.mm in Sources */,
 				2ECDC3151A65E29D00A50D33 /* main.mm in Sources */,
 				1A9915261A7393B300C15939 /* Piece.cpp in Sources */,

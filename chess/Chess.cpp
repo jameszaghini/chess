@@ -6,103 +6,8 @@
 #include <OgreWindowEventUtilities.h>
 #include "OgreText.h"
 
-/* since pipes are unidirectional, we need two pipes.
- one for data to flow from parent's stdout to child's
- stdin and the other for child's stdout to flow to
- parent's stdin */
-
-#define NUM_PIPES          2
-
-#define PARENT_WRITE_PIPE  0
-#define PARENT_READ_PIPE   1
-
-int pipes[NUM_PIPES][2];
-
-/* always in a pipe[], pipe[0] is for read and
- pipe[1] is for write */
-#define READ_FD  0
-#define WRITE_FD 1
-
-#define PARENT_READ_FD  ( pipes[PARENT_READ_PIPE][READ_FD]   )
-#define PARENT_WRITE_FD ( pipes[PARENT_WRITE_PIPE][WRITE_FD] )
-
-#define CHILD_READ_FD   ( pipes[PARENT_WRITE_PIPE][READ_FD]  )
-#define CHILD_WRITE_FD  ( pipes[PARENT_READ_PIPE][WRITE_FD]  )
-
-void setupPipes()
-{
-    int outfd[2];
-    int infd[2];
-    
-    // pipes for parent to write and read
-    pipe(pipes[PARENT_READ_PIPE]);
-    pipe(pipes[PARENT_WRITE_PIPE]);
-    
-    if(!fork()) {
-        char *argv[]={ "/Users/james/Downloads/stockfish-6-mac/Mac/stockfish-6-64", 0};
-        
-        dup2(CHILD_READ_FD, STDIN_FILENO);
-        dup2(CHILD_WRITE_FD, STDOUT_FILENO);
-        
-        /* Close fds not required by child. Also, we don't
-         want the exec'ed program to know these existed */
-        close(CHILD_READ_FD);
-        close(CHILD_WRITE_FD);
-        close(PARENT_READ_FD);
-        close(PARENT_WRITE_FD);
-        
-        execv(argv[0], argv);
-    } else {
-        char buffer[4096];
-        int count;
-        std::string toWrite;
-
-        /* close fds not required by parent */
-        close(CHILD_READ_FD);
-        close(CHILD_WRITE_FD);
-        
-        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-        if (count >= 0) {
-            buffer[count] = 0;
-            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
-        } else {
-            printf("IO Error\n");
-        }
-        
-        // Write to child’s stdin
-        toWrite = "isready\n";
-        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
-
-        // Read from child’s stdout
-        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-        if (count >= 0) {
-            buffer[count] = 0;
-            printf("---%s---", buffer);
-        } else {
-            printf("IO Error\n");
-        }
-       
-        toWrite = "ucinewgame\n";
-        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
-        toWrite = "position startpos moves e2e4\n";
-        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
-        toWrite = "go depth 1\n";
-        write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
-        
-        count = read(PARENT_READ_FD, buffer, sizeof(buffer)-1);
-        if (count >= 0) {
-            buffer[count] = 0;
-            printf("\n\n-----------------------\n%s\n-----------------------\n\n", buffer);
-        } else {
-            printf("IO Error\n");
-        }
-    }
-}
-
 Chess::Chess()
-{
-    setupPipes();
-    
+{   
     selectedNode = 0;
 
     board = 0;
@@ -139,7 +44,13 @@ Chess::Chess()
     blackBishop1 = 0;
     blackBishop2 = 0;
     blackQueen = 0;
-    blackKing = 0;   
+    blackKing = 0;
+    
+    stockfish = Stockfish();
+    stockfish.sendMessage("isready\n");
+    stockfish.sendMessageNoResponse("ucinewgame\n");
+    stockfish.sendMessageNoResponse("position startpos moves e2e4\n");
+    stockfish.sendMessage("go depth 1\n");
 }
 
 Chess::~Chess()

@@ -7,6 +7,7 @@
 #include "Gorilla.h"
 #include "Piece.h"
 #include "Board.h"
+#include "Stockfish.h"
 
 #ifdef INCLUDE_RTSHADER_SYSTEM
 
@@ -186,6 +187,8 @@ private:
     
     // For the smooth movment when moving the mouse
     Ogre::Vector3 cameraDirection;
+    
+    Stockfish stockfish;
     
 	bool m_bShutdown;
 #ifdef INCLUDE_RTSHADER_SYSTEM
