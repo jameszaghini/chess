@@ -12,7 +12,7 @@
 #include <string>
 #include <unistd.h>
 
-#define NUM_PIPES          2
+#define NUM_PIPES 2
 
 class Stockfish {
 
