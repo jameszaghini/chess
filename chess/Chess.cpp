@@ -49,8 +49,7 @@ Chess::Chess()
     stockfish = Stockfish();
     stockfish.sendMessage("isready\n");
     stockfish.sendMessageNoResponse("ucinewgame\n");
-    stockfish.sendMessageNoResponse("position startpos moves e2e4\n");
-    stockfish.sendMessage("go depth 1\n");
+    stockfish.sendMessageNoResponse("position startpos\n");
 }
 
 Chess::~Chess()
@@ -454,7 +453,15 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             if(clickedNodeName.length() == squareNameLength) {
                 if(selectedPiece) {
                     selectedSquare = board->getSquarebyName(clickedNodeName);
+                    
+                    std::string from = selectedPiece->square->name;
+                    std::string to = selectedSquare->name;
+                    
+                    stockfish.sendMessageNoResponse("position fen rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1\n");
+                    stockfish.sendMessage("go depth 1\n");
+                    
                     selectedPiece->moveToSquare(selectedSquare);
+                    
                     selectedPiece->deselect();
                     selectedPiece = nullptr;
                 }
