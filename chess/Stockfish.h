@@ -20,9 +20,14 @@ public:
     Stockfish();
     ~Stockfish();
     
-    std::string sendMessage(std::string toWrite);
+    std::string sendMessage(const std::string &toWrite);
     void sendMessageNoResponse(std::string toWrite);
 
+    void sendMove(const std::string &move);
+    void readMove();
+    
+    std::string toLower(const std::string& s);
+    
     std::string readResponse();
     
     char buffer[4096];
@@ -34,6 +39,9 @@ public:
     int infd[2];
     
     int pipes[NUM_PIPES][2];
+    
+    std::string gameState;
+    std::string moveEngineSaidToDo;
 };
 
 #endif /* defined(__chess__Stockfish__) */

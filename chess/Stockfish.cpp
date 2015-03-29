@@ -9,6 +9,7 @@
 #include "Stockfish.h"
 #include <stdio.h>
 #include <iostream>
+#include <cctype>
 
 // https://jineshkj.wordpress.com/2006/12/22/how-to-capture-stdin-stdout-and-stderr-of-child-program/
 
@@ -31,6 +32,8 @@
 #define CHILD_WRITE_FD  ( pipes[PARENT_READ_PIPE][WRITE_FD]  )
 
 Stockfish::Stockfish() {
+    
+    gameState = "position startpos moves";
     
     // pipes for parent to write and read
     pipe(pipes[PARENT_READ_PIPE]);
@@ -77,16 +80,44 @@ std::string Stockfish::readResponse()
 }
 
 void Stockfish::sendMessageNoResponse(std::string toWrite)
-{    
+{
     write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
 }
 
-std::string Stockfish::sendMessage(std::string toWrite) {
-    
+std::string Stockfish::sendMessage(const std::string &toWrite)
+{
     write(PARENT_WRITE_FD, toWrite.c_str(), toWrite.length());
     readResponse();
 }
 
+void Stockfish::sendMove(const std::string &move)
+{
+    gameState += " " + toLower(move);
+    std::cout << gameState << std::endl;
+    sendMessageNoResponse(gameState + "\n");
+    readMove();
+}
+
+void Stockfish::readMove()
+{
+    sendMessageNoResponse("go depth 1\n");
+    moveEngineSaidToDo = readResponse();
+}
+
+
 Stockfish::~Stockfish() {
     
+}
+
+std::string Stockfish::toLower(const std::string& s)
+{
+    std::string result;
+    
+    std::locale loc;
+    for (unsigned int i = 0; i < s.length(); ++i)
+    {
+        result += std::tolower(s.at(i), loc);
+    }
+    
+    return result;
 }
