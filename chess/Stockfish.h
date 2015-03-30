@@ -41,7 +41,8 @@ public:
     int pipes[NUM_PIPES][2];
     
     std::string gameState;
-    std::string moveEngineSaidToDo;
+    std::string moveFrom;
+    std::string moveTo;
 };
 
 #endif /* defined(__chess__Stockfish__) */

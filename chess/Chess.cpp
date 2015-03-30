@@ -5,6 +5,7 @@
 #include <OgreLight.h>
 #include <OgreWindowEventUtilities.h>
 #include "OgreText.h"
+#include <boost/algorithm/string.hpp>
 
 Chess::Chess()
 {   
@@ -466,8 +467,12 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
                     selectedPiece = nullptr;
                 }
             }
-            
+                        
             for(Piece *piece : pieces) {
+                
+                if(piece->square->name == boost::to_upper_copy(stockfish.moveFrom)) {
+                    piece->moveToSquare(board->getSquarebyName(boost::to_upper_copy(stockfish.moveTo)));
+                }
                 
                 string pieceName = piece->node->getName();
                 if(selectedPiece && pieceName.compare(selectedPiece->name) == 0) {

@@ -101,9 +101,15 @@ void Stockfish::sendMove(const std::string &move)
 void Stockfish::readMove()
 {
     sendMessageNoResponse("go depth 1\n");
-    moveEngineSaidToDo = readResponse();
+    std::string response = readResponse();
+    
+    int length = response.length();
+    if(length) {
+        moveFrom = response.substr(length - 5, 2);
+        moveTo = response.substr(length - 3, 2);
+        gameState += " " + moveFrom + moveTo;
+    }
 }
-
 
 Stockfish::~Stockfish() {
     
