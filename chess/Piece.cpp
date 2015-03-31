@@ -18,6 +18,11 @@ Piece::Piece(std::string name, std::string meshName, Square *square, std::vector
     node->attachObject(entity);
     node->translate(0, .25, 0);
     pieces.push_back(this);
+    
+    Ogre::Vector3 pos = square->node->getPosition();
+    this->originalX = pos.x;
+    this->originalY = pos.y;
+    this->originalZ = pos.z;
 }
 
 Piece::~Piece()
@@ -39,8 +44,22 @@ void Piece::deselect()
 
 void Piece::moveToSquare(Square *destinationSquare)
 {
-    Ogre::Vector3 pos1 = square->node->getPosition();
     Ogre::Vector3 pos2 = destinationSquare->node->getPosition();
     
-    this->node->setPosition(pos2.x - pos1.x, .25, pos2.z - pos1.z);
+    Ogre::Real x = pos2.x - this->originalX;
+    Ogre::Real y = .25;
+    Ogre::Real z = pos2.z - this->originalZ;
+
+    std::cout << "-----------" << this->name << "-------------" << std::endl;
+    std::cout << "x: " << this->originalX << std::endl;
+    std::cout << "y: " << this->originalY << std::endl;
+    std::cout << "z: " << this->originalZ << std::endl;
+    std::cout << "dest-x: " << pos2.x << std::endl;
+    std::cout << "dest-y: " << pos2.y << std::endl;
+    std::cout << "dest-z: " << pos2.z << std::endl;
+    
+    this->node->setPosition(x, y, z);
+    this->square = destinationSquare;
+
+    
 }

@@ -35,12 +35,10 @@ public:
     
     
 private:
-
-    float y;
-    float z;    
     
-    float originalY;
-    float originalZ;
+    Ogre::Real originalX;
+    Ogre::Real originalY;
+    Ogre::Real originalZ;
     
 };
 
