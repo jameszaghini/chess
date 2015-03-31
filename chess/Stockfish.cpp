@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cctype>
+#include <sstream>
 
 // https://jineshkj.wordpress.com/2006/12/22/how-to-capture-stdin-stdout-and-stderr-of-child-program/
 
@@ -93,7 +94,7 @@ std::string Stockfish::sendMessage(const std::string &toWrite)
 void Stockfish::sendMove(const std::string &move)
 {
     gameState += " " + toLower(move);
-    std::cout << gameState << std::endl;
+    std::cout << "GAMESTATE: " << gameState << std::endl;
     sendMessageNoResponse(gameState + "\n");
     readMove();
 }
@@ -105,10 +106,26 @@ void Stockfish::readMove()
     
     int length = response.length();
     if(length) {
-        moveFrom = response.substr(length - 5, 2);
-        moveTo = response.substr(length - 3, 2);
+        // find the actual move from the response
+        std::stringstream s(response);
+        std::string word;
+        std::string fullMove;
+        bool nextIsMove = false;
+        for(int i=0; s >> word; i++) {
+            if(nextIsMove) {
+                fullMove = word;
+                break;
+            }
+            if(word == "bestmove") {
+                nextIsMove = true;
+            }
+        }
+        
+        moveFrom = fullMove.substr(0, 2);
+        moveTo = fullMove.substr(2, 4);
         gameState += " " + moveFrom + moveTo;
     }
+    std::cout << "GAMESTATE: " << gameState << std::endl;
 }
 
 Stockfish::~Stockfish() {
