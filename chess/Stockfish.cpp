@@ -94,7 +94,7 @@ std::string Stockfish::sendMessage(const std::string &toWrite)
 void Stockfish::sendMove(const std::string &move)
 {
     gameState += " " + toLower(move);
-    std::cout << "GAMESTATE: " << gameState << std::endl;
+    outputGameState();
     sendMessageNoResponse(gameState + "\n");
     readMove();
 }
@@ -121,15 +121,23 @@ void Stockfish::readMove()
             }
         }
         
-        moveFrom = fullMove.substr(0, 2);
-        moveTo = fullMove.substr(2, 4);
-        gameState += " " + moveFrom + moveTo;
+        if(fullMove.length()) {
+            moveFrom = fullMove.substr(0, 2);
+            moveTo = fullMove.substr(2, 4);
+            gameState += " " + moveFrom + moveTo;
+        }
     }
-    std::cout << "GAMESTATE: " << gameState << std::endl;
+    
+    outputGameState();
 }
 
 Stockfish::~Stockfish() {
     
+}
+
+void Stockfish::outputGameState()
+{
+    std::cout << "GAMESTATE: " << gameState << std::endl;
 }
 
 std::string Stockfish::toLower(const std::string& s)
