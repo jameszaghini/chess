@@ -107,7 +107,8 @@ private:
 	void runDemo();
     bool initialiseRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void destroyRTShaderSystem();
-    
+    bool cmpf(float A, float B, float epsilon = 0.005f);
+
     std::map<std::string, OIS::MouseListener*> mMouseListeners;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListener;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListenerEnd;
@@ -149,6 +150,7 @@ private:
     Board *board;
     
     std::vector<Piece*> pieces;
+    std::vector<Piece*> piecesToMove;
     
     Ogre::RaySceneQuery *mRayScnQuery;
     

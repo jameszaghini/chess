@@ -32,13 +32,18 @@ public:
     Square *square;
 
     std::string name;
-    
-    
-private:
-    
     Ogre::Real originalX;
     Ogre::Real originalY;
     Ogre::Real originalZ;
+    
+    Ogre::Real destinationX;
+    Ogre::Real destinationY;
+    Ogre::Real destinationZ;
+    
+private:
+    
+    bool isBlack();
+
     
 };
 

@@ -7,6 +7,11 @@
 #include "OgreText.h"
 #include <boost/algorithm/string.hpp>
 
+bool Chess::cmpf(float A, float B, float epsilon)
+{
+    return (fabs(A - B) < epsilon);
+}
+
 Chess::Chess()
 {   
     selectedNode = 0;
@@ -48,8 +53,7 @@ Chess::Chess()
     blackKing = 0;
     
     stockfish = Stockfish();
-    std::string shit = "isready\n";
-    stockfish.sendMessage(shit);
+    stockfish.sendMessage("isready\n");
     stockfish.sendMessageNoResponse("ucinewgame\n");
     stockfish.sendMessageNoResponse("position startpos\n");
 }
@@ -211,8 +215,45 @@ void Chess::update(double timeSinceLastFrame)
         }
         selectedNode->setPosition(position.x, newY, position.z);
     }
-
+    
+    for(Piece *piece : piecesToMove) {
+        
+        Ogre::Vector3 pos = piece->node->getPosition();
+        Ogre::Real currentX = pos.x;
+        Ogre::Real currentY = pos.y;
+        Ogre::Real currentZ = pos.z;
+//        std::cout << "---------------------------------" << std::endl;
+//        std::cout << currentX << ":" << currentY << ":" << currentZ << std::endl;
+//        std::cout << piece->destinationX << ":" << piece->destinationY << ":" << piece->destinationZ << std::endl;
+//        std::cout << "---------------------------------" << std::endl;
+        
+        if(!cmpf(currentX, piece->destinationX)) {
+            if(currentX > piece->destinationX) {
+                currentX -= 0.1;
+            } else {
+                currentX += 0.1;
+            }
+        }
+        if(!cmpf(currentY, piece->destinationY)) {
+            if(currentY > piece->destinationY) {
+                currentY -= 0.1;
+            } else {
+                currentY += 0.1;
+            }
+        }
+        if(!cmpf(currentZ, piece->destinationZ)) {
+            if(currentZ > piece->destinationZ) {
+                currentZ -= 0.1;
+            } else {
+                currentZ += 0.1;
+            }
+        }
+        
+        piece->node->setPosition(currentX, currentY, currentZ);
+    }
 }
+
+
 
 void Chess::setupChessScene()
 {
@@ -461,6 +502,7 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
                     
                     stockfish.sendMove(from + to);                    
                     
+                    piecesToMove.push_back(selectedPiece);
                     selectedPiece->moveToSquare(selectedSquare);
                     
                     selectedPiece->deselect();
