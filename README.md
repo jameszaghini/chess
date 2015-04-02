@@ -2,7 +2,7 @@
 
 3D chess for OS X created with Ogre3D
 
-![demo](https://gfycat.com/BonyAstonishingAfricanbushviper)
+![demo](http://zippy.gfycat.com/BonyAstonishingAfricanbushviper.gif)
 
 ## Build instructions
 
