@@ -440,7 +440,7 @@
 		1A6B61061A5EBD0500F8D961 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				TargetAttributes = {
 					1A6B610E1A5EBD0500F8D961 = {
 						CreatedOnToolsVersion = 6.1;
@@ -576,7 +576,6 @@
 		1A6B61441A5EBD0600F8D961 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(OGRE_SDK_ROOT)/lib/macosx/Release\"",
@@ -598,6 +597,7 @@
 					"\"$(OGRE_SDK_ROOT)/Dependencies/lib/Release\"",
 					/opt/local/lib,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lOIS",
 					"-lboost_system-mt",
@@ -615,7 +615,6 @@
 		1A6B61451A5EBD0600F8D961 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -655,9 +654,9 @@
 		1A6B61471A5EBD0600F8D961 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/OgreSDK/lib/macosx/Release,
@@ -697,9 +696,9 @@
 		1A6B61481A5EBD0600F8D961 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/OgreSDK/lib/macosx/Release,
