@@ -6,6 +6,7 @@
 #include "common.h"
 #include "Gorilla.h"
 #include "Piece.h"
+#include "Pawn.h"
 #include "Board.h"
 #include "Stockfish.h"
 
@@ -113,14 +114,14 @@ private:
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListener;
     std::map<std::string, OIS::MouseListener*>::iterator itMouseListenerEnd;
      
-    Piece *whitePawn1;
-    Piece *whitePawn2;
-    Piece *whitePawn3;
-    Piece *whitePawn4;
-    Piece *whitePawn5;
-    Piece *whitePawn6;
-    Piece *whitePawn7;
-    Piece *whitePawn8;
+    Pawn *whitePawn1;
+    Pawn *whitePawn2;
+    Pawn *whitePawn3;
+    Pawn *whitePawn4;
+    Pawn *whitePawn5;
+    Pawn *whitePawn6;
+    Pawn *whitePawn7;
+    Pawn *whitePawn8;
     Piece *whiteRook1;
     Piece *whiteRook2;
     Piece *whiteKnight1;
@@ -130,14 +131,14 @@ private:
     Piece *whiteQueen;
     Piece *whiteKing;
     
-    Piece *blackPawn1;
-    Piece *blackPawn2;
-    Piece *blackPawn3;
-    Piece *blackPawn4;
-    Piece *blackPawn5;
-    Piece *blackPawn6;
-    Piece *blackPawn7;
-    Piece *blackPawn8;
+    Pawn *blackPawn1;
+    Pawn *blackPawn2;
+    Pawn *blackPawn3;
+    Pawn *blackPawn4;
+    Pawn *blackPawn5;
+    Pawn *blackPawn6;
+    Pawn *blackPawn7;
+    Pawn *blackPawn8;
     Piece *blackRook1;
     Piece *blackRook2;
     Piece *blackKnight1;

@@ -42,7 +42,7 @@ public:
     
     std::string gameState;
     std::string moveFrom;
-    std::string moveTo;       
+    std::string moveTo;
 };
 
 #endif /* defined(__chess__Stockfish__) */
