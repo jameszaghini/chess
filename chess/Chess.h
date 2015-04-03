@@ -7,6 +7,7 @@
 #include "Gorilla.h"
 #include "Piece.h"
 #include "Pawn.h"
+#include "Rook.h"
 #include "Board.h"
 #include "Stockfish.h"
 
@@ -122,8 +123,8 @@ private:
     Pawn *whitePawn6;
     Pawn *whitePawn7;
     Pawn *whitePawn8;
-    Piece *whiteRook1;
-    Piece *whiteRook2;
+    Rook *whiteRook1;
+    Rook *whiteRook2;
     Piece *whiteKnight1;
     Piece *whiteKnight2;
     Piece *whiteBishop1;
@@ -139,8 +140,8 @@ private:
     Pawn *blackPawn6;
     Pawn *blackPawn7;
     Pawn *blackPawn8;
-    Piece *blackRook1;
-    Piece *blackRook2;
+    Rook *blackRook1;
+    Rook *blackRook2;
     Piece *blackKnight1;
     Piece *blackKnight2;
     Piece *blackBishop1;

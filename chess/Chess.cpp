@@ -355,8 +355,8 @@ void Chess::setupWhitePieces()
     whitePawn6 = new Pawn("whitePawn6", "PawnA01.mesh", board->getSquareWithCoordinates("f", "2"), pieces);
     whitePawn7 = new Pawn("whitePawn7", "PawnA01.mesh", board->getSquareWithCoordinates("g", "2"), pieces);
     whitePawn8 = new Pawn("whitePawn8", "PawnA01.mesh", board->getSquareWithCoordinates("h", "2"), pieces);
-    whiteRook1 = new Piece("whiteRook1", "TowerA01.mesh", board->getSquareWithCoordinates("a", "1"), pieces);
-    whiteRook2 = new Piece("whiteRook2", "TowerA01.mesh", board->getSquareWithCoordinates("h", "1"), pieces);
+    whiteRook1 = new Rook("whiteRook1", "TowerA01.mesh", board->getSquareWithCoordinates("a", "1"), pieces);
+    whiteRook2 = new Rook("whiteRook2", "TowerA01.mesh", board->getSquareWithCoordinates("h", "1"), pieces);
     whiteKnight1 = new Piece("whiteKnight1", "HorseA01.mesh", board->getSquareWithCoordinates("b", "1"), pieces);
     whiteKnight2 = new Piece("whiteKnight2", "HorseA01.mesh", board->getSquareWithCoordinates("g", "1"), pieces);
     whiteBishop1 = new Piece("whiteBishop1", "Bishop.mesh", board->getSquareWithCoordinates("c", "1"), pieces);
@@ -379,8 +379,8 @@ void Chess::setupBlackPieces()
     blackPawn6 = new Pawn("blackPawn6", "PawnA01_black.mesh", board->getSquareWithCoordinates("f", "7"), pieces);
     blackPawn7 = new Pawn("blackPawn7", "PawnA01_black.mesh", board->getSquareWithCoordinates("g", "7"), pieces);
     blackPawn8 = new Pawn("blackPawn8", "PawnA01_black.mesh", board->getSquareWithCoordinates("h", "7"), pieces);
-    blackRook1 = new Piece("blackRook1", "TowerA01_black.mesh", board->getSquareWithCoordinates("a", "8"), pieces);
-    blackRook2 = new Piece("blackRook2", "TowerA01_black.mesh", board->getSquareWithCoordinates("h", "8"), pieces);
+    blackRook1 = new Rook("blackRook1", "TowerA01_black.mesh", board->getSquareWithCoordinates("a", "8"), pieces);
+    blackRook2 = new Rook("blackRook2", "TowerA01_black.mesh", board->getSquareWithCoordinates("h", "8"), pieces);
     blackKnight1 = new Piece("blackKnight1", "HorseA01_black.mesh", board->getSquareWithCoordinates("b", "8"), pieces);
     blackKnight2 = new Piece("blackKnight2", "HorseA01_black.mesh", board->getSquareWithCoordinates("g", "8"), pieces);
     blackBishop1 = new Piece("blackBishop1", "Bishop_black.mesh", board->getSquareWithCoordinates("c", "8"), pieces);

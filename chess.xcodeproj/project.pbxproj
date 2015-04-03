@@ -11,6 +11,7 @@
 		1A14B9841A6BDAFF00013597 /* dejavu.gorilla in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9831A6BDAFF00013597 /* dejavu.gorilla */; };
 		1A14B9861A6BDB3600013597 /* dejavu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A14B9851A6BDB3600013597 /* dejavu.png */; };
 		1A2A6DB01ACE9A6800BECA35 /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A6DAE1ACE9A6800BECA35 /* Pawn.cpp */; };
+		1A2A6DB31ACE9CBA00BECA35 /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A6DB11ACE9CBA00BECA35 /* Rook.cpp */; };
 		1A38BE751A7A5D8F0016BD25 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A38BE731A7A5D8F0016BD25 /* Board.cpp */; };
 		1A38BE781A7A61950016BD25 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A38BE761A7A61950016BD25 /* Square.cpp */; };
 		1A6B61131A5EBD0500F8D961 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B61121A5EBD0500F8D961 /* Carbon.framework */; };
@@ -85,6 +86,8 @@
 		1A14B9851A6BDB3600013597 /* dejavu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dejavu.png; path = chess/media/models/dejavu.png; sourceTree = SOURCE_ROOT; };
 		1A2A6DAE1ACE9A6800BECA35 /* Pawn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pawn.cpp; path = chess/Pawn.cpp; sourceTree = SOURCE_ROOT; };
 		1A2A6DAF1ACE9A6800BECA35 /* Pawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pawn.h; path = chess/Pawn.h; sourceTree = SOURCE_ROOT; };
+		1A2A6DB11ACE9CBA00BECA35 /* Rook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Rook.cpp; path = chess/Rook.cpp; sourceTree = SOURCE_ROOT; };
+		1A2A6DB21ACE9CBA00BECA35 /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rook.h; path = chess/Rook.h; sourceTree = SOURCE_ROOT; };
 		1A38BE731A7A5D8F0016BD25 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Board.cpp; path = chess/Board.cpp; sourceTree = SOURCE_ROOT; };
 		1A38BE741A7A5D8F0016BD25 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Board.h; path = chess/Board.h; sourceTree = SOURCE_ROOT; };
 		1A38BE761A7A61950016BD25 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Square.cpp; path = chess/Square.cpp; sourceTree = SOURCE_ROOT; };
@@ -293,14 +296,16 @@
 				2ECDC31C1A65E2B900A50D33 /* OgreFramework.cpp */,
 				2ECDC31D1A65E2B900A50D33 /* OgreFramework.h */,
 				2ECDC31E1A65E2B900A50D33 /* OgreText.h */,
+				1A2A6DAE1ACE9A6800BECA35 /* Pawn.cpp */,
+				1A2A6DAF1ACE9A6800BECA35 /* Pawn.h */,
 				1A9915241A7393B300C15939 /* Piece.cpp */,
 				1A9915251A7393B300C15939 /* Piece.h */,
+				1A2A6DB11ACE9CBA00BECA35 /* Rook.cpp */,
+				1A2A6DB21ACE9CBA00BECA35 /* Rook.h */,
 				1A38BE761A7A61950016BD25 /* Square.cpp */,
 				1A38BE771A7A61950016BD25 /* Square.h */,
 				1A07B4691AC48FB5007207F9 /* Stockfish.cpp */,
 				1A07B46A1AC48FB5007207F9 /* Stockfish.h */,
-				1A2A6DAE1ACE9A6800BECA35 /* Pawn.cpp */,
-				1A2A6DAF1ACE9A6800BECA35 /* Pawn.h */,
 			);
 			name = code;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2A6DB31ACE9CBA00BECA35 /* Rook.cpp in Sources */,
 				2ECDC3201A65E2B900A50D33 /* OgreFramework.cpp in Sources */,
 				1A38BE781A7A61950016BD25 /* Square.cpp in Sources */,
 				1ACC79AE1A750AE0009BA997 /* common.cpp in Sources */,
