@@ -120,26 +120,37 @@ void Chess::update(double timeSinceLastFrame)
 //        std::cout << piece->destinationX << ":" << piece->destinationY << ":" << piece->destinationZ << std::endl;
 //        std::cout << "---------------------------------" << std::endl;
         
+        bool removeFromPiecesToMove = true;
         if(!cmpf(currentX, piece->destinationX)) {
             if(currentX > piece->destinationX) {
                 currentX -= 0.1;
+                removeFromPiecesToMove = false;
             } else {
                 currentX += 0.1;
+                removeFromPiecesToMove = false;
             }
         }
         if(!cmpf(currentY, piece->destinationY)) {
             if(currentY > piece->destinationY) {
                 currentY -= 0.1;
+                removeFromPiecesToMove = false;
             } else {
                 currentY += 0.1;
+                removeFromPiecesToMove = false;
             }
         }
         if(!cmpf(currentZ, piece->destinationZ)) {
             if(currentZ > piece->destinationZ) {
                 currentZ -= 0.1;
+                removeFromPiecesToMove = false;
             } else {
                 currentZ += 0.1;
+                removeFromPiecesToMove = false;
             }
+        }
+        
+        if(removeFromPiecesToMove) {
+            piecesToMove.erase(std::remove(piecesToMove.begin(), piecesToMove.end(), piece), piecesToMove.end());
         }
         
         piece->node->setPosition(currentX, currentY, currentZ);
@@ -406,6 +417,7 @@ bool Chess::mouseReleased(const OIS::MouseEvent &evt, OIS::MouseButtonID id)
             for(Piece *piece : pieces) {
                 
                 if(piece->square->name == stockfish.moveFrom) {
+                    piecesToMove.push_back(piece);
                     piece->moveToSquare(board->getSquarebyName(stockfish.moveTo));
                 }
                 

@@ -61,15 +61,11 @@ void Piece::moveToSquare(Square *destinationSquare)
     destinationX = x;
     destinationY = y;
     destinationZ = z;
-    
-    if(this->isBlack()) {
-        this->node->setPosition(x, y, z);
-    }
+
     this->square = destinationSquare;
 }
 
 bool Piece::isBlack() {
     std::string pieceName = node->getName();
     return pieceName.find("black") != std::string::npos ? true : false;
-
 }
