@@ -14,7 +14,7 @@ Board::Board()
     using namespace std;
     for(int i = 0; i < 8; i++) {
         for(int j = 1; j < 9; j++) {
-            char letter = "ABCDEFGH"[i];
+            char letter = "abcdefgh"[i];
             string name = letter + to_string(j);
             float x = i * -2;
             float z = j * 2;
