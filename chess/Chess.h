@@ -11,6 +11,7 @@
 #include "Bishop.h"
 #include "Knight.h"
 #include "Queen.h"
+#include "King.h"
 #include "Board.h"
 #include "Stockfish.h"
 
@@ -133,7 +134,7 @@ private:
     Bishop *whiteBishop1;
     Bishop *whiteBishop2;
     Queen *whiteQueen;
-    Piece *whiteKing;
+    King *whiteKing;
     
     Pawn *blackPawn1;
     Pawn *blackPawn2;
@@ -150,7 +151,7 @@ private:
     Bishop *blackBishop1;
     Bishop *blackBishop2;
     Queen *blackQueen;
-    Piece *blackKing;
+    King *blackKing;
     
     Board *board;
     

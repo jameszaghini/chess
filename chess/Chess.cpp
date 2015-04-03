@@ -363,7 +363,7 @@ void Chess::setupWhitePieces()
     whiteBishop2 = new Bishop("whiteBishop2", "Bishop.mesh", board->getSquareWithCoordinates("f", "1"), pieces);
     whiteBishop2->node->yaw(Degree(90));
     whiteQueen = new Queen("whiteQueen", "QueenA.mesh", board->getSquareWithCoordinates("e", "1"), pieces);
-    whiteKing = new Piece("whiteKing", "King_black.mesh", board->getSquareWithCoordinates("d", "1"), pieces);
+    whiteKing = new King("whiteKing", "King_black.mesh", board->getSquareWithCoordinates("d", "1"), pieces);
     whiteKing->entity->setMaterialName("white");
 }
 
@@ -387,7 +387,7 @@ void Chess::setupBlackPieces()
     blackBishop2 = new Bishop("blackBishop2", "Bishop_black.mesh", board->getSquareWithCoordinates("f", "8"), pieces);
     blackBishop2->node->yaw(Degree(90));
     blackQueen = new Queen("blackQueen", "QueenA_black.mesh", board->getSquareWithCoordinates("e", "8"), pieces);
-    blackKing = new Piece("blackKing", "King_black.mesh", board->getSquareWithCoordinates("d", "8"), pieces);
+    blackKing = new King("blackKing", "King_black.mesh", board->getSquareWithCoordinates("d", "8"), pieces);
 }
 
 void Chess::runDemo()
