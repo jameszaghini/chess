@@ -43,7 +43,7 @@ Stockfish::Stockfish() {
     pid = fork();
     
     if(!pid) {
-        char *argv[]={ "/Users/james/Downloads/stockfish-6-mac/Mac/stockfish-6-64", 0};
+        char *argv[]={ "/stockfish-6-64", 0};
         
         dup2(CHILD_READ_FD, STDIN_FILENO);
         dup2(CHILD_WRITE_FD, STDOUT_FILENO);
