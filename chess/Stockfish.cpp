@@ -93,7 +93,7 @@ std::string Stockfish::sendMessage(const std::string &toWrite)
 
 void Stockfish::sendMove(const std::string &move)
 {
-    gameState += " " + toLower(move);
+    gameState += " " + move;
     outputGameState();
     sendMessageNoResponse(gameState + "\n");
     readMove();
@@ -138,17 +138,4 @@ Stockfish::~Stockfish() {
 void Stockfish::outputGameState()
 {
     std::cout << "GAMESTATE: " << gameState << std::endl;
-}
-
-std::string Stockfish::toLower(const std::string& s)
-{
-    std::string result;
-    
-    std::locale loc;
-    for (unsigned int i = 0; i < s.length(); ++i)
-    {
-        result += std::tolower(s.at(i), loc);
-    }
-    
-    return result;
 }

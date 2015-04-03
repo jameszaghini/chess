@@ -27,7 +27,6 @@ public:
     void readMove();
     
     void outputGameState();
-    std::string toLower(const std::string& s);
     
     std::string readResponse();
     
@@ -43,9 +42,7 @@ public:
     
     std::string gameState;
     std::string moveFrom;
-    std::string moveTo;
-    
-    
+    std::string moveTo;       
 };
 
 #endif /* defined(__chess__Stockfish__) */
