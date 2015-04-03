@@ -8,6 +8,7 @@
 #include "Piece.h"
 #include "Pawn.h"
 #include "Rook.h"
+#include "Bishop.h"
 #include "Board.h"
 #include "Stockfish.h"
 
@@ -127,8 +128,8 @@ private:
     Rook *whiteRook2;
     Piece *whiteKnight1;
     Piece *whiteKnight2;
-    Piece *whiteBishop1;
-    Piece *whiteBishop2;
+    Bishop *whiteBishop1;
+    Bishop *whiteBishop2;
     Piece *whiteQueen;
     Piece *whiteKing;
     
@@ -144,8 +145,8 @@ private:
     Rook *blackRook2;
     Piece *blackKnight1;
     Piece *blackKnight2;
-    Piece *blackBishop1;
-    Piece *blackBishop2;
+    Bishop *blackBishop1;
+    Bishop *blackBishop2;
     Piece *blackQueen;
     Piece *blackKing;
     
