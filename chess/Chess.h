@@ -1,5 +1,5 @@
-#ifndef OGRE_DEMO_H
-#define OGRE_DEMO_H
+#ifndef CHESS_H
+#define CHESS_H
 
 #include "OgreFramework.h"
 #include "fmod.hpp"
