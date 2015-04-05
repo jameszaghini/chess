@@ -102,7 +102,21 @@ void Stockfish::sendMove(const std::string &move)
 void Stockfish::readMove()
 {
     sendMessageNoResponse("go depth 1\n");
-    std::string response = readResponse();
+    
+    std::string response;
+    
+    // the move comes back on several lines
+    // occassionally the second line with "bestmove" in
+    // it would not be there when reading resposne
+    // this should be done with threads - but it's ok for now
+    bool found = false;
+    while(!found) {
+        response = readResponse();
+        std::string::size_type index = response.find("bestmove");
+        if(index != std::string::npos) {
+            found = true;
+        }
+    }
     
     int length = response.length();
     if(length) {
